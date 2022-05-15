@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="Fault Tree of ipDiagnostic+omission&#xA;--------------&#xA; TOP EVENT &lt;omission> in VisionAir at ipDiagnostic port">
+    <events type="Intermediate" name="ipDiagnostic+omission&#xA;--------------&#xA; TOP EVENT &lt;omission> in VisionAir at ipDiagnostic port">
+      <gate description="1_omission" events="/11 /12 /0/@events.1 /0/@events.2"/>
+    </events>
+    <events name="cip_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in controller_1 ==>omission at cip_o port" description="5_omission"/>
+    <events name="ipd_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in infusion_pump_1 ==> omission at ipd_o port" description="7_omission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of ipDiagnostic+commission&#xA;--------------&#xA; TOP EVENT &lt;commission> in VisionAir at ipDiagnostic port">
+    <events type="Intermediate" name="ipDiagnostic+commission&#xA;--------------&#xA; TOP EVENT &lt;commission> in VisionAir at ipDiagnostic port">
+      <gate description="9_commission" events="/13 /14 /1/@events.1"/>
+    </events>
+    <events type="Intermediate" name="ippc_i+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in infusion_pump_1 at ippc_i port" description="11_commission">
+      <gate description="11_commission" events="/15 /16 /17 /18 /1/@events.2 /1/@events.8 /1/@events.12 /1/@events.15"/>
+    </events>
+    <events type="Intermediate" name="csc_i+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in controller_1 at csc_i port" description="13_valueSubtle">
+      <gate description="13_valueSubtle" events="/19 /20 /21 /1/@events.3 /1/@events.4 /1/@events.5"/>
+    </events>
+    <events name="bpsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in bp_sensor_1 ==> valueSubtle at bpsc_o port" description="17_valueSubtle"/>
+    <events name="nmtsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in nmt_sensor_1 ==> valueSubtle at nmtsc_o port" description="21_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensor_controller_1 at scc_o port" description="22_valueSubtle">
+      <gate type="AND" description="22_valueSubtle" events="/22 /23 /1/@events.6 /1/@events.7"/>
+    </events>
+    <events name="bpsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in bp_sensor_1 ==> valueSubtle at bpsc_o port" description="25_valueSubtle"/>
+    <events name="nmtsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in nmt_sensor_1 ==> valueSubtle at nmtsc_o port" description="28_valueSubtle"/>
+    <events type="Intermediate" name="csc_i+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in controller_1 at csc_i port" description="30_valueCoarse">
+      <gate description="30_valueCoarse" events="/24 /25 /26 /1/@events.9 /1/@events.10 /1/@events.11"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse&#xA;--------------&#xA; INJECTED FAULT &lt;valueCoarse> at vitalParameters" description="35_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse&#xA;--------------&#xA; INJECTED FAULT &lt;valueCoarse> at vitalParameters" description="40_valueCoarse"/>
+    <events name="scc_o+valueCoarse&#xA;--------------&#xA; INTERNAL FAILURE in sensor_controller_1 ==> valueCoarse at scc_o port" description="42_valueCoarse"/>
+    <events type="Intermediate" name="csc_i+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in controller_1 at csc_i port" description="44_omission">
+      <gate description="44_omission" events="/27 /28 /1/@events.13 /1/@events.14"/>
+    </events>
+    <events name="nmtsc_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in nmt_sensor_1 ==> omission at nmtsc_o port" description="48_omission"/>
+    <events name="scc_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in sensor_controller_1 ==> omission at scc_o port" description="50_omission"/>
+    <events name="cip_o+commission&#xA;--------------&#xA; INTERNAL FAILURE in controller_1 ==> commission at cip_o port" description="52_commission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of uiDignostic+commission&#xA;--------------&#xA; TOP EVENT &lt;commission> in VisionAir at uiDignostic port">
+    <events type="Intermediate" name="uiDignostic+commission&#xA;--------------&#xA; TOP EVENT &lt;commission> in VisionAir at uiDignostic port">
+      <gate type="AND" description="60_commission" events="/29 /2/@events.1"/>
+    </events>
+    <events name="uid_o+commission&#xA;--------------&#xA; INTERNAL FAILURE in user_interface_1 ==> commission at uid_o port" description="61_commission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of uiDignostic+late&#xA;--------------&#xA; TOP EVENT &lt;late> in VisionAir at uiDignostic port">
+    <events type="Intermediate" name="uiDignostic+late&#xA;--------------&#xA; TOP EVENT &lt;late> in VisionAir at uiDignostic port" description="64_late">
+      <gate type="AND" description="64_late" events="/30"/>
+    </events>
+    <events type="Intermediate" name="uic_i+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in user_interface_1 at uic_i port" description="105_omission">
+      <gate type="AND" description="109_omission" events="/44 /3/@events.15"/>
+    </events>
+    <events type="Intermediate" name="csc_i+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in controller_1 at csc_i port" description="76_valueSubtle">
+      <gate type="AND" description="76_valueSubtle" events="/34 /35 /3/@events.5 /3/@events.6"/>
+    </events>
+    <events name="bpsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in bp_sensor_1 ==> valueSubtle at bpsc_o port" description="71_valueSubtle"/>
+    <events name="nmtsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in nmt_sensor_1 ==> valueSubtle at nmtsc_o port" description="75_valueSubtle"/>
+    <events name="bpsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in bp_sensor_1 ==> valueSubtle at bpsc_o port" description="79_valueSubtle"/>
+    <events name="nmtsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in nmt_sensor_1 ==> valueSubtle at nmtsc_o port" description="82_valueSubtle"/>
+    <events type="Intermediate" name="csc_i+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in controller_1 at csc_i port">
+      <gate type="AND" description="95_valueCoarse" events="/39 /3/@events.10"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse&#xA;--------------&#xA; INJECTED FAULT &lt;valueCoarse> at vitalParameters" description="89_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse&#xA;--------------&#xA; INJECTED FAULT &lt;valueCoarse> at vitalParameters" description="94_valueCoarse"/>
+    <events name="scc_o+valueCoarse&#xA;--------------&#xA; INTERNAL FAILURE in sensor_controller_1 ==> valueCoarse at scc_o port" description="96_valueCoarse"/>
+    <events name="nmtsc_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in nmt_sensor_1 ==> omission at nmtsc_o port" description="102_omission"/>
+    <events name="scc_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in sensor_controller_1 ==> omission at scc_o port" description="104_omission"/>
+    <events type="Intermediate" name="cps_i+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in controller_1 at cps_i port">
+      <gate type="AND" description="107_valueCoarse" events="/43 /3/@events.14"/>
+    </events>
+    <events name="psc_o+valueCoarse&#xA;--------------&#xA; INTERNAL FAILURE in power_supply_1 ==> valueCoarse at psc_o port" description="108_valueCoarse"/>
+    <events name="cui_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in controller_1 ==> omission at cui_o port" description="110_omission"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="ipd_o+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in infusion_pump_1 at ipd_o port" description="2_omission"/>
+  <emfta:Event type="Intermediate" name="ipd_o+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in infusion_pump_1 at ipd_o port" description="6_omission"/>
+  <emfta:Event type="Intermediate" name="ipd_o+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in infusion_pump_1 at ipd_o port" description="10_commission"/>
+  <emfta:Event type="Intermediate" name="ipd_o+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in infusion_pump_1 at ipd_o port" description="53_commission"/>
+  <emfta:Event type="Intermediate" name="cip_o+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in controller_1 at cip_o port" description="12_commission"/>
+  <emfta:Event type="Intermediate" name="cip_o+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in controller_1 at cip_o port" description="29_commission"/>
+  <emfta:Event type="Intermediate" name="cip_o+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in controller_1 at cip_o port" description="43_commission"/>
+  <emfta:Event type="Intermediate" name="cip_o+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in controller_1 at cip_o port" description="51_commission"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensor_controller_1 at scc_o port" description="14_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensor_controller_1 at scc_o port" description="18_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensor_controller_1 at scc_o port" description="22_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scbp_i+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensor_controller_1 at scbp_i port" description="23_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensor_controller_1 at scnmt_i port" description="26_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in sensor_controller_1 at scc_o port" description="31_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in sensor_controller_1 at scc_o port" description="36_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in sensor_controller_1 at scc_o port" description="41_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scc_o+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in sensor_controller_1 at scc_o port" description="45_omission"/>
+  <emfta:Event type="Intermediate" name="scc_o+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in sensor_controller_1 at scc_o port" description="49_omission"/>
+  <emfta:Event name="uid_o+commission&#xA;--------------&#xA; INTERNAL FAILURE in user_interface_1 ==> commission at uid_o port" description="61_commission"/>
+  <emfta:Event type="Intermediate" name="uic_i+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in user_interface_1 at uic_i port" description="65_omission"/>
+  <emfta:Event type="Intermediate" name="csc_i+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in controller_1 at csc_i port" description="67_valueSubtle"/>
+  <emfta:Event name="bpsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in bp_sensor_1 ==> valueSubtle at bpsc_o port" description="71_valueSubtle"/>
+  <emfta:Event name="nmtsc_o+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in nmt_sensor_1 ==> valueSubtle at nmtsc_o port" description="75_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scbp_i+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensor_controller_1 at scbp_i port" description="77_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensor_controller_1 at scnmt_i port" description="80_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="csc_i+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in controller_1 at csc_i port" description="84_valueCoarse"/>
+  <emfta:Event type="External" name="vitalParameters+valueCoarse&#xA;--------------&#xA; INJECTED FAULT &lt;valueCoarse> at vitalParameters" description="89_valueCoarse"/>
+  <emfta:Event type="External" name="vitalParameters+valueCoarse&#xA;--------------&#xA; INJECTED FAULT &lt;valueCoarse> at vitalParameters" description="94_valueCoarse"/>
+  <emfta:Event name="scc_o+valueCoarse&#xA;--------------&#xA; INTERNAL FAILURE in sensor_controller_1 ==> valueCoarse at scc_o port" description="96_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scc_o+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in sensor_controller_1 at scc_o port" description="99_omission"/>
+  <emfta:Event type="Intermediate" name="scc_o+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in sensor_controller_1 at scc_o port" description="103_omission"/>
+  <emfta:Event type="Intermediate" name="cps_i+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in controller_1 at cps_i port" description="106_valueCoarse"/>
+  <emfta:Event name="psc_o+valueCoarse&#xA;--------------&#xA; INTERNAL FAILURE in power_supply_1 ==> valueCoarse at psc_o port" description="108_valueCoarse"/>
+  <emfta:Event name="cui_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in controller_1 ==> omission at cui_o port" description="110_omission"/>
+</xmi:XMI>

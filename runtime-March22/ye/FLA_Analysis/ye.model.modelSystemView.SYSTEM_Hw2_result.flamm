@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flamm:CompositeComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flamm="http://www.polarsys.org/chess/fla/flamm" id="model::modelSystemView::SYSTEM_Hw2" name="SYSTEM_Hw2">
+  <outputPorts id="model::modelSystemView::SYSTEM_Hw2::flowport1" name="flowport1" connectedPorts="//@components.0/@outputPorts.0" owner="/">
+    <failures id="noFailure" previousFailures="//@components.0/@outputPorts.0/@failures.0"/>
+    <failures type="failure" id="commission" previousFailures="//@components.0/@outputPorts.0/@failures.1"/>
+  </outputPorts>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::SYSTEM_Hw2::system_hw1_1" name="system_hw1_1">
+    <inputPorts id="model::modelSystemView::SYSTEM_Hw1::flowport1" name="flowport1" owner="//@components.0">
+      <failures id="noFailure"/>
+    </inputPorts>
+    <outputPorts id="model::modelSystemView::SYSTEM_Hw1::flowport2" name="flowport2" connectedPorts="//@outputPorts.0" owner="//@components.0">
+      <failures id="noFailure"/>
+      <failures type="failure" id="commission" previousFailures="//@components.0/@inputPorts.0/@failures.0" raisedByRule="//@components.0/@rules.0"/>
+    </outputPorts>
+    <rules>
+      <inputExpression port="//@components.0/@inputPorts.0">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.0/@outputPorts.0">
+        <failures type="failure" id="commission"/>
+      </outputExpression>
+    </rules>
+  </components>
+</flamm:CompositeComponent>

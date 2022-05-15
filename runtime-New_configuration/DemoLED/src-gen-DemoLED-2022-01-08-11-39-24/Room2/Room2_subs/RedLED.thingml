@@ -1,0 +1,37 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+
+
+thing fragment RedLEDMessages {
+	message LedON();
+	message LedOFF();
+}
+
+thing RedLED
+	{ 
+	org.eclipse.uml2.uml.internal.impl.PortImpl@2b88caa7 (name: inLED, visibility: <unset>) (isLeaf: false) (isStatic: false) (isOrdered: false, isUnique: true, isReadOnly: false) (aggregation: composite, isDerived: false, isDerivedUnion: false, isID: false) (isBehavior: false, isConjugated: false, isService: true)
+
+	provided port inLED{
+	
+
+	receives 	org.eclipse.emf.ecore.impl.DynamicEObjectImpl@31ea6529 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@29cf8b2e (name: Payload) (instanceClassName: null) (abstract: false, interface: false))
+	org.eclipse.emf.ecore.impl.DynamicEObjectImpl@79a2bb39 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@29cf8b2e (name: Payload) (instanceClassName: null) (abstract: false, interface: false))
+
+	sends 	}
+	
+
+
+
+
+	}

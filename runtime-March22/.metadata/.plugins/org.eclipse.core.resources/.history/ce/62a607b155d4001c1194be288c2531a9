@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::PMSystem" name="PMSystem">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::PMSystem::sys_power_in" name="sys_power_in">
+        <flaxml:inputFailure type="omission"/>
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+      <flaxml:inputPort id="model::modelSystemView::PMSystem::sys_hum_in" name="sys_hum_in">
+        <flaxml:inputFailure type="late"/>
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::PMSystem::system_monitor_out" name="system_monitor_out">
+        <outputFailure type="valueSubtle"/>
+        <outputFailure type="noFailure"/>
+        <outputFailure type="omission"/>
+        <outputFailure type="valueCoarse"/>
+      </flaxml:outputPort>
+      <flaxml:outputPort id="model::modelSystemView::PMSystem::system_alarm_out" name="system_alarm_out">
+        <outputFailure type="omission"/>
+        <outputFailure type="valueSubtle"/>
+        <outputFailure type="noFailure"/>
+        <outputFailure type="valueCoarse"/>
+        <outputFailure type="commission"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::transciever" sourceId="model::modelSystemView::Transciever::trans_out" targetComponent="model::modelSystemView::PMSystem::server" targetId="model::modelSystemView::Server::server_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::monitor" sourceId="model::modelSystemView::Monitor::mon_alarm_out" targetComponent="model::modelSystemView::PMSystem::alarm" targetId="model::modelSystemView::Alarm::mon_alrm_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::alarm" sourceId="model::modelSystemView::Alarm::alarm_out" targetComponent="model::modelSystemView::PMSystem" targetId="model::modelSystemView::PMSystem::system_alarm_out"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::monitor" sourceId="model::modelSystemView::Monitor::monitor_out" targetComponent="model::modelSystemView::PMSystem" targetId="model::modelSystemView::PMSystem::system_monitor_out"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::monitor" sourceId="model::modelSystemView::Monitor::mon_2_serv_o" targetComponent="model::modelSystemView::PMSystem::server" targetId="model::modelSystemView::Server::serv_in_f_mon"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::human" sourceId="model::modelSystemView::Human::human_out" targetComponent="model::modelSystemView::PMSystem::monitor" targetId="model::modelSystemView::Monitor::hum_mon_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::transciever" sourceId="model::modelSystemView::Transciever::trans_o_2_unit" targetComponent="model::modelSystemView::PMSystem::sensingUnit" targetId="model::modelSystemView::SensingUnit::unit_in_f_trans"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::sensingUnit" sourceId="model::modelSystemView::SensingUnit::unit_trans_out" targetComponent="model::modelSystemView::PMSystem::transciever" targetId="model::modelSystemView::Transciever::trans_in_fr_unit"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem" sourceId="model::modelSystemView::PMSystem::sys_hum_in" targetComponent="model::modelSystemView::PMSystem::human" targetId="model::modelSystemView::Human::human_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::server" sourceId="model::modelSystemView::Server::server_out" targetComponent="model::modelSystemView::PMSystem::monitor" targetId="model::modelSystemView::Monitor::monitor_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::server" sourceId="model::modelSystemView::Server::serv_2_trans_out" targetComponent="model::modelSystemView::PMSystem::transciever" targetId="model::modelSystemView::Transciever::trans_in_f_serv"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PMSystem" sourceId="model::modelSystemView::PMSystem::sys_power_in" targetComponent="model::modelSystemView::PMSystem::sensingUnit" targetId="model::modelSystemView::SensingUnit::unit_power_in"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PMSystem::server" name="server">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Server::serv_in_f_mon" name="serv_in_f_mon">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Server::server_in" name="server_in">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Server::server_out" name="server_out">
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Server::serv_2_trans_out" name="serv_2_trans_out">
+            <outputFailure type="omission"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueSubtle"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="server_in.noFailure->server_out.omission"/>
+          <flaxml:rule pattern="server_in.valueCoarse->server_out.valueCoarse"/>
+          <flaxml:rule pattern="server_in.omission->server_out.omission"/>
+          <flaxml:rule pattern="serv_in_f_mon.valueSubtle->serv_2_trans_out.valueSubtle"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PMSystem::monitor" name="monitor">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Monitor::hum_mon_in" name="hum_mon_in">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Monitor::monitor_in" name="monitor_in">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Monitor::monitor_out" name="monitor_out">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueSubtle"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Monitor::mon_alarm_out" name="mon_alarm_out">
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Monitor::mon_2_serv_o" name="mon_2_serv_o">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="valueSubtle"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="monitor_in.noFailure->monitor_out.omission,mon_alarm_out.omission"/>
+          <flaxml:rule pattern="monitor_in.omission->monitor_out.omission,mon_alarm_out.noFailure"/>
+          <flaxml:rule pattern="monitor_in.valueCoarse->monitor_out.valueCoarse,mon_alarm_out.commission"/>
+          <flaxml:rule pattern="hum_mon_in.valueSubtle->mon_2_serv_o.valueSubtle,mon_alarm_out.commission"/>
+          <flaxml:rule pattern="hum_mon_in.omission->monitor_out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PMSystem::transciever" name="transciever">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Transciever::trans_in_fr_unit" name="trans_in_fr_unit">
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Transciever::trans_in_f_serv" name="trans_in_f_serv">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Transciever::trans_o_2_unit" name="trans_o_2_unit">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueSubtle"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Transciever::trans_out" name="trans_out">
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="trans_in_fr_unit.valueCoarse->trans_out.valueCoarse"/>
+          <flaxml:rule pattern="trans_in_fr_unit.noFailure,trans_in_f_serv.noFailure->trans_out.omission"/>
+          <flaxml:rule pattern="trans_in_fr_unit.omission->trans_out.omission"/>
+          <flaxml:rule pattern="trans_in_f_serv.valueSubtle->trans_o_2_unit.valueSubtle"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::PMSystem::sensingUnit" name="sensingUnit">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::SensingUnit::unit_power_in" name="unit_power_in">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::SensingUnit::unit_in_f_trans" name="unit_in_f_trans">
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SensingUnit::unit_trans_out" name="unit_trans_out">
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::SensingUnit::tempsensor_1" sourceId="model::modelSystemView::TempSensor::tempsens_out" targetComponent="model::modelSystemView::SensingUnit::controller" targetId="model::modelSystemView::Controller::temp_cont_in"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::sensingUnit" sourceId="model::modelSystemView::SensingUnit::unit_power_in" targetComponent="model::modelSystemView::SensingUnit::controller" targetId="model::modelSystemView::Controller::mon_power_in"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SensingUnit::controller" sourceId="model::modelSystemView::Controller::cont_trans_out" targetComponent="model::modelSystemView::PMSystem::sensingUnit" targetId="model::modelSystemView::SensingUnit::unit_trans_out"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SensingUnit::EEGSensor" sourceId="model::modelSystemView::EEGSensor::eegsens_out" targetComponent="model::modelSystemView::SensingUnit::controller" targetId="model::modelSystemView::Controller::eeg_cont_in"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PMSystem::sensingUnit" sourceId="model::modelSystemView::SensingUnit::unit_in_f_trans" targetComponent="model::modelSystemView::SensingUnit::controller" targetId="model::modelSystemView::Controller::trans_cont_in"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SensingUnit::pressSensor" sourceId="model::modelSystemView::PressSensor::psens_out" targetComponent="model::modelSystemView::SensingUnit::controller" targetId="model::modelSystemView::Controller::press_cont_in"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SensingUnit::SPO2Sensor" sourceId="model::modelSystemView::SPO2Sensor::spo2sens_out" targetComponent="model::modelSystemView::SensingUnit::controller" targetId="model::modelSystemView::Controller::spo_cont_in"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::SensingUnit::ECGSensor" sourceId="model::modelSystemView::ECGSensor::ecgsens_out" targetComponent="model::modelSystemView::SensingUnit::controller" targetId="model::modelSystemView::Controller::ecg_cont_in"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SensingUnit::tempsensor_1" name="tempsensor_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::TempSensor::flowport1" name="flowport1">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::TempSensor::tempsens_out" name="tempsens_out">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="flowport1.noFailure->tempsens_out.omission"/>
+              <flaxml:rule pattern="flowport1.noFailure->tempsens_out.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SensingUnit::EEGSensor" name="EEGSensor">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::EEGSensor::flowport1" name="flowport1">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::EEGSensor::eegsens_out" name="eegsens_out">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="flowport1.noFailure->eegsens_out.omission"/>
+              <flaxml:rule pattern="flowport1.noFailure->eegsens_out.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SensingUnit::controller" name="controller">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::Controller::press_cont_in" name="press_cont_in">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="omission"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Controller::mon_power_in" name="mon_power_in">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="omission"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Controller::eeg_cont_in" name="eeg_cont_in">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Controller::trans_cont_in" name="trans_cont_in">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="valueSubtle"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Controller::ecg_cont_in" name="ecg_cont_in">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="omission"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Controller::temp_cont_in" name="temp_cont_in">
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Controller::spo_cont_in" name="spo_cont_in">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::Controller::cont_trans_out" name="cont_trans_out">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="valueSubtle"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="ecg_cont_in.noFailure,eeg_cont_in.noFailure->cont_trans_out.omission"/>
+              <flaxml:rule pattern="mon_power_in.omission->cont_trans_out.omission"/>
+              <flaxml:rule pattern="ecg_cont_in.omission,eeg_cont_in.omission,press_cont_in.omission,spo_cont_in.omission,temp_cont_in.omission->cont_trans_out.omission"/>
+              <flaxml:rule pattern="ecg_cont_in.valueCoarse->cont_trans_out.valueCoarse"/>
+              <flaxml:rule pattern="eeg_cont_in.valueCoarse->cont_trans_out.valueCoarse"/>
+              <flaxml:rule pattern="press_cont_in.valueCoarse->cont_trans_out.valueCoarse"/>
+              <flaxml:rule pattern="spo_cont_in.valueCoarse->cont_trans_out.valueCoarse"/>
+              <flaxml:rule pattern="temp_cont_in.valueCoarse->cont_trans_out.valueCoarse"/>
+              <flaxml:rule pattern="trans_cont_in.valueSubtle->cont_trans_out.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SensingUnit::SPO2Sensor" name="SPO2Sensor">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::SPO2Sensor::flowport1" name="flowport1">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::SPO2Sensor::spo2sens_out" name="spo2sens_out">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="flowport1.noFailure->spo2sens_out.omission"/>
+              <flaxml:rule pattern="flowport1.noFailure->spo2sens_out.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SensingUnit::ECGSensor" name="ECGSensor">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::ECGSensor::flowport1" name="flowport1">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::ECGSensor::ecgsens_out" name="ecgsens_out">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="flowport1.noFailure->ecgsens_out.omission"/>
+              <flaxml:rule pattern="flowport1.noFailure->ecgsens_out.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SensingUnit::pressSensor" name="pressSensor">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::PressSensor::flowport1" name="flowport1">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::PressSensor::psens_out" name="psens_out">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="flowport1.noFailure->psens_out.omission"/>
+              <flaxml:rule pattern="flowport1.noFailure->psens_out.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PMSystem::human" name="human">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Human::human_in" name="human_in">
+            <flaxml:inputFailure type="late"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Human::human_out" name="human_out">
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="human_in.late->human_out.valueSubtle"/>
+          <flaxml:rule pattern="human_in.noFailure->human_out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PMSystem::alarm" name="alarm">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Alarm::mon_alrm_in" name="mon_alrm_in">
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Alarm::alarm_out" name="alarm_out">
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="commission"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="mon_alrm_in.commission->alarm_out.commission"/>
+          <flaxml:rule pattern="mon_alrm_in.noFailure->alarm_out.commission"/>
+          <flaxml:rule pattern="mon_alrm_in.noFailure->alarm_out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

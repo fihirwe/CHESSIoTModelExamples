@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flamm:SimpleComponent xmlns:flamm="http://www.polarsys.org/chess/fla/flamm" id="model::modelSystemView::IoTBoard" name="IoTBoard">
+  <inputPorts id="model::modelSystemView::IoTBoard::in_Humidity" name="in_Humidity" owner="/">
+    <failures id="noFailure"/>
+  </inputPorts>
+  <inputPorts id="model::modelSystemView::IoTBoard::in_Temperature" name="in_Temperature" owner="/">
+    <failures id="noFailure"/>
+  </inputPorts>
+  <inputPorts id="TestID" name="dumyPort" owner="/">
+    <failures id="noFailure"/>
+  </inputPorts>
+  <outputPorts id="model::modelSystemView::IoTBoard::sensedValue" name="sensedValue" owner="/">
+    <failures id="noFailure" previousFailures="//@inputPorts.0/@failures.0 //@inputPorts.1/@failures.0 //@inputPorts.2/@failures.0" raisedByRule="//@implicitFiredRules.0 //@implicitFiredRules.1 //@implicitFiredRules.2"/>
+  </outputPorts>
+  <outputPorts id="model::modelSystemView::IoTBoard::outLight" name="outLight" owner="/">
+    <failures id="noFailure" previousFailures="//@inputPorts.0/@failures.0 //@inputPorts.1/@failures.0 //@inputPorts.2/@failures.0"/>
+  </outputPorts>
+  <rules>
+    <inputExpression port="//@inputPorts.0">
+      <failures type="failure" id="omission"/>
+    </inputExpression>
+    <inputExpression port="//@inputPorts.1">
+      <failures type="failure" id="omission"/>
+    </inputExpression>
+    <outputExpression port="//@outputPorts.0">
+      <failures type="failure" id="omission"/>
+    </outputExpression>
+  </rules>
+  <rules>
+    <inputExpression port="//@inputPorts.2">
+      <failures id="noFailure"/>
+    </inputExpression>
+    <outputExpression port="//@outputPorts.1">
+      <failures type="failure" id="omission"/>
+    </outputExpression>
+    <outputExpression port="//@outputPorts.0">
+      <failures type="failure" id="omission"/>
+    </outputExpression>
+  </rules>
+  <implicitFiredRules>
+    <inputExpression port="//@inputPorts.0">
+      <failures id="noFailure"/>
+    </inputExpression>
+  </implicitFiredRules>
+  <implicitFiredRules>
+    <inputExpression port="//@inputPorts.1">
+      <failures id="noFailure"/>
+    </inputExpression>
+  </implicitFiredRules>
+  <implicitFiredRules>
+    <inputExpression port="//@inputPorts.2">
+      <failures id="noFailure"/>
+    </inputExpression>
+  </implicitFiredRules>
+</flamm:SimpleComponent>

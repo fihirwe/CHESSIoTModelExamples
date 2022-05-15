@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="valueCoarse failure at the ui_diag of VisionAir">
+    <events type="Intermediate" name="valueCoarse failure at the ui_diag of VisionAir" description="1">
+      <gate description="1"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueSubtle failure at the ui_diag of VisionAir">
+    <events type="Intermediate" name="valueSubtle failure at the ui_diag of VisionAir" description="2">
+      <gate description="2"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the ui_diag of VisionAir">
+    <events type="Intermediate" name="omission failure at the ui_diag of VisionAir" description="3">
+      <gate description="3" events="/2/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the uid_out of user interface_1" description="4">
+      <gate type="AND" description="4" events="/2/@events.2"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the uictl_in of user interface_1" description="5">
+      <gate description="5" events="/2/@events.3 /2/@events.23 /2/@events.38 /2/@events.46 /2/@events.49 /2/@events.69 /2/@events.84"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ctlui_out of controller_1" description="6">
+      <gate type="AND" description="6" events="/2/@events.4 /2/@events.22"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the ctlsp_in of controller_1" description="7">
+      <gate description="7" events="/2/@events.5 /2/@events.10 /2/@events.15"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the spctl_out of sensor processing_1" description="8">
+      <gate type="AND" description="8" events="/2/@events.6 /2/@events.9"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the spbp_in of sensor processing_1" description="9">
+      <gate description="9" events="/2/@events.7"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the bpsp_out of bp sensor_1" description="10">
+      <gate type="AND" description="10" events="/2/@events.8"/>
+    </events>
+    <events name=" INTERNAL failure in bp sensor_1" probability="2.000E-07" description="11"/>
+    <events name=" INTERNAL failure in sensor processing_1" probability="2.000E-07" description="12"/>
+    <events type="Intermediate" name="valueSubtle failure at the spctl_out of sensor processing_1" description="13">
+      <gate type="AND" description="13" events="/2/@events.11 /2/@events.12"/>
+    </events>
+    <events name=" INTERNAL failure in sensor processing_1" probability="2.000E-07" description="14"/>
+    <events type="Intermediate" name="valueSubtle failure at the spnmt_in of sensor processing_1" description="15">
+      <gate description="15" events="/2/@events.13"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the nmtsp_out of nmt sensor_1" description="16">
+      <gate type="AND" description="16" events="/2/@events.14"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="17"/>
+    <events type="Intermediate" name="valueSubtle failure at the spctl_out of sensor processing_1" description="18">
+      <gate type="AND" description="18" events="/2/@events.16 /2/@events.19"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the spbp_in of sensor processing_1" description="19">
+      <gate description="19" events="/2/@events.17"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the bpsp_out of bp sensor_1" description="20">
+      <gate type="AND" description="20" events="/2/@events.18"/>
+    </events>
+    <events name=" INTERNAL failure in bp sensor_1" probability="2.000E-07" description="21"/>
+    <events type="Intermediate" name="valueSubtle failure at the spnmt_in of sensor processing_1" description="22">
+      <gate description="22" events="/2/@events.20"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the nmtsp_out of nmt sensor_1" description="23">
+      <gate type="AND" description="23" events="/2/@events.21"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="24"/>
+    <events name=" INTERNAL failure in controller_1" probability="2.000E-07" description="25"/>
+    <events type="Intermediate" name="omission failure at the ctlui_out of controller_1" description="26">
+      <gate type="AND" description="26" events="/2/@events.24 /2/@events.37"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the ctlsp_in of controller_1" description="27">
+      <gate description="27" events="/2/@events.25 /2/@events.30"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the spctl_out of sensor processing_1" description="28">
+      <gate type="AND" description="28" events="/2/@events.26 /2/@events.27"/>
+    </events>
+    <events name=" INTERNAL failure in sensor processing_1" probability="2.000E-07" description="29"/>
+    <events type="Intermediate" name="valueCoarse failure at the spnmt_in of sensor processing_1" description="30">
+      <gate description="30" events="/2/@events.28"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the nmtsp_out of nmt sensor_1" description="31">
+      <gate type="AND" description="31" events="/2/@events.29"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="32"/>
+    <events type="Intermediate" name="valueCoarse failure at the spctl_out of sensor processing_1" description="33">
+      <gate type="AND" description="33" events="/2/@events.31 /2/@events.34"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the spbp_in of sensor processing_1" description="34">
+      <gate description="34" events="/2/@events.32"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the bpsp_out of bp sensor_1" description="35">
+      <gate type="AND" description="35" events="/2/@events.33"/>
+    </events>
+    <events name=" INTERNAL failure in bp sensor_1" probability="2.000E-07" description="36"/>
+    <events type="Intermediate" name="valueCoarse failure at the spnmt_in of sensor processing_1" description="37">
+      <gate description="37" events="/2/@events.35"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the nmtsp_out of nmt sensor_1" description="38">
+      <gate type="AND" description="38" events="/2/@events.36"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="39"/>
+    <events name=" INTERNAL failure in controller_1" probability="2.000E-07" description="40"/>
+    <events type="Intermediate" name="omission failure at the ctlui_out of controller_1" description="41">
+      <gate type="AND" description="41" events="/2/@events.39 /2/@events.45"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ctlsp_in of controller_1" description="42">
+      <gate description="42" events="/2/@events.40"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the spctl_out of sensor processing_1" description="43">
+      <gate type="AND" description="43" events="/2/@events.41 /2/@events.42"/>
+    </events>
+    <events name=" INTERNAL failure in sensor processing_1" probability="2.000E-07" description="44"/>
+    <events type="Intermediate" name="omission failure at the spnmt_in of sensor processing_1" description="45">
+      <gate description="45" events="/2/@events.43"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the nmtsp_out of nmt sensor_1" description="46">
+      <gate type="AND" description="46" events="/2/@events.44"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="47"/>
+    <events name=" INTERNAL failure in controller_1" probability="2.000E-07" description="48"/>
+    <events type="Intermediate" name="omission failure at the ctlui_out of controller_1" description="49">
+      <gate type="AND" description="49" events="/2/@events.47 /2/@events.48"/>
+    </events>
+    <events name=" INTERNAL failure in controller_1" probability="2.000E-07" description="50"/>
+    <events type="Intermediate" name="valueCoarse  failure at the ctlps_in of controller_1" description="51">
+      <gate description="51"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ctlui_out of controller_1" description="52">
+      <gate type="AND" description="52" events="/2/@events.50 /2/@events.68"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the ctlsp_in of controller_1" description="53">
+      <gate description="53" events="/2/@events.51 /2/@events.56 /2/@events.61"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the spctl_out of sensor processing_1" description="54">
+      <gate type="AND" description="54" events="/2/@events.52 /2/@events.55"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the spbp_in of sensor processing_1" description="55">
+      <gate description="55" events="/2/@events.53"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the bpsp_out of bp sensor_1" description="56">
+      <gate type="AND" description="56" events="/2/@events.54"/>
+    </events>
+    <events name=" INTERNAL failure in bp sensor_1" probability="2.000E-07" description="57"/>
+    <events name=" INTERNAL failure in sensor processing_1" probability="2.000E-07" description="58"/>
+    <events type="Intermediate" name="valueSubtle failure at the spctl_out of sensor processing_1" description="59">
+      <gate type="AND" description="59" events="/2/@events.57 /2/@events.58"/>
+    </events>
+    <events name=" INTERNAL failure in sensor processing_1" probability="2.000E-07" description="60"/>
+    <events type="Intermediate" name="valueSubtle failure at the spnmt_in of sensor processing_1" description="61">
+      <gate description="61" events="/2/@events.59"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the nmtsp_out of nmt sensor_1" description="62">
+      <gate type="AND" description="62" events="/2/@events.60"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="63"/>
+    <events type="Intermediate" name="valueSubtle failure at the spctl_out of sensor processing_1" description="64">
+      <gate type="AND" description="64" events="/2/@events.62 /2/@events.65"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the spbp_in of sensor processing_1" description="65">
+      <gate description="65" events="/2/@events.63"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the bpsp_out of bp sensor_1" description="66">
+      <gate type="AND" description="66" events="/2/@events.64"/>
+    </events>
+    <events name=" INTERNAL failure in bp sensor_1" probability="2.000E-07" description="67"/>
+    <events type="Intermediate" name="valueSubtle failure at the spnmt_in of sensor processing_1" description="68">
+      <gate description="68" events="/2/@events.66"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the nmtsp_out of nmt sensor_1" description="69">
+      <gate type="AND" description="69" events="/2/@events.67"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="70"/>
+    <events type="Intermediate" name="valueCoarse  failure at the ctlps_in of controller_1" description="71">
+      <gate description="71"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ctlui_out of controller_1" description="72">
+      <gate type="AND" description="72" events="/2/@events.70 /2/@events.83"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the ctlsp_in of controller_1" description="73">
+      <gate description="73" events="/2/@events.71 /2/@events.76"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the spctl_out of sensor processing_1" description="74">
+      <gate type="AND" description="74" events="/2/@events.72 /2/@events.73"/>
+    </events>
+    <events name=" INTERNAL failure in sensor processing_1" probability="2.000E-07" description="75"/>
+    <events type="Intermediate" name="valueCoarse failure at the spnmt_in of sensor processing_1" description="76">
+      <gate description="76" events="/2/@events.74"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the nmtsp_out of nmt sensor_1" description="77">
+      <gate type="AND" description="77" events="/2/@events.75"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="78"/>
+    <events type="Intermediate" name="valueCoarse failure at the spctl_out of sensor processing_1" description="79">
+      <gate type="AND" description="79" events="/2/@events.77 /2/@events.80"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the spbp_in of sensor processing_1" description="80">
+      <gate description="80" events="/2/@events.78"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the bpsp_out of bp sensor_1" description="81">
+      <gate type="AND" description="81" events="/2/@events.79"/>
+    </events>
+    <events name=" INTERNAL failure in bp sensor_1" probability="2.000E-07" description="82"/>
+    <events type="Intermediate" name="valueCoarse failure at the spnmt_in of sensor processing_1" description="83">
+      <gate description="83" events="/2/@events.81"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the nmtsp_out of nmt sensor_1" description="84">
+      <gate type="AND" description="84" events="/2/@events.82"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="85"/>
+    <events type="Intermediate" name="valueCoarse  failure at the ctlps_in of controller_1" description="86">
+      <gate description="86"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ctlui_out of controller_1" description="87">
+      <gate type="AND" description="87" events="/2/@events.85 /2/@events.91"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ctlsp_in of controller_1" description="88">
+      <gate description="88" events="/2/@events.86"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the spctl_out of sensor processing_1" description="89">
+      <gate type="AND" description="89" events="/2/@events.87 /2/@events.88"/>
+    </events>
+    <events name=" INTERNAL failure in sensor processing_1" probability="2.000E-07" description="90"/>
+    <events type="Intermediate" name="omission failure at the spnmt_in of sensor processing_1" description="91">
+      <gate description="91" events="/2/@events.89"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the nmtsp_out of nmt sensor_1" description="92">
+      <gate type="AND" description="92" events="/2/@events.90"/>
+    </events>
+    <events name=" INTERNAL failure in nmt sensor_1" probability="2.000E-07" description="93"/>
+    <events type="Intermediate" name="valueCoarse  failure at the ctlps_in of controller_1" description="94">
+      <gate description="94"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueCoarse failure at the ip_diag of VisionAir">
+    <events type="Intermediate" name="valueCoarse failure at the ip_diag of VisionAir" description="95">
+      <gate description="95"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the ip_diag of VisionAir">
+    <events type="Intermediate" name="omission failure at the ip_diag of VisionAir" description="96">
+      <gate description="96"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueSubtle failure at the ip_diag of VisionAir">
+    <events type="Intermediate" name="valueSubtle failure at the ip_diag of VisionAir" description="97">
+      <gate description="97"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

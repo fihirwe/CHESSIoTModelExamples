@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::SYSTEM_Hw1" name="SYSTEM_Hw1">
+    <flaxml:inputPorts/>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::SYSTEM_Hw1::output" name="output"/>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" sourceId="model::modelSystemView::PhysicalEntity1::outNode3" targetComponent="model::modelSystemView::SYSTEM_Hw1::gateway1" targetId="model::modelSystemView::Gateway1::inGate1"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" sourceId="model::modelSystemView::PhysicalEntity1::outNode4" targetComponent="model::modelSystemView::SYSTEM_Hw1::gateway4" targetId="model::modelSystemView::Gateway1::inGate4"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::gateway4" sourceId="model::modelSystemView::Gateway1::outGate4" targetComponent="model::modelSystemView::SYSTEM_Hw1::server2" targetId="model::modelSystemView::Server1::inServer2"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" sourceId="model::modelSystemView::PhysicalEntity1::outNode1" targetComponent="model::modelSystemView::SYSTEM_Hw1::gateway2" targetId="model::modelSystemView::Gateway1::inGate2"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::computer_1" sourceId="model::modelSystemView::ExternalComputer::data" targetComponent="model::modelSystemView::SYSTEM_Hw1" targetId="model::modelSystemView::SYSTEM_Hw1::output"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::gateway2" sourceId="model::modelSystemView::Gateway1::outGate2" targetComponent="model::modelSystemView::SYSTEM_Hw1::server1" targetId="model::modelSystemView::Server1::inServer1"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::gateway1" sourceId="model::modelSystemView::Gateway1::outGate1" targetComponent="model::modelSystemView::SYSTEM_Hw1::server1" targetId="model::modelSystemView::Server1::inServer1"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::server2" sourceId="model::modelSystemView::Server1::outServer2" targetComponent="model::modelSystemView::SYSTEM_Hw1::computer_1" targetId="model::modelSystemView::ExternalComputer::inData"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::server1" sourceId="model::modelSystemView::Server1::outServer1" targetComponent="model::modelSystemView::SYSTEM_Hw1::computer_1" targetId="model::modelSystemView::ExternalComputer::inData"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" sourceId="model::modelSystemView::PhysicalEntity1::outNode2" targetComponent="model::modelSystemView::SYSTEM_Hw1::gateway3" targetId="model::modelSystemView::Gateway1::inGate3"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::gateway3" sourceId="model::modelSystemView::Gateway1::outGate3" targetComponent="model::modelSystemView::SYSTEM_Hw1::server2" targetId="model::modelSystemView::Server1::inServer2"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" name="physicalentity1_1">
+        <flaxml:inputPorts/>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::PhysicalEntity1::outNode2" name="outNode2"/>
+          <flaxml:outputPort id="model::modelSystemView::PhysicalEntity1::outNode1" name="outNode1"/>
+          <flaxml:outputPort id="model::modelSystemView::PhysicalEntity1::outNode3" name="outNode3"/>
+          <flaxml:outputPort id="model::modelSystemView::PhysicalEntity1::outNode4" name="outNode4"/>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::powersource_1" sourceId="model::modelSystemView::PowerSource::outPower" targetComponent="model::modelSystemView::PhysicalEntity1::node_2" targetId="model::modelSystemView::NODE::inPowerNode"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::node_1" sourceId="model::modelSystemView::NODE::outDataNODE" targetComponent="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" targetId="model::modelSystemView::PhysicalEntity1::outNode1"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::powersource_1" sourceId="model::modelSystemView::PowerSource::outPower" targetComponent="model::modelSystemView::PhysicalEntity1::node_3" targetId="model::modelSystemView::NODE::inPowerNode"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::powersource_1" sourceId="model::modelSystemView::PowerSource::outPower" targetComponent="model::modelSystemView::PhysicalEntity1::node_4" targetId="model::modelSystemView::NODE::inPowerNode"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::node_4" sourceId="model::modelSystemView::NODE::outDataNODE" targetComponent="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" targetId="model::modelSystemView::PhysicalEntity1::outNode3"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::node_3" sourceId="model::modelSystemView::NODE::outDataNODE" targetComponent="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" targetId="model::modelSystemView::PhysicalEntity1::outNode4"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::powersource_1" sourceId="model::modelSystemView::PowerSource::outPower" targetComponent="model::modelSystemView::PhysicalEntity1::node_1" targetId="model::modelSystemView::NODE::inPowerNode"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::node_2" sourceId="model::modelSystemView::NODE::outDataNODE" targetComponent="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" targetId="model::modelSystemView::PhysicalEntity1::outNode2"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::PhysicalEntity1::node_1" name="node_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::NODE::inPowerNode" name="inPowerNode"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::NODE::outDataNODE" name="outDataNODE"/>
+            </flaxml:outputPorts>
+            <flaxml:connections>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::humiditysensor_1" sourceId="model::modelSystemView::HumiditySensor::outHumidity" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromHumidity"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::node_1" sourceId="model::modelSystemView::NODE::inPowerNode" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::powerInBoard"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::gazsensor_1" sourceId="model::modelSystemView::GAZSensor::outGAZ" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromGAZ"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::computingboard1_1" sourceId="model::modelSystemView::ComputingBoard1::outDataBoard" targetComponent="model::modelSystemView::PhysicalEntity1::node_1" targetId="model::modelSystemView::NODE::outDataNODE"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::led_1" sourceId="model::modelSystemView::LED::outLED" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromLED"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::buzzer_1" sourceId="model::modelSystemView::BUZZER::outBuzzer" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromBuzzer"/>
+            </flaxml:connections>
+            <flaxml:components>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::gazsensor_1" name="gazsensor_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::GAZSensor::outGAZ" name="outGAZ"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outGAZ.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::led_1" name="led_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::LED::outLED" name="outLED"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outLED.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::humiditysensor_1" name="humiditysensor_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::HumiditySensor::outHumidity" name="outHumidity"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outHumidity.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::computingboard1_1" name="computingboard1_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromHumidity" name="fromHumidity"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromGAZ" name="fromGAZ"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::powerInBoard" name="powerInBoard"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromLED" name="fromLED"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromBuzzer" name="fromBuzzer"/>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::ComputingBoard1::outDataBoard" name="outDataBoard"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outDataBoard.omission"/>
+                  <flaxml:rule pattern="fromBuzzer.omission,fromGAZ.omission,fromHumidity.omission,fromLED.omission->outDataBoard.omission"/>
+                  <flaxml:rule pattern="powerInBoard.omission->outDataBoard.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::buzzer_1" name="buzzer_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::BUZZER::outBuzzer" name="outBuzzer"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outBuzzer.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+            </flaxml:components>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::PhysicalEntity1::node_2" name="node_2">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::NODE::inPowerNode" name="inPowerNode"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::NODE::outDataNODE" name="outDataNODE"/>
+            </flaxml:outputPorts>
+            <flaxml:connections>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::computingboard1_1" sourceId="model::modelSystemView::ComputingBoard1::outDataBoard" targetComponent="model::modelSystemView::PhysicalEntity1::node_2" targetId="model::modelSystemView::NODE::outDataNODE"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::buzzer_1" sourceId="model::modelSystemView::BUZZER::outBuzzer" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromBuzzer"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::humiditysensor_1" sourceId="model::modelSystemView::HumiditySensor::outHumidity" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromHumidity"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::node_2" sourceId="model::modelSystemView::NODE::inPowerNode" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::powerInBoard"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::gazsensor_1" sourceId="model::modelSystemView::GAZSensor::outGAZ" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromGAZ"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::led_1" sourceId="model::modelSystemView::LED::outLED" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromLED"/>
+            </flaxml:connections>
+            <flaxml:components>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::led_1" name="led_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::LED::outLED" name="outLED"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outLED.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::computingboard1_1" name="computingboard1_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromLED" name="fromLED"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromHumidity" name="fromHumidity"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromGAZ" name="fromGAZ"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::powerInBoard" name="powerInBoard"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromBuzzer" name="fromBuzzer"/>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::ComputingBoard1::outDataBoard" name="outDataBoard"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outDataBoard.omission"/>
+                  <flaxml:rule pattern="fromBuzzer.omission,fromGAZ.omission,fromHumidity.omission,fromLED.omission->outDataBoard.omission"/>
+                  <flaxml:rule pattern="powerInBoard.omission->outDataBoard.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::buzzer_1" name="buzzer_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::BUZZER::outBuzzer" name="outBuzzer"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outBuzzer.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::gazsensor_1" name="gazsensor_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::GAZSensor::outGAZ" name="outGAZ"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outGAZ.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::humiditysensor_1" name="humiditysensor_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::HumiditySensor::outHumidity" name="outHumidity"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outHumidity.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+            </flaxml:components>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PhysicalEntity1::powersource_1" name="powersource_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="TestID" name="dumyPort"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::PowerSource::outPower" name="outPower"/>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="dumyPort.noFailure->outPower.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::PhysicalEntity1::node_4" name="node_4">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::NODE::inPowerNode" name="inPowerNode"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::NODE::outDataNODE" name="outDataNODE"/>
+            </flaxml:outputPorts>
+            <flaxml:connections>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::computingboard1_1" sourceId="model::modelSystemView::ComputingBoard1::outDataBoard" targetComponent="model::modelSystemView::PhysicalEntity1::node_4" targetId="model::modelSystemView::NODE::outDataNODE"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::buzzer_1" sourceId="model::modelSystemView::BUZZER::outBuzzer" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromBuzzer"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::led_1" sourceId="model::modelSystemView::LED::outLED" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromLED"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::gazsensor_1" sourceId="model::modelSystemView::GAZSensor::outGAZ" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromGAZ"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::node_4" sourceId="model::modelSystemView::NODE::inPowerNode" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::powerInBoard"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::humiditysensor_1" sourceId="model::modelSystemView::HumiditySensor::outHumidity" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromHumidity"/>
+            </flaxml:connections>
+            <flaxml:components>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::humiditysensor_1" name="humiditysensor_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::HumiditySensor::outHumidity" name="outHumidity"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outHumidity.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::computingboard1_1" name="computingboard1_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::powerInBoard" name="powerInBoard"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromGAZ" name="fromGAZ"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromHumidity" name="fromHumidity"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromLED" name="fromLED"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromBuzzer" name="fromBuzzer"/>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::ComputingBoard1::outDataBoard" name="outDataBoard"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outDataBoard.omission"/>
+                  <flaxml:rule pattern="fromBuzzer.omission,fromGAZ.omission,fromHumidity.omission,fromLED.omission->outDataBoard.omission"/>
+                  <flaxml:rule pattern="powerInBoard.omission->outDataBoard.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::led_1" name="led_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::LED::outLED" name="outLED"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outLED.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::buzzer_1" name="buzzer_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::BUZZER::outBuzzer" name="outBuzzer"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outBuzzer.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::gazsensor_1" name="gazsensor_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::GAZSensor::outGAZ" name="outGAZ"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outGAZ.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+            </flaxml:components>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::PhysicalEntity1::node_3" name="node_3">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::NODE::inPowerNode" name="inPowerNode"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::NODE::outDataNODE" name="outDataNODE"/>
+            </flaxml:outputPorts>
+            <flaxml:connections>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::gazsensor_1" sourceId="model::modelSystemView::GAZSensor::outGAZ" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromGAZ"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::computingboard1_1" sourceId="model::modelSystemView::ComputingBoard1::outDataBoard" targetComponent="model::modelSystemView::PhysicalEntity1::node_3" targetId="model::modelSystemView::NODE::outDataNODE"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::buzzer_1" sourceId="model::modelSystemView::BUZZER::outBuzzer" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromBuzzer"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::humiditysensor_1" sourceId="model::modelSystemView::HumiditySensor::outHumidity" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromHumidity"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::NODE::led_1" sourceId="model::modelSystemView::LED::outLED" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::fromLED"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::node_3" sourceId="model::modelSystemView::NODE::inPowerNode" targetComponent="model::modelSystemView::NODE::computingboard1_1" targetId="model::modelSystemView::ComputingBoard1::powerInBoard"/>
+            </flaxml:connections>
+            <flaxml:components>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::gazsensor_1" name="gazsensor_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::GAZSensor::outGAZ" name="outGAZ"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outGAZ.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::computingboard1_1" name="computingboard1_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromGAZ" name="fromGAZ"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromLED" name="fromLED"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromBuzzer" name="fromBuzzer"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::powerInBoard" name="powerInBoard"/>
+                  <flaxml:inputPort id="model::modelSystemView::ComputingBoard1::fromHumidity" name="fromHumidity"/>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::ComputingBoard1::outDataBoard" name="outDataBoard"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outDataBoard.omission"/>
+                  <flaxml:rule pattern="fromBuzzer.omission,fromGAZ.omission,fromHumidity.omission,fromLED.omission->outDataBoard.omission"/>
+                  <flaxml:rule pattern="powerInBoard.omission->outDataBoard.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::led_1" name="led_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::LED::outLED" name="outLED"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outLED.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::humiditysensor_1" name="humiditysensor_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::HumiditySensor::outHumidity" name="outHumidity"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outHumidity.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::NODE::buzzer_1" name="buzzer_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::BUZZER::outBuzzer" name="outBuzzer"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="dumyPort.noFailure->outBuzzer.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+            </flaxml:components>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::server2" name="server2">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Server1::inServer2" name="inServer2"/>
+          <flaxml:inputPort id="model::modelSystemView::Server1::inServer1" name="inServer1"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Server1::outServer1" name="outServer1"/>
+          <flaxml:outputPort id="model::modelSystemView::Server1::outServer2" name="outServer2"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inServer1.omission,inServer2.omission->outServer1.omission,outServer2.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outServer1.omission,outServer2.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::gateway3" name="gateway3">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate3" name="inGate3"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate4" name="inGate4"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate1" name="inGate1"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate2" name="inGate2"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate3" name="outGate3"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate2" name="outGate2"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate4" name="outGate4"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate1" name="outGate1"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->outGate1.omission,outGate2.omission,outGate3.omission,outGate4.omission"/>
+          <flaxml:rule pattern="inGate1.omission,inGate2.omission,inGate3.omission,inGate4.omission->outGate1.omission,outGate2.omission,outGate3.omission,outGate4.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::server1" name="server1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Server1::inServer1" name="inServer1"/>
+          <flaxml:inputPort id="model::modelSystemView::Server1::inServer2" name="inServer2"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Server1::outServer1" name="outServer1"/>
+          <flaxml:outputPort id="model::modelSystemView::Server1::outServer2" name="outServer2"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inServer1.omission,inServer2.omission->outServer1.omission,outServer2.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outServer1.omission,outServer2.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::computer_1" name="computer_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::ExternalComputer::inData" name="inData"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::ExternalComputer::data" name="data"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inData.omission->data.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->data.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::gateway2" name="gateway2">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate2" name="inGate2"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate3" name="inGate3"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate4" name="inGate4"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate1" name="inGate1"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate4" name="outGate4"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate2" name="outGate2"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate3" name="outGate3"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate1" name="outGate1"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->outGate1.omission,outGate2.omission,outGate3.omission,outGate4.omission"/>
+          <flaxml:rule pattern="inGate1.omission,inGate2.omission,inGate3.omission,inGate4.omission->outGate1.omission,outGate2.omission,outGate3.omission,outGate4.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::gateway1" name="gateway1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate1" name="inGate1"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate2" name="inGate2"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate4" name="inGate4"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate3" name="inGate3"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate1" name="outGate1"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate2" name="outGate2"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate4" name="outGate4"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate3" name="outGate3"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->outGate1.omission,outGate2.omission,outGate3.omission,outGate4.omission"/>
+          <flaxml:rule pattern="inGate1.omission,inGate2.omission,inGate3.omission,inGate4.omission->outGate1.omission,outGate2.omission,outGate3.omission,outGate4.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::gateway4" name="gateway4">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate2" name="inGate2"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate1" name="inGate1"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate3" name="inGate3"/>
+          <flaxml:inputPort id="model::modelSystemView::Gateway1::inGate4" name="inGate4"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate1" name="outGate1"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate3" name="outGate3"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate4" name="outGate4"/>
+          <flaxml:outputPort id="model::modelSystemView::Gateway1::outGate2" name="outGate2"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->outGate1.omission,outGate2.omission,outGate3.omission,outGate4.omission"/>
+          <flaxml:rule pattern="inGate1.omission,inGate2.omission,inGate3.omission,inGate4.omission->outGate1.omission,outGate2.omission,outGate3.omission,outGate4.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

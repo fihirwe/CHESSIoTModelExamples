@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../CHESSIoTplugins_FMEAFTA/org.polarsys.chess.fla.faultTreeAnalysis/models/emfta.ecore">
+  <emfta:FTAModel name="omission failure at the outDataSystem of SYSTEM_Hw1">
+    <events type="Intermediate" name="omission failure at the outDataSystem of SYSTEM_Hw1">
+      <gate description="1" events="/2 /3 /0/@events.1 /0/@events.14"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inDataFromServer of thirdpartyservices_1" description="3">
+      <gate description="3" events="/4 /5 /0/@events.2 /0/@events.13"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the outDataFromServer of server1_1" description="4">
+      <gate type="AND" description="4" events="/6 /7 /0/@events.3 /0/@events.8"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inFromRoom1 of server1_1" description="5">
+      <gate description="5" events="/8 /9 /0/@events.4 /0/@events.7"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inGateway of gateway_1" description="7">
+      <gate description="7" events="/10 /11 /12 /0/@events.5 /0/@events.6"/>
+    </events>
+    <events name=" INTERNAL failure in sensor_1" description="11"/>
+    <events name=" INTERNAL failure in board_1" description="15"/>
+    <events name=" INTERNAL failure in gateway_1" description="17"/>
+    <events type="Intermediate" name="omission failure at the inFromRoom2 of server1_1" description="18">
+      <gate description="18" events="/13 /14 /0/@events.9 /0/@events.12"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inGateway of gateway_1" description="20">
+      <gate description="20" events="/15 /16 /17 /0/@events.10 /0/@events.11"/>
+    </events>
+    <events name=" INTERNAL failure in sensor_1" description="24"/>
+    <events name=" INTERNAL failure in board_1" description="28"/>
+    <events name=" INTERNAL failure in gateway_1" description="30"/>
+    <events name=" INTERNAL failure in server1_1" description="32"/>
+    <events name=" INTERNAL failure in thirdpartyservices_1" description="34"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="omission failure at the OutDataServices of thirdpartyservices_1" description="2"/>
+  <emfta:Event type="Intermediate" name="omission failure at the OutDataServices of thirdpartyservices_1" description="33"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataFromServer of server1_1" description="4"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataFromServer of server1_1" description="31"/>
+  <emfta:Event type="Intermediate" name="omission failure at the inFromRoom1 of server1_1" description="5"/>
+  <emfta:Event type="Intermediate" name="omission failure at the inFromRoom2 of server1_1" description="18"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGateway of gateway_1" description="6"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGateway of gateway_1" description="16"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="8"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="12"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="14"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGateway of gateway_1" description="19"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGateway of gateway_1" description="29"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="21"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="25"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="27"/>
+</xmi:XMI>

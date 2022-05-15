@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::SYSTEM_Hw1" name="SYSTEM_Hw1">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::SYSTEM_Hw1::in1" name="in1">
+        <flaxml:inputFailure type="noFailure"/>
+        <flaxml:inputFailure type="valueCoarse"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::SYSTEM_Hw1::out" name="out">
+        <outputFailure type="noFailure"/>
+        <outputFailure type="early"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1" sourceId="model::modelSystemView::SYSTEM_Hw1::in1" targetComponent="model::modelSystemView::SYSTEM_Hw1::sensorblock1_1" targetId="model::modelSystemView::SensorBlock1::in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::physicalboard1_1" sourceId="model::modelSystemView::PhysicalBoard1::out" targetComponent="model::modelSystemView::SYSTEM_Hw1::actuatingblock1_1" targetId="model::modelSystemView::ActuatingBlock1::in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::sensorblock1_1" sourceId="model::modelSystemView::SensorBlock1::out" targetComponent="model::modelSystemView::SYSTEM_Hw1::physicalboard1_1" targetId="model::modelSystemView::PhysicalBoard1::in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::physicalelement1_1" sourceId="model::modelSystemView::PhysicalElement1::out" targetComponent="model::modelSystemView::SYSTEM_Hw1" targetId="model::modelSystemView::SYSTEM_Hw1::out"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw1::actuatingblock1_1" sourceId="model::modelSystemView::ActuatingBlock1::out" targetComponent="model::modelSystemView::SYSTEM_Hw1::physicalelement1_1" targetId="model::modelSystemView::PhysicalElement1::in"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::sensorblock1_1" name="sensorblock1_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::SensorBlock1::in" name="in">
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SensorBlock1::out" name="out">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueSubtle"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="in.valueCoarse->out.valueSubtle"/>
+          <flaxml:rule pattern="in.noFailure->out.valueSubtle"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::physicalelement1_1" name="physicalelement1_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::PhysicalElement1::in" name="in">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="commission"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::PhysicalElement1::out" name="out">
+            <outputFailure type="early"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="in.commission->out.early"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::physicalboard1_1" name="physicalboard1_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::PhysicalBoard1::in" name="in">
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::PhysicalBoard1::out" name="out">
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="in.valueSubtle->out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw1::actuatingblock1_1" name="actuatingblock1_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::ActuatingBlock1::in" name="in">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::ActuatingBlock1::out" name="out">
+            <outputFailure type="commission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="in.omission->out.commission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

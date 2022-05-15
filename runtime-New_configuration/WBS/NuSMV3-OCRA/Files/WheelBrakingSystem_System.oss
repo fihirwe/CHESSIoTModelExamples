@@ -1,0 +1,167 @@
+	
+	COMPONENT system
+
+	INTERFACE
+
+	INPUT PORT Pedal_Pos1 : Boolean;
+	INPUT PORT Pedal_Pos2 : Boolean;
+	OUTPUT PORT Brake_Line : Continuous;
+	PARAMETER No_Double_Fault : Boolean;
+
+	CONTRACT brake_time
+	assume:
+		  No_Double_Fault and always Pedal_Pos1=Pedal_Pos2;
+	guarantee:
+		always ( (change(Pedal_Pos1) or change(Pedal_Pos2)) ->
+         (time_until( change(Brake_Line) ) <=10 ));
+
+	REFINEMENT
+
+	SUB	hydraulic : Hydraulic;
+	SUB	bscu : BSCU;
+
+	CONNECTION bscu.Pedal_Pos1 := Pedal_Pos1;
+	CONNECTION Brake_Line := hydraulic.Brake_Line;
+	CONNECTION hydraulic.Valid := bscu.Valid;
+	CONNECTION hydraulic.CMD_AS := bscu.CMD_AS;
+	CONNECTION bscu.Pedal_Pos2 := Pedal_Pos2;
+
+	CONNECTION No_Double_Fault := bscu.No_Double_Fault;
+
+	CONTRACT brake_time REFINEDBY bscu.safety, hydraulic.brake_time, bscu.cmd_time;
+
+		
+		COMPONENT Hydraulic
+	
+		INTERFACE
+	
+		OUTPUT PORT Brake_Line : Continuous;
+		INPUT PORT CMD_AS : Boolean;
+		INPUT PORT Valid : Boolean;
+	
+		CONTRACT brake_time
+		assume:
+			TRUE;
+		guarantee:
+			always (change(CMD_AS) -> (time_until(change(Brake_Line)) <= 5 ));
+	
+		REFINEMENT
+	
+	
+	
+	
+	
+	
+	
+		
+		COMPONENT BSCU
+	
+		INTERFACE
+	
+		INPUT PORT Pedal_Pos1 : Boolean;
+		INPUT PORT Pedal_Pos2 : Boolean;
+		OUTPUT PORT Valid : Boolean;
+		OUTPUT PORT CMD_AS : Boolean;
+		PARAMETER No_Double_Fault : Boolean;
+	
+		CONTRACT cmd_time
+		assume:
+			 No_Double_Fault and always Pedal_Pos1=Pedal_Pos2;
+		guarantee:
+			always ( (Valid and ((change(Pedal_Pos1) or change(Pedal_Pos2)))) implies
+	   (time_until((change(CMD_AS) or fall(Valid))) <=5 ));
+	
+		CONTRACT safety
+		assume:
+			  No_Double_Fault;
+		guarantee:
+			always Valid;
+	
+		REFINEMENT
+	
+		SUB	bscu1 : SubBSCU;
+		SUB	bscu2 : SubBSCU;
+		SUB	switch : Select_Switch_Impl;
+	
+		CONNECTION bscu2.Pedal_Pos := Pedal_Pos2;
+		CONNECTION switch.Select := bscu1.Valid;
+		CONNECTION bscu1.Pedal_Pos := Pedal_Pos1;
+		CONNECTION CMD_AS := switch.Out;
+		CONNECTION switch.In1 := bscu1.CMD_AS;
+		CONNECTION switch.In2 := bscu2.CMD_AS;
+	
+		CONNECTION Valid := bscu1.Valid or bscu2.Valid ;
+		CONNECTION No_Double_Fault := always ( (not bscu1.fault_Monitor) and (not bscu1.fault_Command) and (not bscu2.fault_Monitor) ) or always ( (not bscu1.fault_Monitor) and (not bscu1.fault_Command) and (not bscu2.fault_Command) ) or always ( (not bscu1.fault_Monitor) and (not bscu2.fault_Command) and (not bscu2.fault_Monitor) ) or always ( (not bscu1.fault_Command) and (not bscu2.fault_Command) and (not bscu2.fault_Monitor) );
+	
+		CONTRACT cmd_time REFINEDBY bscu2.cmd_time, switch.sel0_time, bscu1.cmd_time, bscu1.safety, switch.sel1_time, bscu2.safety;
+		CONTRACT safety REFINEDBY bscu1.safety, bscu2.safety;
+	
+			
+			COMPONENT SubBSCU
+		
+			INTERFACE
+		
+			INPUT PORT Pedal_Pos : Boolean;
+			PORT fault_Monitor : Boolean;
+			OUTPUT PORT Valid : Boolean;
+			PORT fault_Command : Boolean;
+			OUTPUT PORT CMD_AS : Boolean;
+		
+			CONTRACT safety
+			assume:
+				 true;
+			guarantee:
+				( always (not fault_Command) and always (not fault_Monitor)) implies
+		    always Valid;
+		
+			CONTRACT cmd_time
+			assume:
+				TRUE;
+			guarantee:
+				always ( (Valid and (change(Pedal_Pos))) implies
+		  (time_until(change(CMD_AS) or fall(Valid)) <=2 ));
+		
+			REFINEMENT
+		
+		
+		
+		
+		
+		
+		
+			
+			COMPONENT Select_Switch_Impl
+		
+			INTERFACE
+		
+			INPUT PORT In1 : Boolean;
+			INPUT PORT In2 : Boolean;
+			INPUT PORT Select : Boolean;
+			OUTPUT PORT Out : Boolean;
+		
+			CONTRACT sel0_time
+			assume:
+				  TRUE;
+			guarantee:
+				(not Select or fall(Select)) releases
+		     (change(In1) -> (time_until(change(Out)) <=1));
+		
+			CONTRACT sel1_time
+			assume:
+				  TRUE;
+			guarantee:
+				 always ( (not Select or time_until(fall(Select))<=2) implies
+		     always (change(In2) implies (time_until(change(Out)) <= 3)));
+		
+			REFINEMENT
+		
+		
+		
+		
+		
+		
+		
+	
+	
+
+

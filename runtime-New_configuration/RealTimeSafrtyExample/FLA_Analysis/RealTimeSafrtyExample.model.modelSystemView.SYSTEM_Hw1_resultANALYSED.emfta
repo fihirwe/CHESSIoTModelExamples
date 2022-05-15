@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../CHESSIoTplugins_FMEAFTA/org.polarsys.chess.fla.faultTreeAnalysis/models/emfta.ecore">
+  <emfta:FTAModel name="omission failure at the output of SYSTEM_Hw1">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: omission failure at the output of SYSTEM_Hw1" probability="1.0">
+      <gate description="1" events="/2 /3 /0/@events.1 /0/@events.42"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inData of computer_1" probability="1.0" description="3">
+      <gate description="3" events="/4 /5 /6 /7 /0/@events.2 /0/@events.21 /0/@events.22 /0/@events.41"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inServer of server2" probability="1.0" description="5">
+      <gate description="5" events="/8 /9 /10 /11 /0/@events.3 /0/@events.4 /0/@events.12 /0/@events.13"/>
+    </events>
+    <events name=" INTERNAL failure in gateway4" probability="5.0E-4" description="7"/>
+    <events type="Intermediate" name="omission failure at the inGate of gateway4" probability="0.9999999999999376" description="9">
+      <gate description="9" events="/12 /13 /14 /0/@events.5 /0/@events.6 /0/@events.11"/>
+    </events>
+    <events name=" INTERNAL failure in computingboard1_1" probability="5.0E-4" description="11"/>
+    <events type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" probability="6.250000000000001E-14" description="12">
+      <gate type="AND" description="12" events="/15 /16 /17 /18 /0/@events.7 /0/@events.8 /0/@events.9 /0/@events.10"/>
+    </events>
+    <events name=" INTERNAL failure in buzzer_1" probability="5.0E-4" description="15"/>
+    <events name=" INTERNAL failure in gazsensor_1" probability="5.0E-4" description="18"/>
+    <events name=" INTERNAL failure in humiditysensor_1" probability="5.0E-4" description="21"/>
+    <events name=" INTERNAL failure in led_1" probability="5.0E-4" description="24"/>
+    <events name=" INTERNAL failure in powersource_1" probability="5.0E-4" description="28"/>
+    <events name=" INTERNAL failure in gateway3" probability="5.0E-4" description="30"/>
+    <events type="Intermediate" name="omission failure at the inGate of gateway3" probability="0.9999999999999376" description="32">
+      <gate description="32" events="/19 /20 /21 /0/@events.14 /0/@events.15 /0/@events.20"/>
+    </events>
+    <events name=" INTERNAL failure in computingboard1_1" probability="5.0E-4" description="34"/>
+    <events type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" probability="6.250000000000001E-14" description="35">
+      <gate type="AND" description="35" events="/22 /23 /24 /25 /0/@events.16 /0/@events.17 /0/@events.18 /0/@events.19"/>
+    </events>
+    <events name=" INTERNAL failure in buzzer_1" probability="5.0E-4" description="38"/>
+    <events name=" INTERNAL failure in gazsensor_1" probability="5.0E-4" description="41"/>
+    <events name=" INTERNAL failure in humiditysensor_1" probability="5.0E-4" description="44"/>
+    <events name=" INTERNAL failure in led_1" probability="5.0E-4" description="47"/>
+    <events name=" INTERNAL failure in powersource_1" probability="5.0E-4" description="51"/>
+    <events name=" INTERNAL failure in server2" probability="5.0E-4" description="53"/>
+    <events type="Intermediate" name="omission failure at the inServer of server1" probability="1.0" description="55">
+      <gate description="55" events="/26 /27 /28 /29 /0/@events.23 /0/@events.24 /0/@events.32 /0/@events.33"/>
+    </events>
+    <events name=" INTERNAL failure in gateway2" probability="5.0E-4" description="57"/>
+    <events type="Intermediate" name="omission failure at the inGate of gateway2" probability="0.9999999999999376" description="59">
+      <gate description="59" events="/30 /31 /32 /0/@events.25 /0/@events.26 /0/@events.31"/>
+    </events>
+    <events name=" INTERNAL failure in computingboard1_1" probability="5.0E-4" description="61"/>
+    <events type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" probability="6.250000000000001E-14" description="62">
+      <gate type="AND" description="62" events="/33 /34 /35 /36 /0/@events.27 /0/@events.28 /0/@events.29 /0/@events.30"/>
+    </events>
+    <events name=" INTERNAL failure in buzzer_1" probability="5.0E-4" description="65"/>
+    <events name=" INTERNAL failure in gazsensor_1" probability="5.0E-4" description="68"/>
+    <events name=" INTERNAL failure in humiditysensor_1" probability="5.0E-4" description="71"/>
+    <events name=" INTERNAL failure in led_1" probability="5.0E-4" description="74"/>
+    <events name=" INTERNAL failure in powersource_1" probability="5.0E-4" description="78"/>
+    <events name=" INTERNAL failure in gateway1" probability="5.0E-4" description="80"/>
+    <events type="Intermediate" name="omission failure at the inGate of gateway1" probability="0.9999999999999376" description="82">
+      <gate description="82" events="/37 /38 /39 /0/@events.34 /0/@events.35 /0/@events.40"/>
+    </events>
+    <events name=" INTERNAL failure in computingboard1_1" probability="5.0E-4" description="84"/>
+    <events type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" probability="6.250000000000001E-14" description="85">
+      <gate type="AND" description="85" events="/40 /41 /42 /43 /0/@events.36 /0/@events.37 /0/@events.38 /0/@events.39"/>
+    </events>
+    <events name=" INTERNAL failure in buzzer_1" probability="5.0E-4" description="88"/>
+    <events name=" INTERNAL failure in gazsensor_1" probability="5.0E-4" description="91"/>
+    <events name=" INTERNAL failure in humiditysensor_1" probability="5.0E-4" description="94"/>
+    <events name=" INTERNAL failure in led_1" probability="5.0E-4" description="97"/>
+    <events name=" INTERNAL failure in powersource_1" probability="5.0E-4" description="101"/>
+    <events name=" INTERNAL failure in server1" probability="5.0E-4" description="103"/>
+    <events name=" INTERNAL failure in computer_1" probability="5.0E-4" description="105"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="omission failure at the data of computer_1" description="2"/>
+  <emfta:Event type="Intermediate" name="omission failure at the data of computer_1" description="104"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outServer of server2" description="4"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outServer of server2" description="52"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outServer of server1" description="54"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outServer of server1" description="102"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGate of gateway4" description="6"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGate of gateway4" description="8"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGate of gateway3" description="29"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGate of gateway3" description="31"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="10"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="12"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="25"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromBuzzer of computingboard1_1" description="13"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromGAZ of computingboard1_1" description="16"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromHumidity of computingboard1_1" description="19"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromLED of computingboard1_1" description="22"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="33"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="35"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="48"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromBuzzer of computingboard1_1" description="36"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromGAZ of computingboard1_1" description="39"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromHumidity of computingboard1_1" description="42"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromLED of computingboard1_1" description="45"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGate of gateway2" description="56"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGate of gateway2" description="58"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGate of gateway1" description="79"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGate of gateway1" description="81"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="60"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="62"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="75"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromBuzzer of computingboard1_1" description="63"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromGAZ of computingboard1_1" description="66"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromHumidity of computingboard1_1" description="69"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromLED of computingboard1_1" description="72"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="83"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="85"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="98"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromBuzzer of computingboard1_1" description="86"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromGAZ of computingboard1_1" description="89"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromHumidity of computingboard1_1" description="92"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromLED of computingboard1_1" description="95"/>
+</xmi:XMI>

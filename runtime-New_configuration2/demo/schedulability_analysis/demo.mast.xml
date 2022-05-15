@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mast_res:REAL_TIME_SITUATION 
+   xmlns:mast_res="http://mast.unican.es/xmlmast/xmlmast_1_4/Mast_Result" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://mast.unican.es/xmlmast/xmlmast_1_4/Mast_Result http://mast.unican.es/xmlmast/xmlmast_1_4/Mast_Result.xsd" 
+   Model_Name="Unknown" 
+   Model_Date="2021-11-16T11:36:19" 
+   Generation_Tool="MAST Schedulability Analysis, version MAST++ 0.2.1 (20190216)" 
+   Generation_Profile="D:\ijfel\Desktop\Research\Marie Curie\CHESS\test\mast\windows\mast_analysis.exe offset_based -c -s D:\ijfel\Desktop\Research\Marie Curie\CHESS\test\workspace\demo\schedulability_analysis\demo.mast D:\ijfel\Desktop\Research\Marie Curie\CHESS\test\workspace\demo\schedulability_analysis\demo.mast.xml" 
+   Generation_Date="2021-11-16T11:36:19">
+        <mast_res:Slack Value="24.61"/>
+      <mast_res:Transaction Name="swsystem.producer_clientserverport1_produce" >
+         <mast_res:Slack Value="39.84"/>
+         <mast_res:Timing_Result Event_Name="swsystem.producer_clientserverport1_produce__internal_event_1" Num_Of_Suspensions="0" Worst_Blocking_Time="0.000" Worst_MrsP_Remote_Blocking_Time="0.000" >
+            <mast_res:Worst_Global_Response_Times>
+               <mast_res:Global_Response_Time  Referenced_Event="initialnode1" Time_Value="0.080000"/>
+            </mast_res:Worst_Global_Response_Times>
+            <mast_res:Best_Global_Response_Times>
+               <mast_res:Global_Response_Time  Referenced_Event="initialnode1" Time_Value="0.000"/>
+            </mast_res:Best_Global_Response_Times>
+            <mast_res:Jitters>
+               <mast_res:Global_Response_Time  Referenced_Event="initialnode1" Time_Value="0.080000"/>
+            </mast_res:Jitters>
+         </mast_res:Timing_Result> 
+      </mast_res:Transaction> 
+
+      <mast_res:Transaction Name="swsystem.consumer_clientserverport1_consume" >
+         <mast_res:Slack Value="66.41"/>
+         <mast_res:Timing_Result Event_Name="swsystem.consumer_clientserverport1_consume__internal_event_1" Num_Of_Suspensions="0" Worst_Blocking_Time="0.000" Worst_MrsP_Remote_Blocking_Time="0.000" >
+            <mast_res:Worst_Global_Response_Times>
+               <mast_res:Global_Response_Time  Referenced_Event="initialnode1" Time_Value="0.080000"/>
+            </mast_res:Worst_Global_Response_Times>
+            <mast_res:Best_Global_Response_Times>
+               <mast_res:Global_Response_Time  Referenced_Event="initialnode1" Time_Value="0.000"/>
+            </mast_res:Best_Global_Response_Times>
+            <mast_res:Jitters>
+               <mast_res:Global_Response_Time  Referenced_Event="initialnode1" Time_Value="0.080000"/>
+            </mast_res:Jitters>
+         </mast_res:Timing_Result> 
+      </mast_res:Transaction> 
+
+      <mast_res:Processing_Resource Name="system.ch_hwprocessor1">
+         <mast_res:Slack Value="25.33"/>
+         <mast_res:Utilization Total="65.00"/>
+      </mast_res:Processing_Resource>
+      <mast_res:Shared_Resource Name="swsystem.consumer_clientserverport1_consume_state" >
+      </mast_res:Shared_Resource>
+   </mast_res:REAL_TIME_SITUATION>

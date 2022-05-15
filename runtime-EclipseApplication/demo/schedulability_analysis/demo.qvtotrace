@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trace:Trace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:trace="http:///www.eclipse.org/m2m/qvt/operational/trace.ecore">
+  <traceRecords>
+    <mappingOperation name="psmModel" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context kind="INOUT" name="self" type="Model">
+        <value>
+          <modelElement href="demo.uml#_AJ7cEEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result/>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="CHGaResourcePlatform2SaAnalysisContext" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Package">
+        <value>
+          <modelElement href="demo.uml#_62zgIEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="saAnalysisCtx" type="SaAnalysisContext">
+        <value>
+          <modelElement href="demo.uml#_8oZkIEbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xAEbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="HwProcessor2SaExecHost" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_2Av6sUbIEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="core" type="String">
+        <value/>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xAUbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Slot2SwSchedulableResource" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_62_GUEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="chrtComment" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_B056sEbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63I3UEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xAkbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="CHRtSlot2SwSchedulableResource" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63I3UEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="chrt" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_B056sEbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xAkbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Slot2Class4SaStep" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63I3UEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xA0bJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="UnprotectedOperation2SaStep" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_62_GUEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="chrt" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_B056sEbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63I3UEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="owningInstance" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_62_GUEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="demo.uml#_Bv0xBEbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="CHRTCommentUnprotected2SaStep" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_B056sEbIEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63I3UEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="owningInstance" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_62_GUEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="demo.uml#_Bv0xBEbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Slot2SwSchedulableResource" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_63KsgEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="chrtComment" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_aesT4EbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63VroEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xBUbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="CHRtSlot2SwSchedulableResource" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63VroEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="chrt" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_aesT4EbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xBUbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Slot2Class4SaStep" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63VroEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters/>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xBkbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="SporadicOperation2SwMutualExclusionResource" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_63KsgEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="chrt" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_aesT4EbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63VroEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Class">
+        <value>
+          <modelElement href="demo.uml#_Bv0xB0bJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="InstanceSporadic2SaStep" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_aesT4EbIEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63VroEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="ownerInstance" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_63KsgEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="demo.uml#_Bv0xCkbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="CHRTCommentSporadic2SaStep" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_aesT4EbIEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63VroEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="ownerInstance" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_63KsgEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Operation">
+        <value>
+          <modelElement href="demo.uml#_Bv0xCkbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Instance2EndToEndWorkFlow" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_B056sEbIEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63I3UEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="inst" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_62_GUEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Activity">
+        <value>
+          <modelElement href="demo.uml#_Bv0xC0bJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="slot2EndToEndWorkFlow" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63I3UEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="chrt" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_B056sEbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Activity">
+        <value>
+          <modelElement href="demo.uml#_Bv0xC0bJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="Instance2EndToEndWorkFlow" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_aesT4EbIEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="slot" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63VroEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+      <parameters name="inst" type="InstanceSpecification">
+        <value>
+          <modelElement href="demo.uml#_63KsgEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Activity">
+        <value>
+          <modelElement href="demo.uml#_Bv0xFUbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+  <traceRecords>
+    <mappingOperation name="slot2EndToEndWorkFlow" package="CHESS_PIM2PSM" module="CHESS_PIM2PSM"/>
+    <context>
+      <context name="self" type="Slot">
+        <value>
+          <modelElement href="demo.uml#_63VroEbHEeyQlqbrYlprDQ"/>
+        </value>
+      </context>
+    </context>
+    <parameters>
+      <parameters name="chrt" type="Comment">
+        <value>
+          <modelElement href="demo.uml#_aesT4EbIEeyQlqbrYlprDQ"/>
+        </value>
+      </parameters>
+    </parameters>
+    <result>
+      <result kind="OUT" name="result" type="Activity">
+        <value>
+          <modelElement href="demo.uml#_Bv0xFUbJEeyQlqbrYlprDQ"/>
+        </value>
+      </result>
+    </result>
+  </traceRecords>
+</trace:Trace>

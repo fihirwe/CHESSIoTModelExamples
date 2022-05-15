@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../CHESSIoTplugins_FMEAFTA/org.polarsys.chess.fla.faultTreeGenerator/models/emfta.ecore">
+  <emfta:FTAModel name="Fault Tree of system_alarm_out+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at system_alarm_out port in PMSystem">
+    <events type="Intermediate" name="system_alarm_out+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at system_alarm_out port in PMSystem" description="1_omission">
+      <gate description="1_omission" events="/0/@events.1"/>
+    </events>
+    <events type="Intermediate" name="alarm_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at alarm_out port in alarm" description="2_omission">
+      <gate description="2_omission" events="/0/@events.2"/>
+    </events>
+    <events name="alarm_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at alarm_out port in alarm" description="3_omission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of system_monitor_out+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at system_monitor_out port in PMSystem">
+    <events type="Intermediate" name="system_monitor_out+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at system_monitor_out port in PMSystem" description="4_omission">
+      <gate description="4_omission" events="/1/@events.1 /1/@events.3"/>
+    </events>
+    <events type="Intermediate" name="monitor_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at monitor_out port in monitor" description="5_omission">
+      <gate description="5_omission" events="/1/@events.2"/>
+    </events>
+    <events name="monitor_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at monitor_out port in monitor" description="6_omission"/>
+    <events type="Intermediate" name="monitor_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at monitor_out port in monitor" description="7_omission">
+      <gate description="7_omission" events="/1/@events.4"/>
+    </events>
+    <events type="Intermediate" name="monitor_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at monitor_in port in monitor" description="8_omission">
+      <gate description="8_omission" events="/1/@events.5 /1/@events.7"/>
+    </events>
+    <events type="Intermediate" name="server_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at server_out port in server" description="9_omission">
+      <gate description="9_omission" events="/1/@events.6"/>
+    </events>
+    <events name="server_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at server_out port in server" description="10_omission"/>
+    <events type="Intermediate" name="server_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at server_out port in server" description="11_omission">
+      <gate description="11_omission" events="/1/@events.8"/>
+    </events>
+    <events type="Intermediate" name="server_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at server_in port in server" description="12_omission">
+      <gate description="12_omission" events="/1/@events.9 /1/@events.11"/>
+    </events>
+    <events type="Intermediate" name="trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at trans_out port in transciever" description="13_omission">
+      <gate description="13_omission" events="/1/@events.10"/>
+    </events>
+    <events name="trans_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at trans_out port in transciever" description="14_omission"/>
+    <events type="Intermediate" name="trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at trans_out port in transciever" description="15_omission">
+      <gate description="15_omission" events="/1/@events.12"/>
+    </events>
+    <events type="Intermediate" name="trans_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at trans_in port in transciever" description="16_omission">
+      <gate description="16_omission" events="/1/@events.13 /1/@events.15 /1/@events.18 /1/@events.22 /1/@events.26 /1/@events.30 /1/@events.34"/>
+    </events>
+    <events type="Intermediate" name="cont_tran_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_tran_out port in controller" description="17_omission">
+      <gate description="17_omission" events="/1/@events.14"/>
+    </events>
+    <events name="cont_tran_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at cont_tran_out port in controller" description="18_omission"/>
+    <events type="Intermediate" name="cont_tran_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_tran_out port in controller" description="19_omission">
+      <gate description="19_omission" events="/1/@events.16"/>
+    </events>
+    <events type="Intermediate" name="mon_power_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at mon_power_in port in controller" description="20_omission">
+      <gate description="20_omission" events="/1/@events.17"/>
+    </events>
+    <events type="External" name="sys_power_in+omission &#xA;--------------&#xA; INJECTED FAILURE &lt;omission> at sys_power_in port in PMSystem" description="21_omission"/>
+    <events type="Intermediate" name="cont_tran_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_tran_out port in controller" description="22_omission">
+      <gate description="22_omission" events="/1/@events.19"/>
+    </events>
+    <events type="Intermediate" name="ecg_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at ecg_cont_in port in controller" description="23_omission">
+      <gate description="23_omission" events="/1/@events.20"/>
+    </events>
+    <events type="Intermediate" name="ecgsens_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at ecgsens_out port in ECGSensor" description="24_omission">
+      <gate description="24_omission" events="/1/@events.21"/>
+    </events>
+    <events name="ecgsens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at ecgsens_out port in ECGSensor" description="25_omission"/>
+    <events type="Intermediate" name="cont_tran_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_tran_out port in controller" description="26_omission">
+      <gate description="26_omission" events="/1/@events.23"/>
+    </events>
+    <events type="Intermediate" name="eeg_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at eeg_cont_in port in controller" description="27_omission">
+      <gate description="27_omission" events="/1/@events.24"/>
+    </events>
+    <events type="Intermediate" name="eegsens_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at eegsens_out port in EEGSensor" description="28_omission">
+      <gate description="28_omission" events="/1/@events.25"/>
+    </events>
+    <events name="eegsens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at eegsens_out port in EEGSensor" description="29_omission"/>
+    <events type="Intermediate" name="cont_tran_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_tran_out port in controller" description="30_omission">
+      <gate description="30_omission" events="/1/@events.27"/>
+    </events>
+    <events type="Intermediate" name="press_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at press_cont_in port in controller" description="31_omission">
+      <gate description="31_omission" events="/1/@events.28"/>
+    </events>
+    <events type="Intermediate" name="psens_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at psens_out port in pressSensor" description="32_omission">
+      <gate description="32_omission" events="/1/@events.29"/>
+    </events>
+    <events name="psens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at psens_out port in pressSensor" description="33_omission"/>
+    <events type="Intermediate" name="cont_tran_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_tran_out port in controller" description="34_omission">
+      <gate description="34_omission" events="/1/@events.31"/>
+    </events>
+    <events type="Intermediate" name="spo_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at spo_cont_in port in controller" description="35_omission">
+      <gate description="35_omission" events="/1/@events.32"/>
+    </events>
+    <events type="Intermediate" name="spo2sens_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at spo2sens_out port in SPO2Sensor" description="36_omission">
+      <gate description="36_omission" events="/1/@events.33"/>
+    </events>
+    <events name="spo2sens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at spo2sens_out port in SPO2Sensor" description="37_omission"/>
+    <events type="Intermediate" name="cont_tran_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_tran_out port in controller" description="38_omission">
+      <gate description="38_omission" events="/1/@events.35"/>
+    </events>
+    <events type="Intermediate" name="temp_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at temp_cont_in port in controller" description="39_omission">
+      <gate description="39_omission" events="/1/@events.36"/>
+    </events>
+    <events type="Intermediate" name="tempsens_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at tempsens_out port in tempsensor_1" description="40_omission">
+      <gate description="40_omission" events="/1/@events.37"/>
+    </events>
+    <events name="tempsens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at tempsens_out port in tempsensor_1" description="41_omission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel/>
+</xmi:XMI>

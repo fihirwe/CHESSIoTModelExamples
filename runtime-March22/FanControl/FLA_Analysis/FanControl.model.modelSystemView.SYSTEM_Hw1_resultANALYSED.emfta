@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="Fault Tree of out+early&#xA;--------------&#xA; TOP EVENT &lt;early> in SYSTEM_Hw1 at out port">
+    <events type="Intermediate" name="out+early&#xA;--------------&#xA; TOP EVENT &lt;early> in SYSTEM_Hw1 at out port" description="2_early">
+      <gate type="AND" description="2_early" events="/2 /0/@events.1"/>
+    </events>
+    <events type="Intermediate" name="in+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in physicalelement1_1 at in port" description="4_commission">
+      <gate type="AND" description="4_commission" events="/3 /0/@events.2"/>
+    </events>
+    <events type="Intermediate" name="in+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in actuatingblock1_1 at in port" description="6_omission">
+      <gate type="AND" description="6_omission" events="/4 /0/@events.3"/>
+    </events>
+    <events type="Intermediate" name="in+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in physicalboard1_1 at in port" description="7_valueSubtle">
+      <gate description="7_valueSubtle" events="/5 /6 /0/@events.4 /0/@events.7"/>
+    </events>
+    <events type="Intermediate" name="out+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensorblock1_1 at out port" description="8_valueSubtle">
+      <gate type="AND" description="8_valueSubtle" events="/7 /0/@events.5"/>
+    </events>
+    <events type="Intermediate" name="in+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in sensorblock1_1 at in port">
+      <gate description="9_valueCoarse" events="/8 /0/@events.6"/>
+    </events>
+    <events type="External" name="in1+valueCoarse&#xA;--------------&#xA; INJECTED FAULT &lt;valueCoarse> at in1" description="10_valueCoarse"/>
+    <events type="Intermediate" name="out+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensorblock1_1 at out port">
+      <gate type="AND" description="11_valueSubtle" events="/9 /0/@events.8"/>
+    </events>
+    <events name="out+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in sensorblock1_1 ==> valueSubtle at out port" description="12_valueSubtle"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="in+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in physicalelement1_1 at in port" description="3_commission"/>
+  <emfta:Event type="Intermediate" name="in+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in actuatingblock1_1 at in port" description="5_omission"/>
+  <emfta:Event type="Intermediate" name="in+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in physicalboard1_1 at in port" description="7_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="out+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensorblock1_1 at out port" description="8_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="out+valueSubtle&#xA;--------------&#xA; LOCAL EFFECT &lt;valueSubtle> in sensorblock1_1 at out port" description="11_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="in+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in sensorblock1_1 at in port" description="9_valueCoarse"/>
+  <emfta:Event type="External" name="in1+valueCoarse&#xA;--------------&#xA; INJECTED FAULT &lt;valueCoarse> at in1" description="10_valueCoarse"/>
+  <emfta:Event name="out+valueSubtle&#xA;--------------&#xA; INTERNAL FAILURE in sensorblock1_1 ==> valueSubtle at out port" description="12_valueSubtle"/>
+</xmi:XMI>

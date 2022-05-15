@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../cleanNovember212/org.polarsys.chess.fla.faultTreeAnalysis/models/emfta.ecore">
+  <emfta:FTAModel name="omission failure of outSystem in System">
+    <events type="Intermediate" name="omission failure of outSystem in System">
+      <gate description="1" events="/4 /5 /6 /0/@events.1 /0/@events.2 /0/@events.5"/>
+    </events>
+    <events name=" INTERNAL failure in sensor_1" description="5"/>
+    <events type="Intermediate" name="omission failure of inFromRelay in iotboard1_1" description="7">
+      <gate description="7" events="/7 /8 /0/@events.3 /0/@events.4"/>
+    </events>
+    <events type="External" name="valueSubtle failure INJECTED at inSystem in System" description="10"/>
+    <events name=" INTERNAL failure in relay_1" description="12"/>
+    <events name=" INTERNAL failure in iotboard1_1" description="14"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueSubtle failure of outSystem in System">
+    <events type="Intermediate" name="valueSubtle failure of outSystem in System">
+      <gate description="15"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="omission failure of outputBoard in iotboard1_1" description="2"/>
+  <emfta:Event type="Intermediate" name="omission failure of outputBoard in iotboard1_1" description="6"/>
+  <emfta:Event type="Intermediate" name="omission failure of outputBoard in iotboard1_1" description="13"/>
+  <emfta:Event type="Intermediate" name="omission failure of outRelay in relay_1" description="8"/>
+  <emfta:Event type="Intermediate" name="omission failure of outRelay in relay_1" description="11"/>
+</xmi:XMI>

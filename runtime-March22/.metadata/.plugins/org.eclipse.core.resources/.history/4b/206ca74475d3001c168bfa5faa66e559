@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="Fault Tree of uiDignostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at uiDignostic port in VisionAir">
+    <events type="Intermediate" name="uiDignostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at uiDignostic port in VisionAir" probability="2.655E-04">
+      <gate description="1_commission" events="/15 /16 /0/@events.1 /0/@events.2"/>
+    </events>
+    <events name="uid_o+commission &#xA;--------------&#xA; INTERNAL FAILURE: L" probability="1.119E-04" description="3_commission"/>
+    <events name="cui_o+commission &#xA;--------------&#xA; INTERNAL FAILURE: J" probability="1.536E-04" description="7_commission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of uiDignostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at uiDignostic port in VisionAir">
+    <events type="Intermediate" name="uiDignostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at uiDignostic port in VisionAir" description="10_omission">
+      <gate description="10_omission" events="/17 /18 /19 /20 /21 /1/@events.1 /1/@events.42 /1/@events.103 /1/@events.113"/>
+    </events>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="11_omission">
+      <gate type="AND" description="11_omission" events="/22 /1/@events.2"/>
+    </events>
+    <events type="Intermediate" name="csc_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at csc_i port in controller_1" description="12_valueSubtle">
+      <gate description="12_valueSubtle" events="/23 /24 /25 /26 /27 /28 /1/@events.3 /1/@events.4 /1/@events.5 /1/@events.6 /1/@events.9 /1/@events.14"/>
+    </events>
+    <events name="scc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE: M" probability="1.658E-04" description="14_valueSubtle"/>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE: A" probability="1.909E-04" description="18_valueSubtle"/>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE: B" probability="1.230E-04" description="22_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="23_valueSubtle">
+      <gate type="AND" description="23_valueSubtle" events="/29 /30 /1/@events.7 /1/@events.8"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE: A" probability="1.909E-04" description="26_valueSubtle"/>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE: B" probability="1.230E-04" description="29_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="30_valueSubtle">
+      <gate type="AND" description="30_valueSubtle" events="/31 /32 /1/@events.10 /1/@events.13"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="33_valueCoarse">
+      <gate description="33_valueCoarse" events="/33 /34 /1/@events.11 /1/@events.12"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="35_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="38_valueCoarse"/>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE: B" probability="1.230E-04" description="41_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="42_valueSubtle">
+      <gate type="AND" description="42_valueSubtle" events="/35 /36 /1/@events.15 /1/@events.16"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE: A" probability="1.909E-04" description="45_valueSubtle"/>
+    <events type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="46_valueCoarse">
+      <gate description="46_valueCoarse" events="/37 /38 /39 /1/@events.17 /1/@events.20 /1/@events.29"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="48_valueCoarse">
+      <gate description="48_valueCoarse" events="/40 /41 /1/@events.18 /1/@events.19"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="50_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="53_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="55_valueCoarse">
+      <gate description="55_valueCoarse" events="/42 /43 /44 /1/@events.21 /1/@events.22 /1/@events.27"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: F" probability="1.650E-04" description="57_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="58_valueCoarse">
+      <gate type="AND" description="58_valueCoarse" events="/45 /1/@events.23"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="61_early">
+      <gate description="61_early" events="/46 /47 /1/@events.24 /1/@events.26"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="62_early">
+      <gate type="AND" description="62_early" events="/48 /1/@events.25"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INTERNAL FAILURE: Q" probability="1.300E-04" description="64_commission"/>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE: N" probability="1.990E-04" description="66_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="67_valueCoarse">
+      <gate type="AND" description="67_valueCoarse" events="/49 /1/@events.28"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE: H" probability="1.877E-04" description="70_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="71_valueCoarse">
+      <gate type="AND" description="71_valueCoarse" events="/50 /51 /1/@events.30 /1/@events.33"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="72_valueCoarse">
+      <gate description="72_valueCoarse" events="/52 /53 /1/@events.31 /1/@events.32"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="74_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="77_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="78_valueCoarse">
+      <gate description="78_valueCoarse" events="/54 /55 /56 /1/@events.34 /1/@events.35 /1/@events.40"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: F" probability="1.650E-04" description="80_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="81_valueCoarse">
+      <gate type="AND" description="81_valueCoarse" events="/57 /1/@events.36"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="84_early">
+      <gate description="84_early" events="/58 /59 /1/@events.37 /1/@events.39"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="85_early">
+      <gate type="AND" description="85_early" events="/60 /1/@events.38"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INTERNAL FAILURE: Q" probability="1.300E-04" description="87_commission"/>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE: N" probability="1.990E-04" description="89_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="90_valueCoarse">
+      <gate type="AND" description="90_valueCoarse" events="/61 /1/@events.41"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE: H" probability="1.877E-04" description="93_commission"/>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="94_omission">
+      <gate type="AND" description="94_omission" events="/62 /1/@events.43"/>
+    </events>
+    <events type="Intermediate" name="csc_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at csc_i port in controller_1" description="95_valueCoarse">
+      <gate description="95_valueCoarse" events="/63 /64 /65 /1/@events.44 /1/@events.70 /1/@events.73"/>
+    </events>
+    <events type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="97_valueCoarse">
+      <gate description="97_valueCoarse" events="/66 /67 /68 /1/@events.45 /1/@events.48 /1/@events.57"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="99_valueCoarse">
+      <gate description="99_valueCoarse" events="/69 /70 /1/@events.46 /1/@events.47"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="101_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="104_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="106_valueCoarse">
+      <gate description="106_valueCoarse" events="/71 /72 /73 /1/@events.49 /1/@events.50 /1/@events.55"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: F" probability="1.650E-04" description="108_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="109_valueCoarse">
+      <gate type="AND" description="109_valueCoarse" events="/74 /1/@events.51"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="112_early">
+      <gate description="112_early" events="/75 /76 /1/@events.52 /1/@events.54"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="113_early">
+      <gate type="AND" description="113_early" events="/77 /1/@events.53"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INTERNAL FAILURE: Q" probability="1.300E-04" description="115_commission"/>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE: N" probability="1.990E-04" description="117_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="118_valueCoarse">
+      <gate type="AND" description="118_valueCoarse" events="/78 /1/@events.56"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE: H" probability="1.877E-04" description="121_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="122_valueCoarse">
+      <gate type="AND" description="122_valueCoarse" events="/79 /80 /1/@events.58 /1/@events.61"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="123_valueCoarse">
+      <gate description="123_valueCoarse" events="/81 /82 /1/@events.59 /1/@events.60"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="125_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="128_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="129_valueCoarse">
+      <gate description="129_valueCoarse" events="/83 /84 /85 /1/@events.62 /1/@events.63 /1/@events.68"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: F" probability="1.650E-04" description="131_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="132_valueCoarse">
+      <gate type="AND" description="132_valueCoarse" events="/86 /1/@events.64"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="135_early">
+      <gate description="135_early" events="/87 /88 /1/@events.65 /1/@events.67"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="136_early">
+      <gate type="AND" description="136_early" events="/89 /1/@events.66"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INTERNAL FAILURE: Q" probability="1.300E-04" description="138_commission"/>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE: N" probability="1.990E-04" description="140_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="141_valueCoarse">
+      <gate type="AND" description="141_valueCoarse" events="/90 /1/@events.69"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE: H" probability="1.877E-04" description="144_commission"/>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="148_valueCoarse">
+      <gate description="148_valueCoarse" events="/91 /92 /1/@events.71 /1/@events.72"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="150_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="153_valueCoarse"/>
+    <events type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="154_valueCoarse">
+      <gate type="AND" description="154_valueCoarse" events="/93 /94 /1/@events.74 /1/@events.77"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="157_valueCoarse">
+      <gate description="157_valueCoarse" events="/95 /96 /1/@events.75 /1/@events.76"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="159_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="162_valueCoarse"/>
+    <events type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="163_valueCoarse">
+      <gate description="163_valueCoarse" events="/97 /98 /99 /1/@events.78 /1/@events.81 /1/@events.90"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="165_valueCoarse">
+      <gate description="165_valueCoarse" events="/100 /101 /1/@events.79 /1/@events.80"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="167_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="170_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="172_valueCoarse">
+      <gate description="172_valueCoarse" events="/102 /103 /104 /1/@events.82 /1/@events.83 /1/@events.88"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: F" probability="1.650E-04" description="174_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="175_valueCoarse">
+      <gate type="AND" description="175_valueCoarse" events="/105 /1/@events.84"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="178_early">
+      <gate description="178_early" events="/106 /107 /1/@events.85 /1/@events.87"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="179_early">
+      <gate type="AND" description="179_early" events="/108 /1/@events.86"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INTERNAL FAILURE: Q" probability="1.300E-04" description="181_commission"/>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE: N" probability="1.990E-04" description="183_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="184_valueCoarse">
+      <gate type="AND" description="184_valueCoarse" events="/109 /1/@events.89"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE: H" probability="1.877E-04" description="187_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="188_valueCoarse">
+      <gate type="AND" description="188_valueCoarse" events="/110 /111 /1/@events.91 /1/@events.94"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="189_valueCoarse">
+      <gate description="189_valueCoarse" events="/112 /113 /1/@events.92 /1/@events.93"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="191_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="194_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="195_valueCoarse">
+      <gate description="195_valueCoarse" events="/114 /115 /116 /1/@events.95 /1/@events.96 /1/@events.101"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: F" probability="1.650E-04" description="197_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="198_valueCoarse">
+      <gate type="AND" description="198_valueCoarse" events="/117 /1/@events.97"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="201_early">
+      <gate description="201_early" events="/118 /119 /1/@events.98 /1/@events.100"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="202_early">
+      <gate type="AND" description="202_early" events="/120 /1/@events.99"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INTERNAL FAILURE: Q" probability="1.300E-04" description="204_commission"/>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE: N" probability="1.990E-04" description="206_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="207_valueCoarse">
+      <gate type="AND" description="207_valueCoarse" events="/121 /1/@events.102"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE: H" probability="1.877E-04" description="210_commission"/>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="212_omission">
+      <gate description="212_omission" events="/122 /123 /124 /1/@events.104 /1/@events.105 /1/@events.108"/>
+    </events>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE: C" probability="1.566E-04" description="216_omission"/>
+    <events type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="217_omission">
+      <gate type="AND" description="217_omission" events="/125 /126 /1/@events.106 /1/@events.107"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE: A" probability="1.909E-04" description="220_valueSubtle"/>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE: C" probability="1.566E-04" description="223_omission"/>
+    <events type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="224_omission">
+      <gate type="AND" description="224_omission" events="/127 /128 /1/@events.109 /1/@events.112"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="227_valueCoarse">
+      <gate description="227_valueCoarse" events="/129 /130 /1/@events.110 /1/@events.111"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: D" probability="1.787E-04" description="229_valueCoarse"/>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE: O" probability="1.000E-04" description="232_valueCoarse"/>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE: C" probability="1.566E-04" description="235_omission"/>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="236_omission">
+      <gate type="AND" description="236_omission" events="/131 /1/@events.114"/>
+    </events>
+    <events type="Intermediate" name="csc_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at csc_i port in controller_1" description="237_late">
+      <gate description="237_late" events="/132 /133 /134 /1/@events.115 /1/@events.116 /1/@events.117"/>
+    </events>
+    <events name="prsp_o+late &#xA;--------------&#xA; INTERNAL FAILURE: E" probability="1.679E-04" description="243_late"/>
+    <events name="prsp_o+late &#xA;--------------&#xA; INTERNAL FAILURE: E" probability="1.679E-04" description="249_late"/>
+    <events type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="250_late">
+      <gate type="AND" description="250_late" events="/135 /136 /137"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of ipDiagnostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at ipDiagnostic port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of ipDiagnostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at ipDiagnostic port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+valueSubtle &#xA;--------------&#xA; TOP FAILURE &lt;valueSubtle> at PatientDiscomfort port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at PatientDiscomfort port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+early &#xA;--------------&#xA; TOP FAILURE &lt;early> at PatientDiscomfort port in VisionAir"/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="uid_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at uid_o port in user_interface_1" description="2_commission"/>
+  <emfta:Event type="Intermediate" name="uid_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at uid_o port in user_interface_1" description="4_commission"/>
+  <emfta:Event type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="11_omission"/>
+  <emfta:Event type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="94_omission"/>
+  <emfta:Event type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="211_omission"/>
+  <emfta:Event type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="236_omission"/>
+  <emfta:Event type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="253_omission"/>
+  <emfta:Event type="Intermediate" name="csc_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at csc_i port in controller_1" description="12_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="13_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="15_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="19_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="23_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="30_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="42_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="24_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scnmt_i port in sensor_controller_1" description="27_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="31_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scnmt_i port in sensor_controller_1" description="39_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="34_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="36_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="43_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="46_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="47_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="54_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="71_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="49_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="51_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="56_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="58_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="67_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="59_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="62_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="65_early"/>
+  <emfta:Event type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="63_commission"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="68_commission"/>
+  <emfta:Event type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="72_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="78_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="73_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="75_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="79_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="81_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="90_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="82_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="85_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="88_early"/>
+  <emfta:Event type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="86_commission"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="91_commission"/>
+  <emfta:Event type="Intermediate" name="csc_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at csc_i port in controller_1" description="95_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="96_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="145_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="154_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="98_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="105_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="122_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="100_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="102_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="107_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="109_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="118_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="110_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="113_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="116_early"/>
+  <emfta:Event type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="114_commission"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="119_commission"/>
+  <emfta:Event type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="123_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="129_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="124_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="126_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="130_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="132_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="141_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="133_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="136_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="139_early"/>
+  <emfta:Event type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="137_commission"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="142_commission"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="149_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="151_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="155_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="163_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="158_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="160_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="164_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="171_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="188_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="166_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="168_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="173_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="175_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="184_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="176_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="179_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="182_early"/>
+  <emfta:Event type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="180_commission"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="185_commission"/>
+  <emfta:Event type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="189_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="195_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="190_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="192_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="196_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="198_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="207_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="199_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="202_early"/>
+  <emfta:Event type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="205_early"/>
+  <emfta:Event type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="203_commission"/>
+  <emfta:Event type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="208_commission"/>
+  <emfta:Event type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="213_omission"/>
+  <emfta:Event type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="217_omission"/>
+  <emfta:Event type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="224_omission"/>
+  <emfta:Event type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="218_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scnmt_i port in sensor_controller_1" description="221_omission"/>
+  <emfta:Event type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="225_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scnmt_i port in sensor_controller_1" description="233_omission"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="228_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="230_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="csc_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at csc_i port in controller_1" description="237_late"/>
+  <emfta:Event type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="238_late"/>
+  <emfta:Event type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="244_late"/>
+  <emfta:Event type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="250_late"/>
+  <emfta:Event type="Intermediate" name="scbp_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at scbp_i port in sensor_controller_1" description="251_early"/>
+  <emfta:Event type="Intermediate" name="scnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at scnmt_i port in sensor_controller_1" description="252_early"/>
+  <emfta:Event type="Undevelopped" name="UNDEVELOPED FAILURE"/>
+</xmi:XMI>

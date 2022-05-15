@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="omission failure at the OUT_o of HealthCare">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: omission failure at the OUT_o of HealthCare" description="1">
+      <gate description="1" events="/0/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the CTL_out_o of controller_1" description="2">
+      <gate type="AND" description="2" events="/0/@events.2 /0/@events.5"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the CTL_bp_i of controller_1" description="3">
+      <gate description="3" events="/0/@events.3"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the BP_ctl_o of bp_1" description="4">
+      <gate type="AND" description="4" events="/0/@events.4"/>
+    </events>
+    <events name=" INTERNAL failure in bp_1" description="5"/>
+    <events name=" INTERNAL failure in controller_1" description="6"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="commission failure at the OUT_o of HealthCare">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: commission failure at the OUT_o of HealthCare" description="7">
+      <gate description="7" events="/1/@events.1"/>
+    </events>
+    <events type="Intermediate" name="commission failure at the CTL_out_o of controller_1" description="8">
+      <gate type="AND" description="8" events="/1/@events.2 /1/@events.3"/>
+    </events>
+    <events name=" INTERNAL failure in controller_1" description="9"/>
+    <events type="Intermediate" name="valueSubtle failure at the CTL_nmt_i of controller_1" description="10">
+      <gate description="10" events="/1/@events.4"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the NMT_ctl_o of nmt_1" description="11">
+      <gate type="AND" description="11" events="/1/@events.5"/>
+    </events>
+    <events name=" INTERNAL failure in nmt_1" description="12"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueSubtle failure at the OUT_o of HealthCare">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: valueSubtle failure at the OUT_o of HealthCare" description="13">
+      <gate description="13"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

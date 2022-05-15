@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flamm:CompositeComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flamm="http://www.polarsys.org/chess/fla/flamm" id="model::modelSystemView::WBS_SYSTEM" name="WBS_SYSTEM">
+  <inputPorts id="model::modelSystemView::WBS_SYSTEM::Pedar_Pos1" name="Pedar_Pos1" connectedPorts="//@components.0/@inputPorts.0" owner="/">
+    <failures type="failure" id="late"/>
+  </inputPorts>
+  <inputPorts id="model::modelSystemView::WBS_SYSTEM::Pedar_Pos2" name="Pedar_Pos2" connectedPorts="//@components.0/@inputPorts.1" owner="/">
+    <failures type="failure" id="late"/>
+  </inputPorts>
+  <outputPorts id="model::modelSystemView::WBS_SYSTEM::Brake_line" name="Brake_line" connectedPorts="//@components.1/@outputPorts.0" owner="/"/>
+  <components xsi:type="flamm:CompositeComponent" id="model::modelSystemView::WBS_SYSTEM::bscu_1" name="bscu_1">
+    <inputPorts id="model::modelSystemView::BSCU::Pedar_Pos1BSCU" name="Pedar_Pos1BSCU" connectedPorts="//@components.0/@components.2/@inputPorts.0 //@inputPorts.0" owner="//@components.0"/>
+    <inputPorts id="model::modelSystemView::BSCU::Pedal_Pos2BSCU" name="Pedal_Pos2BSCU" connectedPorts="//@components.0/@components.0/@inputPorts.0 //@inputPorts.1" owner="//@components.0"/>
+    <outputPorts id="model::modelSystemView::BSCU::CMD_ASBSCU" name="CMD_ASBSCU" connectedPorts="//@components.0/@components.1/@outputPorts.0 //@components.1/@inputPorts.2" owner="//@components.0"/>
+    <outputPorts id="model::modelSystemView::BSCU::ValidBSCU" name="ValidBSCU" connectedPorts="//@components.0/@components.1/@outputPorts.1 //@components.1/@inputPorts.1" owner="//@components.0"/>
+    <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::BSCU::subbscu_2" name="subbscu_2">
+      <inputPorts id="model::modelSystemView::SubBSCU::Pedar_Pos" name="Pedar_Pos" connectedPorts="//@components.0/@inputPorts.1" owner="//@components.0/@components.0"/>
+      <inputPorts id="TestID" name="dumyPort" owner="//@components.0/@components.0"/>
+      <outputPorts id="model::modelSystemView::SubBSCU::CMD_AS" name="CMD_AS" connectedPorts="//@components.0/@components.1/@inputPorts.3" owner="//@components.0/@components.0"/>
+      <outputPorts id="model::modelSystemView::SubBSCU::Valid" name="Valid" connectedPorts="//@components.0/@components.1/@inputPorts.1" owner="//@components.0/@components.0"/>
+      <rules>
+        <inputExpression port="//@components.0/@components.0/@inputPorts.1">
+          <failures id="noFailure"/>
+        </inputExpression>
+        <outputExpression port="//@components.0/@components.0/@outputPorts.0">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+        <outputExpression port="//@components.0/@components.0/@outputPorts.1">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+      </rules>
+      <rules>
+        <inputExpression port="//@components.0/@components.0/@inputPorts.0">
+          <failures type="failure" id="late"/>
+        </inputExpression>
+        <outputExpression port="//@components.0/@components.0/@outputPorts.0">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+      </rules>
+    </components>
+    <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::BSCU::select_switch_1" name="select_switch_1">
+      <inputPorts id="model::modelSystemView::Select_Switch::in1" name="in1" connectedPorts="//@components.0/@components.2/@outputPorts.0" owner="//@components.0/@components.1"/>
+      <inputPorts id="model::modelSystemView::Select_Switch::select1" name="select1" connectedPorts="//@components.0/@components.0/@outputPorts.1" owner="//@components.0/@components.1"/>
+      <inputPorts id="model::modelSystemView::Select_Switch::select2" name="select2" connectedPorts="//@components.0/@components.2/@outputPorts.1" owner="//@components.0/@components.1"/>
+      <inputPorts id="model::modelSystemView::Select_Switch::in2" name="in2" connectedPorts="//@components.0/@components.0/@outputPorts.0" owner="//@components.0/@components.1"/>
+      <inputPorts id="TestID" name="dumyPort" owner="//@components.0/@components.1"/>
+      <outputPorts id="model::modelSystemView::Select_Switch::Out" name="Out" connectedPorts="//@components.0/@outputPorts.0" owner="//@components.0/@components.1"/>
+      <outputPorts id="model::modelSystemView::Select_Switch::outValid" name="outValid" connectedPorts="//@components.0/@outputPorts.1" owner="//@components.0/@components.1"/>
+      <rules>
+        <inputExpression port="//@components.0/@components.1/@inputPorts.0">
+          <failures type="failure" id="omission"/>
+        </inputExpression>
+        <inputExpression port="//@components.0/@components.1/@inputPorts.3">
+          <failures type="failure" id="omission"/>
+        </inputExpression>
+        <outputExpression port="//@components.0/@components.1/@outputPorts.0">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+      </rules>
+      <rules>
+        <inputExpression port="//@components.0/@components.1/@inputPorts.1">
+          <failures type="failure" id="omission"/>
+        </inputExpression>
+        <inputExpression port="//@components.0/@components.1/@inputPorts.2">
+          <failures type="failure" id="omission"/>
+        </inputExpression>
+        <outputExpression port="//@components.0/@components.1/@outputPorts.1">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+      </rules>
+      <rules>
+        <inputExpression port="//@components.0/@components.1/@inputPorts.4">
+          <failures id="noFailure"/>
+        </inputExpression>
+        <outputExpression port="//@components.0/@components.1/@outputPorts.0">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+        <outputExpression port="//@components.0/@components.1/@outputPorts.1">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+      </rules>
+    </components>
+    <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::BSCU::subbscu_1" name="subbscu_1">
+      <inputPorts id="model::modelSystemView::SubBSCU::Pedar_Pos" name="Pedar_Pos" connectedPorts="//@components.0/@inputPorts.0" owner="//@components.0/@components.2"/>
+      <inputPorts id="TestID" name="dumyPort" owner="//@components.0/@components.2"/>
+      <outputPorts id="model::modelSystemView::SubBSCU::CMD_AS" name="CMD_AS" connectedPorts="//@components.0/@components.1/@inputPorts.0" owner="//@components.0/@components.2"/>
+      <outputPorts id="model::modelSystemView::SubBSCU::Valid" name="Valid" connectedPorts="//@components.0/@components.1/@inputPorts.2" owner="//@components.0/@components.2"/>
+      <rules>
+        <inputExpression port="//@components.0/@components.2/@inputPorts.1">
+          <failures id="noFailure"/>
+        </inputExpression>
+        <outputExpression port="//@components.0/@components.2/@outputPorts.0">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+        <outputExpression port="//@components.0/@components.2/@outputPorts.1">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+      </rules>
+      <rules>
+        <inputExpression port="//@components.0/@components.2/@inputPorts.0">
+          <failures type="failure" id="late"/>
+        </inputExpression>
+        <outputExpression port="//@components.0/@components.2/@outputPorts.0">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+      </rules>
+    </components>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::WBS_SYSTEM::hydraulics_1" name="hydraulics_1">
+    <inputPorts id="model::modelSystemView::Hydraulics::inFluid" name="inFluid" connectedPorts="//@components.2/@outputPorts.0" owner="//@components.1"/>
+    <inputPorts id="model::modelSystemView::Hydraulics::Valid" name="Valid" connectedPorts="//@components.0/@outputPorts.1" owner="//@components.1"/>
+    <inputPorts id="model::modelSystemView::Hydraulics::CMD_AS" name="CMD_AS" connectedPorts="//@components.0/@outputPorts.0" owner="//@components.1"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.1"/>
+    <outputPorts id="model::modelSystemView::Hydraulics::Brake" name="Brake" connectedPorts="//@outputPorts.0" owner="//@components.1"/>
+    <rules>
+      <inputExpression port="//@components.1/@inputPorts.2">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <inputExpression port="//@components.1/@inputPorts.1">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.1/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.1/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.1/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.1/@inputPorts.3">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.1/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::WBS_SYSTEM::fluidreservoir_1" name="fluidreservoir_1">
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.2"/>
+    <outputPorts id="model::modelSystemView::FluidReservoir::outFluid" name="outFluid" connectedPorts="//@components.1/@inputPorts.0" owner="//@components.2"/>
+    <rules>
+      <inputExpression port="//@components.2/@inputPorts.0">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.2/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+</flamm:CompositeComponent>

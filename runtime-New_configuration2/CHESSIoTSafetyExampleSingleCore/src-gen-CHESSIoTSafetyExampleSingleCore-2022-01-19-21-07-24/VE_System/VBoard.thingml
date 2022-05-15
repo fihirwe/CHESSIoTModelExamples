@@ -1,0 +1,82 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+import "../util/_Datatypes.thingml"
+import "../util/_Timer.thingml"
+
+thing VBoard includes TimerMsgs,VBoardMessages,TempHumSensorMessages,GazSensorMessages,VBoardMessages,LEDMessages,RFTransReceiverMessages { 
+	provided port IssueGazSenseProv{
+	}
+	provided port IssueTempHumSenseProv{
+	}
+	provided port IssueLEDBlinkProv{
+	}
+	provided port SendDataProv{
+	}
+	required port IGazSenseReq{
+	}
+	required port IsenseTemHumReq{
+	}
+	required port IBlinkReq{
+	}
+
+
+	     function  issueSenseGaz() 
+			do
+	    	// TODO functional body
+	     	end
+
+	     function  issueSenseHumTemp() 
+			do
+	    	// TODO functional body
+	     	end
+
+	     function  issueLEDBlink() 
+			do
+	    	// TODO functional body
+	     	end
+
+	     function  sendData() 
+			do
+	    	// TODO functional body
+	     	end
+
+
+statechart VBOARD_SM init 	IoTState2IoTState3{
+	state IoTState2{
+	}
+	
+	state IoTState4{
+	
+	}
+	
+	
+	state IoTState3{
+	
+	
+	}
+	
+	
+	
+	state IoTState5{
+	
+	
+	
+	}
+	
+	
+	
+	
+}
+
+}

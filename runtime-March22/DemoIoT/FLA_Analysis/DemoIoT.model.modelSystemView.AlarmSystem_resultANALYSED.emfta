@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="Fault Tree of system_o+omission &#xA;--------------&#xA; TOP EVENT &lt;omission> at system_o port in AlarmSystem">
+    <events type="Intermediate" name="system_o+omission &#xA;--------------&#xA; TOP EVENT &lt;omission> at system_o port in AlarmSystem">
+      <gate description="2_omission" events="/4 /5 /6 /0/@events.1 /0/@events.6 /0/@events.8"/>
+    </events>
+    <events type="Intermediate" name="alarm_out+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at alarm_out port in alarm_1" description="4_omission">
+      <gate description="4_omission" events="/7 /8 /0/@events.2 /0/@events.3"/>
+    </events>
+    <events name="power_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at power_o port in powerunit_1" description="8_omission"/>
+    <events type="Intermediate" name="outBoard+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at outBoard port in board_1" description="9_omission">
+      <gate type="AND" description="9_omission" events="/9 /10 /0/@events.4 /0/@events.5"/>
+    </events>
+    <events name="outTemp+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at outTemp port in tempsensor_1" description="12_omission"/>
+    <events name="outGaz+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at outGaz port in gassensor_1" description="15_omission"/>
+    <events type="Intermediate" name="alarm_out+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at alarm_out port in alarm_1" description="16_omission">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/11 /0/@events.7"/>
+    </events>
+    <events name="outBoard+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at outBoard port in board_1" description="19_valueCoarse"/>
+    <events type="Intermediate" name="alarm_out+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at alarm_out port in alarm_1" description="21_omission">
+      <gate description="21_omission" events="/12 /13 /0/@events.9 /0/@events.10"/>
+    </events>
+    <events name="power_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at power_o port in powerunit_1" description="25_omission"/>
+    <events type="Intermediate" name="outBoard+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at outBoard port in board_1" description="26_omission">
+      <gate type="AND" description="26_omission" events="/14 /15 /0/@events.11 /0/@events.12"/>
+    </events>
+    <events name="outTemp+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at outTemp port in tempsensor_1" description="29_omission"/>
+    <events name="outGaz+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at outGaz port in gassensor_1" description="32_omission"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="alarm_out+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at alarm_out port in alarm_1" description="3_omission"/>
+  <emfta:Event type="Intermediate" name="alarm_out+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at alarm_out port in alarm_1" description="16_omission"/>
+  <emfta:Event type="Intermediate" name="alarm_out+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at alarm_out port in alarm_1" description="20_omission"/>
+  <emfta:Event type="Intermediate" name="outBoard+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at outBoard port in board_1" description="5_omission"/>
+  <emfta:Event type="Intermediate" name="outBoard+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at outBoard port in board_1" description="9_omission"/>
+  <emfta:Event type="Intermediate" name="in_From_Temp+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at in_From_Temp port in board_1" description="10_omission"/>
+  <emfta:Event type="Intermediate" name="in_FromGas+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at in_FromGas port in board_1" description="13_omission"/>
+  <emfta:Event type="Intermediate" name="alarm_in+valueCoarse &#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> at alarm_in port in alarm_1" description="17_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="outBoard+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at outBoard port in board_1" description="22_omission"/>
+  <emfta:Event type="Intermediate" name="outBoard+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at outBoard port in board_1" description="26_omission"/>
+  <emfta:Event type="Intermediate" name="in_From_Temp+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at in_From_Temp port in board_1" description="27_omission"/>
+  <emfta:Event type="Intermediate" name="in_FromGas+omission &#xA;--------------&#xA; LOCAL EFFECT &lt;omission> at in_FromGas port in board_1" description="30_omission"/>
+</xmi:XMI>

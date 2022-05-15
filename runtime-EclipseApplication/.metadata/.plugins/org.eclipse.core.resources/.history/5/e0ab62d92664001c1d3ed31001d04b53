@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::PhysicalEntity1" name="PhysicalEntity1">
+    <flaxml:inputPorts/>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::PhysicalEntity1::sensedValue" name="sensedValue"/>
+      <flaxml:outputPort id="model::modelSystemView::PhysicalEntity1::lightPort" name="lightPort"/>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::TempSensor" sourceId="model::modelSystemView::SensorBlock::outSensed" targetComponent="model::modelSystemView::PhysicalEntity1::internaltest_1" targetId="model::modelSystemView::InternalTest::inInternal"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::rfmodule1_1" sourceId="model::modelSystemView::RFModule1::outBroadcast" targetComponent="model::modelSystemView::PhysicalEntity1" targetId="model::modelSystemView::PhysicalEntity1::sensedValue"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::iotboard_1" sourceId="model::modelSystemView::IoTBoard::outLight" targetComponent="model::modelSystemView::PhysicalEntity1::led_1" targetId="model::modelSystemView::LED::inLight"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::led_1" sourceId="model::modelSystemView::LED::outLED" targetComponent="model::modelSystemView::PhysicalEntity1" targetId="model::modelSystemView::PhysicalEntity1::lightPort"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::iotboard_1" sourceId="model::modelSystemView::IoTBoard::sensedValue" targetComponent="model::modelSystemView::PhysicalEntity1::rfmodule1_1" targetId="model::modelSystemView::RFModule1::inSensed"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::internaltest_1" sourceId="model::modelSystemView::InternalTest::outInternal" targetComponent="model::modelSystemView::PhysicalEntity1::iotboard_1" targetId="model::modelSystemView::IoTBoard::in_Temperature"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::HumiditySensor" sourceId="model::modelSystemView::SensorBlock::outSensed" targetComponent="model::modelSystemView::PhysicalEntity1::iotboard_1" targetId="model::modelSystemView::IoTBoard::in_Humidity"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PhysicalEntity1::iotboard_1" name="iotboard_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::IoTBoard::in_Temperature" name="in_Temperature"/>
+          <flaxml:inputPort id="model::modelSystemView::IoTBoard::in_Humidity" name="in_Humidity"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::IoTBoard::sensedValue" name="sensedValue"/>
+          <flaxml:outputPort id="model::modelSystemView::IoTBoard::outLight" name="outLight"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="in_Humidity.omission,in_Temperature.omission->sensedValue.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outLight.omission,sensedValue.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PhysicalEntity1::HumiditySensor" name="HumiditySensor">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SensorBlock::outSensed" name="outSensed"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->outSensed.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::PhysicalEntity1::internaltest_1" name="internaltest_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::InternalTest::inInternal" name="inInternal"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::InternalTest::outInternal" name="outInternal"/>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::internaltest_1" sourceId="model::modelSystemView::InternalTest::inInternal" targetComponent="model::modelSystemView::InternalTest::innercomposite_1" targetId="model::modelSystemView::InnerComposite::INCompo1"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::PhysicalEntity1::internaltest_1" sourceId="model::modelSystemView::InternalTest::inInternal" targetComponent="model::modelSystemView::InternalTest::innerSimple_1" targetId="model::modelSystemView::InnerSimple::inB"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::InternalTest::innercomposite_1" sourceId="model::modelSystemView::InnerComposite::OUTComp1" targetComponent="model::modelSystemView::PhysicalEntity1::internaltest_1" targetId="model::modelSystemView::InternalTest::outInternal"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::InternalTest::innerSimple_1" sourceId="model::modelSystemView::InnerSimple::outB" targetComponent="model::modelSystemView::InternalTest::innercomposite_1" targetId="model::modelSystemView::InnerComposite::inComp2Ommission"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::InternalTest::innerSimple_1" name="innerSimple_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::InnerSimple::inB" name="inB"/>
+              <flaxml:inputPort id="TestID" name="dumyPort"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::InnerSimple::outB" name="outB"/>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inB.omission->outB.omission"/>
+              <flaxml:rule pattern="dumyPort.noFailure->outB.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::InternalTest::innercomposite_1" name="innercomposite_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::InnerComposite::INCompo1" name="INCompo1"/>
+              <flaxml:inputPort id="model::modelSystemView::InnerComposite::inComp2Ommission" name="inComp2Ommission"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::InnerComposite::OUTComp1" name="OUTComp1"/>
+            </flaxml:outputPorts>
+            <flaxml:connections>
+              <flaxml:connection sourceComponent="model::modelSystemView::InnerComposite::lastdown_1" sourceId="model::modelSystemView::LastDown1::OUTLastDown1" targetComponent="model::modelSystemView::InternalTest::innercomposite_1" targetId="model::modelSystemView::InnerComposite::OUTComp1"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::InternalTest::innercomposite_1" sourceId="model::modelSystemView::InnerComposite::INCompo1" targetComponent="model::modelSystemView::InnerComposite::lastdown_1" targetId="model::modelSystemView::LastDown1::INLastDown1"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::InnerComposite::block2_1" sourceId="model::modelSystemView::LastDown2::OUTLastDow2" targetComponent="model::modelSystemView::InternalTest::innercomposite_1" targetId="model::modelSystemView::InnerComposite::OUTComp1"/>
+              <flaxml:connection sourceComponent="model::modelSystemView::InternalTest::innercomposite_1" sourceId="model::modelSystemView::InnerComposite::inComp2Ommission" targetComponent="model::modelSystemView::InnerComposite::block2_1" targetId="model::modelSystemView::LastDown2::INLastDown2"/>
+            </flaxml:connections>
+            <flaxml:components>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::InnerComposite::block2_1" name="block2_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="model::modelSystemView::LastDown2::INLastDown2" name="INLastDown2"/>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::LastDown2::OUTLastDow2" name="OUTLastDow2"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="INLastDown2.omission->OUTLastDow2.omission"/>
+                  <flaxml:rule pattern="dumyPort.noFailure->OUTLastDow2.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+              <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::InnerComposite::lastdown_1" name="lastdown_1">
+                <flaxml:inputPorts>
+                  <flaxml:inputPort id="model::modelSystemView::LastDown1::INLastDown1" name="INLastDown1"/>
+                  <flaxml:inputPort id="TestID" name="dumyPort"/>
+                </flaxml:inputPorts>
+                <flaxml:outputPorts>
+                  <flaxml:outputPort id="model::modelSystemView::LastDown1::OUTLastDown1" name="OUTLastDown1"/>
+                </flaxml:outputPorts>
+                <flaxml:rules>
+                  <flaxml:rule pattern="INLastDown1.omission->OUTLastDown1.omission"/>
+                  <flaxml:rule pattern="dumyPort.noFailure->OUTLastDown1.omission"/>
+                </flaxml:rules>
+              </flaxml:component>
+            </flaxml:components>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PhysicalEntity1::led_1" name="led_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::LED::inLight" name="inLight"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::LED::outLED" name="outLED"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inLight.omission->outLED.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outLED.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PhysicalEntity1::rfmodule1_1" name="rfmodule1_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::RFModule1::inSensed" name="inSensed"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::RFModule1::outBroadcast" name="outBroadcast"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inSensed.omission->outBroadcast.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outBroadcast.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::PhysicalEntity1::TempSensor" name="TempSensor">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SensorBlock::outSensed" name="outSensed"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->outSensed.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

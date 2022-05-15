@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::WBS_SYSTEM" name="WBS_SYSTEM">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::WBS_SYSTEM::Pedal_Pos1" name="Pedal_Pos1">
+        <flaxml:inputFailure type="late"/>
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::WBS_SYSTEM::Brake" name="Brake">
+        <outputFailure type="late"/>
+        <outputFailure type="noFailure"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM" sourceId="model::modelSystemView::WBS_SYSTEM::Pedal_Pos1" targetComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" targetId="model::modelSystemView::BSCU::inPedal1"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::hydraulics_1" sourceId="model::modelSystemView::Hydraulics::outBrakeHydr" targetComponent="model::modelSystemView::WBS_SYSTEM" targetId="model::modelSystemView::WBS_SYSTEM::Brake"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" sourceId="model::modelSystemView::BSCU::outCMD_AS_BSCU" targetComponent="model::modelSystemView::WBS_SYSTEM::hydraulics_1" targetId="model::modelSystemView::Hydraulics::inCMD_AS_Hydr"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::WBS_SYSTEM::bscu_1" name="bscu_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::BSCU::inPedal1" name="inPedal1">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="late"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::BSCU::outCMD_AS_BSCU" name="outCMD_AS_BSCU">
+            <outputFailure type="late"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inPedal1.late->outCMD_AS_BSCU.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outCMD_AS_BSCU.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::WBS_SYSTEM::hydraulics_1" name="hydraulics_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Hydraulics::inCMD_AS_Hydr" name="inCMD_AS_Hydr">
+            <flaxml:inputFailure type="late"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Hydraulics::outBrakeHydr" name="outBrakeHydr">
+            <outputFailure type="late"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->outBrakeHydr.omission"/>
+          <flaxml:rule pattern="inCMD_AS_Hydr.omission->outBrakeHydr.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

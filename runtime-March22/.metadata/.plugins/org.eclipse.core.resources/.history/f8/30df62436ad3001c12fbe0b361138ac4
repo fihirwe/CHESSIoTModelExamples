@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="Fault Tree of uiDignostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at uiDignostic port in VisionAir">
+    <events type="Intermediate" name="uiDignostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at uiDignostic port in VisionAir" description="1_commission">
+      <gate description="1_commission" events="/0/@events.1 /0/@events.3"/>
+    </events>
+    <events type="Intermediate" name="uid_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at uid_o port in user_interface_1" description="2_commission">
+      <gate type="AND" description="2_commission" events="/0/@events.2"/>
+    </events>
+    <events name="uid_o+commission &#xA;--------------&#xA; L" probability="1.119E-04" description="3_commission"/>
+    <events type="Intermediate" name="uid_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at uid_o port in user_interface_1" description="4_commission">
+      <gate type="AND" description="4_commission" events="/0/@events.4"/>
+    </events>
+    <events type="Intermediate" name="uic_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at uic_i port in user_interface_1" description="5_commission">
+      <gate description="5_commission" events="/0/@events.5"/>
+    </events>
+    <events type="Intermediate" name="cui_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cui_o port in controller_1" description="6_commission">
+      <gate type="AND" description="6_commission" events="/0/@events.6"/>
+    </events>
+    <events name="cui_o+commission &#xA;--------------&#xA; J" probability="1.536E-04" description="7_commission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of uiDignostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at uiDignostic port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of ipDiagnostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at ipDiagnostic port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of ipDiagnostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at ipDiagnostic port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+valueSubtle &#xA;--------------&#xA; TOP FAILURE &lt;valueSubtle> at PatientDiscomfort port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at PatientDiscomfort port in VisionAir"/>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+early &#xA;--------------&#xA; TOP FAILURE &lt;early> at PatientDiscomfort port in VisionAir"/>
+  <emfta:FTAModel/>
+</xmi:XMI>

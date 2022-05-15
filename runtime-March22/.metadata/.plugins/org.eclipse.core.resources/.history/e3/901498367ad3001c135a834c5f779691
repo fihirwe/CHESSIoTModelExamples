@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../CHESSIoTplugins_FMEAFTA/org.polarsys.chess.fla.faultTreeGenerator/models/emfta.ecore">
+  <emfta:FTAModel name="Fault Tree of uiDignostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at uiDignostic port in VisionAir">
+    <events type="Intermediate" name="uiDignostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at uiDignostic port in VisionAir" description="1_commission">
+      <gate description="1_commission" events="/0/@events.1 /0/@events.3"/>
+    </events>
+    <events type="Intermediate" name="uid_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at uid_o port in user_interface_1" description="2_commission">
+      <gate description="2_commission" events="/0/@events.2"/>
+    </events>
+    <events name="uid_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at uid_o port in user_interface_1" description="3_commission"/>
+    <events type="Intermediate" name="uid_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at uid_o port in user_interface_1" description="4_commission">
+      <gate description="4_commission" events="/0/@events.4"/>
+    </events>
+    <events type="Intermediate" name="uic_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at uic_i port in user_interface_1" description="5_commission">
+      <gate description="5_commission" events="/0/@events.5"/>
+    </events>
+    <events type="Intermediate" name="cui_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cui_o port in controller_1" description="6_commission">
+      <gate description="6_commission" events="/0/@events.6"/>
+    </events>
+    <events name="cui_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at cui_o port in controller_1" description="7_commission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of uiDignostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at uiDignostic port in VisionAir">
+    <events type="Intermediate" name="uiDignostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at uiDignostic port in VisionAir" description="8_omission">
+      <gate description="8_omission" events="/1/@events.1"/>
+    </events>
+    <events type="Intermediate" name="uid_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at uid_o port in user_interface_1" description="9_omission">
+      <gate description="9_omission" events="/1/@events.2"/>
+    </events>
+    <events type="Intermediate" name="uic_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at uic_i port in user_interface_1" description="10_omission">
+      <gate description="10_omission" events="/1/@events.3 /1/@events.86 /1/@events.203 /1/@events.228 /1/@events.245"/>
+    </events>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="11_omission">
+      <gate description="11_omission" events="/1/@events.4"/>
+    </events>
+    <events type="Intermediate" name="csc_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at csc_i port in controller_1" description="12_valueSubtle">
+      <gate description="12_valueSubtle" events="/1/@events.5 /1/@events.7 /1/@events.11 /1/@events.15 /1/@events.22 /1/@events.34"/>
+    </events>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="13_valueSubtle">
+      <gate description="13_valueSubtle" events="/1/@events.6"/>
+    </events>
+    <events name="scc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="14_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="15_valueSubtle">
+      <gate description="15_valueSubtle" events="/1/@events.8"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="16_valueSubtle">
+      <gate description="16_valueSubtle" events="/1/@events.9"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="17_valueSubtle">
+      <gate description="17_valueSubtle" events="/1/@events.10"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="18_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="19_valueSubtle">
+      <gate description="19_valueSubtle" events="/1/@events.12"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scnmt_i port in sensor_controller_1" description="20_valueSubtle">
+      <gate description="20_valueSubtle" events="/1/@events.13"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="21_valueSubtle">
+      <gate description="21_valueSubtle" events="/1/@events.14"/>
+    </events>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="22_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="23_valueSubtle">
+      <gate description="23_valueSubtle" events="/1/@events.16 /1/@events.19"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="24_valueSubtle">
+      <gate description="24_valueSubtle" events="/1/@events.17"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="25_valueSubtle">
+      <gate description="25_valueSubtle" events="/1/@events.18"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="26_valueSubtle"/>
+    <events type="Intermediate" name="scnmt_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scnmt_i port in sensor_controller_1" description="27_valueSubtle">
+      <gate description="27_valueSubtle" events="/1/@events.20"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="28_valueSubtle">
+      <gate description="28_valueSubtle" events="/1/@events.21"/>
+    </events>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="29_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="30_valueSubtle">
+      <gate description="30_valueSubtle" events="/1/@events.23 /1/@events.31"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="31_valueCoarse">
+      <gate description="31_valueCoarse" events="/1/@events.24"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="32_valueCoarse">
+      <gate description="32_valueCoarse" events="/1/@events.25"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpvp_i port in bp_sensor_1" description="33_valueCoarse">
+      <gate description="33_valueCoarse" events="/1/@events.26 /1/@events.28"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="34_valueCoarse">
+      <gate description="34_valueCoarse" events="/1/@events.27"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="35_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="36_valueCoarse">
+      <gate description="36_valueCoarse" events="/1/@events.29"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="37_valueCoarse">
+      <gate description="37_valueCoarse" events="/1/@events.30"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="38_valueCoarse"/>
+    <events type="Intermediate" name="scnmt_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scnmt_i port in sensor_controller_1" description="39_valueSubtle">
+      <gate description="39_valueSubtle" events="/1/@events.32"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="40_valueSubtle">
+      <gate description="40_valueSubtle" events="/1/@events.33"/>
+    </events>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="41_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="42_valueSubtle">
+      <gate description="42_valueSubtle" events="/1/@events.35 /1/@events.38"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="43_valueSubtle">
+      <gate description="43_valueSubtle" events="/1/@events.36"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="44_valueSubtle">
+      <gate description="44_valueSubtle" events="/1/@events.37"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="45_valueSubtle"/>
+    <events type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="46_valueCoarse">
+      <gate description="46_valueCoarse" events="/1/@events.39 /1/@events.46 /1/@events.63"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="47_valueCoarse">
+      <gate description="47_valueCoarse" events="/1/@events.40"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="48_valueCoarse">
+      <gate description="48_valueCoarse" events="/1/@events.41 /1/@events.43"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="49_valueCoarse">
+      <gate description="49_valueCoarse" events="/1/@events.42"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="50_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="51_valueCoarse">
+      <gate description="51_valueCoarse" events="/1/@events.44"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="52_valueCoarse">
+      <gate description="52_valueCoarse" events="/1/@events.45"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="53_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="54_valueCoarse">
+      <gate description="54_valueCoarse" events="/1/@events.47"/>
+    </events>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="55_valueCoarse">
+      <gate description="55_valueCoarse" events="/1/@events.48 /1/@events.50 /1/@events.59"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="56_valueCoarse">
+      <gate description="56_valueCoarse" events="/1/@events.49"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="57_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="58_valueCoarse">
+      <gate type="AND" description="58_valueCoarse" events="/1/@events.51"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="59_early">
+      <gate description="59_early" events="/1/@events.52"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="60_early">
+      <gate description="60_early" events="/1/@events.53"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="61_early">
+      <gate description="61_early" events="/1/@events.54 /1/@events.57"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="62_early">
+      <gate type="AND" description="62_early" events="/1/@events.55"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="63_commission">
+      <gate description="63_commission" events="/1/@events.56"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="64_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="65_early">
+      <gate description="65_early" events="/1/@events.58"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="66_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="67_valueCoarse">
+      <gate type="AND" description="67_valueCoarse" events="/1/@events.60"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="68_commission">
+      <gate description="68_commission" events="/1/@events.61"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="69_commission">
+      <gate description="69_commission" events="/1/@events.62"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="70_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="71_valueCoarse">
+      <gate description="71_valueCoarse" events="/1/@events.64 /1/@events.70"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="72_valueCoarse">
+      <gate description="72_valueCoarse" events="/1/@events.65 /1/@events.67"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="73_valueCoarse">
+      <gate description="73_valueCoarse" events="/1/@events.66"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="74_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="75_valueCoarse">
+      <gate description="75_valueCoarse" events="/1/@events.68"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="76_valueCoarse">
+      <gate description="76_valueCoarse" events="/1/@events.69"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="77_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="78_valueCoarse">
+      <gate description="78_valueCoarse" events="/1/@events.71 /1/@events.73 /1/@events.82"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="79_valueCoarse">
+      <gate description="79_valueCoarse" events="/1/@events.72"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="80_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="81_valueCoarse">
+      <gate type="AND" description="81_valueCoarse" events="/1/@events.74"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="82_early">
+      <gate description="82_early" events="/1/@events.75"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="83_early">
+      <gate description="83_early" events="/1/@events.76"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="84_early">
+      <gate description="84_early" events="/1/@events.77 /1/@events.80"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="85_early">
+      <gate type="AND" description="85_early" events="/1/@events.78"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="86_commission">
+      <gate description="86_commission" events="/1/@events.79"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="87_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="88_early">
+      <gate description="88_early" events="/1/@events.81"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="89_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="90_valueCoarse">
+      <gate type="AND" description="90_valueCoarse" events="/1/@events.83"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="91_commission">
+      <gate description="91_commission" events="/1/@events.84"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="92_commission">
+      <gate description="92_commission" events="/1/@events.85"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="93_commission"/>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="94_omission">
+      <gate description="94_omission" events="/1/@events.87"/>
+    </events>
+    <events type="Intermediate" name="csc_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at csc_i port in controller_1" description="95_valueCoarse">
+      <gate description="95_valueCoarse" events="/1/@events.88 /1/@events.137 /1/@events.146"/>
+    </events>
+    <events type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="96_valueCoarse">
+      <gate description="96_valueCoarse" events="/1/@events.89"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="97_valueCoarse">
+      <gate description="97_valueCoarse" events="/1/@events.90 /1/@events.97 /1/@events.114"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="98_valueCoarse">
+      <gate description="98_valueCoarse" events="/1/@events.91"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="99_valueCoarse">
+      <gate description="99_valueCoarse" events="/1/@events.92 /1/@events.94"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="100_valueCoarse">
+      <gate description="100_valueCoarse" events="/1/@events.93"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="101_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="102_valueCoarse">
+      <gate description="102_valueCoarse" events="/1/@events.95"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="103_valueCoarse">
+      <gate description="103_valueCoarse" events="/1/@events.96"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="104_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="105_valueCoarse">
+      <gate description="105_valueCoarse" events="/1/@events.98"/>
+    </events>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="106_valueCoarse">
+      <gate description="106_valueCoarse" events="/1/@events.99 /1/@events.101 /1/@events.110"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="107_valueCoarse">
+      <gate description="107_valueCoarse" events="/1/@events.100"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="108_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="109_valueCoarse">
+      <gate type="AND" description="109_valueCoarse" events="/1/@events.102"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="110_early">
+      <gate description="110_early" events="/1/@events.103"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="111_early">
+      <gate description="111_early" events="/1/@events.104"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="112_early">
+      <gate description="112_early" events="/1/@events.105 /1/@events.108"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="113_early">
+      <gate type="AND" description="113_early" events="/1/@events.106"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="114_commission">
+      <gate description="114_commission" events="/1/@events.107"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="115_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="116_early">
+      <gate description="116_early" events="/1/@events.109"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="117_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="118_valueCoarse">
+      <gate type="AND" description="118_valueCoarse" events="/1/@events.111"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="119_commission">
+      <gate description="119_commission" events="/1/@events.112"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="120_commission">
+      <gate description="120_commission" events="/1/@events.113"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="121_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="122_valueCoarse">
+      <gate description="122_valueCoarse" events="/1/@events.115 /1/@events.121"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="123_valueCoarse">
+      <gate description="123_valueCoarse" events="/1/@events.116 /1/@events.118"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="124_valueCoarse">
+      <gate description="124_valueCoarse" events="/1/@events.117"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="125_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="126_valueCoarse">
+      <gate description="126_valueCoarse" events="/1/@events.119"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="127_valueCoarse">
+      <gate description="127_valueCoarse" events="/1/@events.120"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="128_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="129_valueCoarse">
+      <gate description="129_valueCoarse" events="/1/@events.122 /1/@events.124 /1/@events.133"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="130_valueCoarse">
+      <gate description="130_valueCoarse" events="/1/@events.123"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="131_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="132_valueCoarse">
+      <gate type="AND" description="132_valueCoarse" events="/1/@events.125"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="133_early">
+      <gate description="133_early" events="/1/@events.126"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="134_early">
+      <gate description="134_early" events="/1/@events.127"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="135_early">
+      <gate description="135_early" events="/1/@events.128 /1/@events.131"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="136_early">
+      <gate type="AND" description="136_early" events="/1/@events.129"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="137_commission">
+      <gate description="137_commission" events="/1/@events.130"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="138_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="139_early">
+      <gate description="139_early" events="/1/@events.132"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="140_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="141_valueCoarse">
+      <gate type="AND" description="141_valueCoarse" events="/1/@events.134"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="142_commission">
+      <gate description="142_commission" events="/1/@events.135"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="143_commission">
+      <gate description="143_commission" events="/1/@events.136"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="144_commission"/>
+    <events type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="145_valueCoarse">
+      <gate description="145_valueCoarse" events="/1/@events.138"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="146_valueCoarse">
+      <gate description="146_valueCoarse" events="/1/@events.139"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="147_valueCoarse">
+      <gate description="147_valueCoarse" events="/1/@events.140"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpvp_i port in bp_sensor_1" description="148_valueCoarse">
+      <gate description="148_valueCoarse" events="/1/@events.141 /1/@events.143"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="149_valueCoarse">
+      <gate description="149_valueCoarse" events="/1/@events.142"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="150_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="151_valueCoarse">
+      <gate description="151_valueCoarse" events="/1/@events.144"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="152_valueCoarse">
+      <gate description="152_valueCoarse" events="/1/@events.145"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="153_valueCoarse"/>
+    <events type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="154_valueCoarse">
+      <gate description="154_valueCoarse" events="/1/@events.147 /1/@events.155"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="155_valueCoarse">
+      <gate description="155_valueCoarse" events="/1/@events.148"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="156_valueCoarse">
+      <gate description="156_valueCoarse" events="/1/@events.149"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpvp_i port in bp_sensor_1" description="157_valueCoarse">
+      <gate description="157_valueCoarse" events="/1/@events.150 /1/@events.152"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="158_valueCoarse">
+      <gate description="158_valueCoarse" events="/1/@events.151"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="159_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="160_valueCoarse">
+      <gate description="160_valueCoarse" events="/1/@events.153"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="161_valueCoarse">
+      <gate description="161_valueCoarse" events="/1/@events.154"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="162_valueCoarse"/>
+    <events type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="163_valueCoarse">
+      <gate description="163_valueCoarse" events="/1/@events.156 /1/@events.163 /1/@events.180"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="164_valueCoarse">
+      <gate description="164_valueCoarse" events="/1/@events.157"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="165_valueCoarse">
+      <gate description="165_valueCoarse" events="/1/@events.158 /1/@events.160"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="166_valueCoarse">
+      <gate description="166_valueCoarse" events="/1/@events.159"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="167_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="168_valueCoarse">
+      <gate description="168_valueCoarse" events="/1/@events.161"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="169_valueCoarse">
+      <gate description="169_valueCoarse" events="/1/@events.162"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="170_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="171_valueCoarse">
+      <gate description="171_valueCoarse" events="/1/@events.164"/>
+    </events>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="172_valueCoarse">
+      <gate description="172_valueCoarse" events="/1/@events.165 /1/@events.167 /1/@events.176"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="173_valueCoarse">
+      <gate description="173_valueCoarse" events="/1/@events.166"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="174_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="175_valueCoarse">
+      <gate type="AND" description="175_valueCoarse" events="/1/@events.168"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="176_early">
+      <gate description="176_early" events="/1/@events.169"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="177_early">
+      <gate description="177_early" events="/1/@events.170"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="178_early">
+      <gate description="178_early" events="/1/@events.171 /1/@events.174"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="179_early">
+      <gate type="AND" description="179_early" events="/1/@events.172"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="180_commission">
+      <gate description="180_commission" events="/1/@events.173"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="181_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="182_early">
+      <gate description="182_early" events="/1/@events.175"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="183_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="184_valueCoarse">
+      <gate type="AND" description="184_valueCoarse" events="/1/@events.177"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="185_commission">
+      <gate description="185_commission" events="/1/@events.178"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="186_commission">
+      <gate description="186_commission" events="/1/@events.179"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="187_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="188_valueCoarse">
+      <gate description="188_valueCoarse" events="/1/@events.181 /1/@events.187"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="189_valueCoarse">
+      <gate description="189_valueCoarse" events="/1/@events.182 /1/@events.184"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="190_valueCoarse">
+      <gate description="190_valueCoarse" events="/1/@events.183"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="191_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="192_valueCoarse">
+      <gate description="192_valueCoarse" events="/1/@events.185"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="193_valueCoarse">
+      <gate description="193_valueCoarse" events="/1/@events.186"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="194_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="195_valueCoarse">
+      <gate description="195_valueCoarse" events="/1/@events.188 /1/@events.190 /1/@events.199"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="196_valueCoarse">
+      <gate description="196_valueCoarse" events="/1/@events.189"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="197_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="198_valueCoarse">
+      <gate type="AND" description="198_valueCoarse" events="/1/@events.191"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="199_early">
+      <gate description="199_early" events="/1/@events.192"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="200_early">
+      <gate description="200_early" events="/1/@events.193"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="201_early">
+      <gate description="201_early" events="/1/@events.194 /1/@events.197"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="202_early">
+      <gate type="AND" description="202_early" events="/1/@events.195"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="203_commission">
+      <gate description="203_commission" events="/1/@events.196"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="204_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="205_early">
+      <gate description="205_early" events="/1/@events.198"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="206_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="207_valueCoarse">
+      <gate type="AND" description="207_valueCoarse" events="/1/@events.200"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="208_commission">
+      <gate description="208_commission" events="/1/@events.201"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="209_commission">
+      <gate description="209_commission" events="/1/@events.202"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="210_commission"/>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="211_omission">
+      <gate description="211_omission" events="/1/@events.204"/>
+    </events>
+    <events type="Intermediate" name="csc_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at csc_i port in controller_1" description="212_omission">
+      <gate description="212_omission" events="/1/@events.205 /1/@events.209 /1/@events.216"/>
+    </events>
+    <events type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="213_omission">
+      <gate description="213_omission" events="/1/@events.206"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scnmt_i port in sensor_controller_1" description="214_omission">
+      <gate description="214_omission" events="/1/@events.207"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="215_omission">
+      <gate description="215_omission" events="/1/@events.208"/>
+    </events>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="216_omission"/>
+    <events type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="217_omission">
+      <gate description="217_omission" events="/1/@events.210 /1/@events.213"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="218_valueSubtle">
+      <gate description="218_valueSubtle" events="/1/@events.211"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="219_valueSubtle">
+      <gate description="219_valueSubtle" events="/1/@events.212"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="220_valueSubtle"/>
+    <events type="Intermediate" name="scnmt_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scnmt_i port in sensor_controller_1" description="221_omission">
+      <gate description="221_omission" events="/1/@events.214"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="222_omission">
+      <gate description="222_omission" events="/1/@events.215"/>
+    </events>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="223_omission"/>
+    <events type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="224_omission">
+      <gate description="224_omission" events="/1/@events.217 /1/@events.225"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="225_valueCoarse">
+      <gate description="225_valueCoarse" events="/1/@events.218"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="226_valueCoarse">
+      <gate description="226_valueCoarse" events="/1/@events.219"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpvp_i port in bp_sensor_1" description="227_valueCoarse">
+      <gate description="227_valueCoarse" events="/1/@events.220 /1/@events.222"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="228_valueCoarse">
+      <gate description="228_valueCoarse" events="/1/@events.221"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="229_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="230_valueCoarse">
+      <gate description="230_valueCoarse" events="/1/@events.223"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="231_valueCoarse">
+      <gate description="231_valueCoarse" events="/1/@events.224"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="232_valueCoarse"/>
+    <events type="Intermediate" name="scnmt_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scnmt_i port in sensor_controller_1" description="233_omission">
+      <gate description="233_omission" events="/1/@events.226"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="234_omission">
+      <gate description="234_omission" events="/1/@events.227"/>
+    </events>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="235_omission"/>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="236_omission">
+      <gate description="236_omission" events="/1/@events.229"/>
+    </events>
+    <events type="Intermediate" name="csc_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at csc_i port in controller_1" description="237_late">
+      <gate description="237_late" events="/1/@events.230 /1/@events.236 /1/@events.242"/>
+    </events>
+    <events type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="238_late">
+      <gate description="238_late" events="/1/@events.231"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scbp_i port in sensor_controller_1" description="239_late">
+      <gate description="239_late" events="/1/@events.232"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at bpsc_o port in bp_sensor_1" description="240_late">
+      <gate description="240_late" events="/1/@events.233"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at bpvp_i port in bp_sensor_1" description="241_late">
+      <gate description="241_late" events="/1/@events.234"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at prsp_o port in pressure_sensor_1" description="242_late">
+      <gate description="242_late" events="/1/@events.235"/>
+    </events>
+    <events name="prsp_o+late &#xA;--------------&#xA; INTERNAL FAILURE &lt;late> at prsp_o port in pressure_sensor_1" description="243_late"/>
+    <events type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="244_late">
+      <gate description="244_late" events="/1/@events.237"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scnmt_i port in sensor_controller_1" description="245_late">
+      <gate description="245_late" events="/1/@events.238"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at nmtsc_o port in nmt_sensor_1" description="246_late">
+      <gate description="246_late" events="/1/@events.239"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at nmtvp_i port in nmt_sensor_1" description="247_late">
+      <gate description="247_late" events="/1/@events.240"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at prsp_o port in pressure_sensor_1" description="248_late">
+      <gate description="248_late" events="/1/@events.241"/>
+    </events>
+    <events name="prsp_o+late &#xA;--------------&#xA; INTERNAL FAILURE &lt;late> at prsp_o port in pressure_sensor_1" description="249_late"/>
+    <events type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="250_late">
+      <gate type="AND" description="250_late" events="/1/@events.243 /1/@events.244"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at scbp_i port in sensor_controller_1" description="251_early">
+      <gate description="251_early" events="/1/@events.252"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at scnmt_i port in sensor_controller_1" description="252_early">
+      <gate description="252_early" events="/1/@events.253"/>
+    </events>
+    <events type="Intermediate" name="cui_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cui_o port in controller_1" description="253_omission">
+      <gate type="AND" description="253_omission" events="/1/@events.246"/>
+    </events>
+    <events type="Intermediate" name="cps_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cps_i port in controller_1" description="254_valueCoarse">
+      <gate description="254_valueCoarse" events="/1/@events.247 /1/@events.249"/>
+    </events>
+    <events type="Intermediate" name="psc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at psc_o port in power_supply_1" description="255_valueCoarse">
+      <gate description="255_valueCoarse" events="/1/@events.248"/>
+    </events>
+    <events name="psc_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at psc_o port in power_supply_1" description="256_valueCoarse"/>
+    <events type="Intermediate" name="psc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at psc_o port in power_supply_1" description="257_valueCoarse">
+      <gate description="257_valueCoarse" events="/1/@events.250"/>
+    </events>
+    <events type="Intermediate" name="ppps_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at ppps_i port in power_supply_1" description="258_valueCoarse">
+      <gate description="258_valueCoarse" events="/1/@events.251"/>
+    </events>
+    <events type="External" name="powerPlug+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at powerPlug port in VisionAir" description="259_valueCoarse"/>
+    <events type="Undevelopped" name="UNDEVELOPED FAILURE"/>
+    <events type="Undevelopped" name="UNDEVELOPED FAILURE"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of ipDiagnostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at ipDiagnostic port in VisionAir">
+    <events type="Intermediate" name="ipDiagnostic+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at ipDiagnostic port in VisionAir" description="260_omission">
+      <gate description="260_omission" events="/2/@events.1 /2/@events.5"/>
+    </events>
+    <events type="Intermediate" name="ipd_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at ipd_o port in infusion_pump_1" description="261_omission">
+      <gate description="261_omission" events="/2/@events.2"/>
+    </events>
+    <events type="Intermediate" name="ippc_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at ippc_i port in infusion_pump_1" description="262_omission">
+      <gate description="262_omission" events="/2/@events.3"/>
+    </events>
+    <events type="Intermediate" name="cip_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cip_o port in controller_1" description="263_omission">
+      <gate description="263_omission" events="/2/@events.4"/>
+    </events>
+    <events name="cip_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at cip_o port in controller_1" description="264_omission"/>
+    <events type="Intermediate" name="ipd_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at ipd_o port in infusion_pump_1" description="265_omission">
+      <gate description="265_omission" events="/2/@events.6"/>
+    </events>
+    <events name="ipd_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at ipd_o port in infusion_pump_1" description="266_omission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of ipDiagnostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at ipDiagnostic port in VisionAir">
+    <events type="Intermediate" name="ipDiagnostic+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at ipDiagnostic port in VisionAir" description="267_commission">
+      <gate description="267_commission" events="/3/@events.1 /3/@events.245"/>
+    </events>
+    <events type="Intermediate" name="ipd_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at ipd_o port in infusion_pump_1" description="268_commission">
+      <gate description="268_commission" events="/3/@events.2"/>
+    </events>
+    <events type="Intermediate" name="ippc_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at ippc_i port in infusion_pump_1" description="269_commission">
+      <gate description="269_commission" events="/3/@events.3 /3/@events.86 /3/@events.203 /3/@events.228"/>
+    </events>
+    <events type="Intermediate" name="cip_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cip_o port in controller_1" description="270_commission">
+      <gate description="270_commission" events="/3/@events.4"/>
+    </events>
+    <events type="Intermediate" name="csc_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at csc_i port in controller_1" description="271_valueSubtle">
+      <gate description="271_valueSubtle" events="/3/@events.5 /3/@events.7 /3/@events.11 /3/@events.15 /3/@events.22 /3/@events.34"/>
+    </events>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="272_valueSubtle">
+      <gate description="272_valueSubtle" events="/3/@events.6"/>
+    </events>
+    <events name="scc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="273_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="274_valueSubtle">
+      <gate description="274_valueSubtle" events="/3/@events.8"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="275_valueSubtle">
+      <gate description="275_valueSubtle" events="/3/@events.9"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="276_valueSubtle">
+      <gate description="276_valueSubtle" events="/3/@events.10"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="277_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="278_valueSubtle">
+      <gate description="278_valueSubtle" events="/3/@events.12"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scnmt_i port in sensor_controller_1" description="279_valueSubtle">
+      <gate description="279_valueSubtle" events="/3/@events.13"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="280_valueSubtle">
+      <gate description="280_valueSubtle" events="/3/@events.14"/>
+    </events>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="281_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="282_valueSubtle">
+      <gate description="282_valueSubtle" events="/3/@events.16 /3/@events.19"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="283_valueSubtle">
+      <gate description="283_valueSubtle" events="/3/@events.17"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="284_valueSubtle">
+      <gate description="284_valueSubtle" events="/3/@events.18"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="285_valueSubtle"/>
+    <events type="Intermediate" name="scnmt_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scnmt_i port in sensor_controller_1" description="286_valueSubtle">
+      <gate description="286_valueSubtle" events="/3/@events.20"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="287_valueSubtle">
+      <gate description="287_valueSubtle" events="/3/@events.21"/>
+    </events>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="288_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="289_valueSubtle">
+      <gate description="289_valueSubtle" events="/3/@events.23 /3/@events.31"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="290_valueCoarse">
+      <gate description="290_valueCoarse" events="/3/@events.24"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="291_valueCoarse">
+      <gate description="291_valueCoarse" events="/3/@events.25"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpvp_i port in bp_sensor_1" description="292_valueCoarse">
+      <gate description="292_valueCoarse" events="/3/@events.26 /3/@events.28"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="293_valueCoarse">
+      <gate description="293_valueCoarse" events="/3/@events.27"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="294_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="295_valueCoarse">
+      <gate description="295_valueCoarse" events="/3/@events.29"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="296_valueCoarse">
+      <gate description="296_valueCoarse" events="/3/@events.30"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="297_valueCoarse"/>
+    <events type="Intermediate" name="scnmt_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scnmt_i port in sensor_controller_1" description="298_valueSubtle">
+      <gate description="298_valueSubtle" events="/3/@events.32"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="299_valueSubtle">
+      <gate description="299_valueSubtle" events="/3/@events.33"/>
+    </events>
+    <events name="nmtsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at nmtsc_o port in nmt_sensor_1" description="300_valueSubtle"/>
+    <events type="Intermediate" name="scc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scc_o port in sensor_controller_1" description="301_valueSubtle">
+      <gate description="301_valueSubtle" events="/3/@events.35 /3/@events.38"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="302_valueSubtle">
+      <gate description="302_valueSubtle" events="/3/@events.36"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="303_valueSubtle">
+      <gate description="303_valueSubtle" events="/3/@events.37"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="304_valueSubtle"/>
+    <events type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="305_valueCoarse">
+      <gate description="305_valueCoarse" events="/3/@events.39 /3/@events.46 /3/@events.63"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="306_valueCoarse">
+      <gate description="306_valueCoarse" events="/3/@events.40"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="307_valueCoarse">
+      <gate description="307_valueCoarse" events="/3/@events.41 /3/@events.43"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="308_valueCoarse">
+      <gate description="308_valueCoarse" events="/3/@events.42"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="309_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="310_valueCoarse">
+      <gate description="310_valueCoarse" events="/3/@events.44"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="311_valueCoarse">
+      <gate description="311_valueCoarse" events="/3/@events.45"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="312_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="313_valueCoarse">
+      <gate description="313_valueCoarse" events="/3/@events.47"/>
+    </events>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="314_valueCoarse">
+      <gate description="314_valueCoarse" events="/3/@events.48 /3/@events.50 /3/@events.59"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="315_valueCoarse">
+      <gate description="315_valueCoarse" events="/3/@events.49"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="316_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="317_valueCoarse">
+      <gate type="AND" description="317_valueCoarse" events="/3/@events.51"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="318_early">
+      <gate description="318_early" events="/3/@events.52"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="319_early">
+      <gate description="319_early" events="/3/@events.53"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="320_early">
+      <gate description="320_early" events="/3/@events.54 /3/@events.57"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="321_early">
+      <gate type="AND" description="321_early" events="/3/@events.55"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="322_commission">
+      <gate description="322_commission" events="/3/@events.56"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="323_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="324_early">
+      <gate description="324_early" events="/3/@events.58"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="325_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="326_valueCoarse">
+      <gate type="AND" description="326_valueCoarse" events="/3/@events.60"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="327_commission">
+      <gate description="327_commission" events="/3/@events.61"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="328_commission">
+      <gate description="328_commission" events="/3/@events.62"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="329_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="330_valueCoarse">
+      <gate description="330_valueCoarse" events="/3/@events.64 /3/@events.70"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="331_valueCoarse">
+      <gate description="331_valueCoarse" events="/3/@events.65 /3/@events.67"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="332_valueCoarse">
+      <gate description="332_valueCoarse" events="/3/@events.66"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="333_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="334_valueCoarse">
+      <gate description="334_valueCoarse" events="/3/@events.68"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="335_valueCoarse">
+      <gate description="335_valueCoarse" events="/3/@events.69"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="336_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="337_valueCoarse">
+      <gate description="337_valueCoarse" events="/3/@events.71 /3/@events.73 /3/@events.82"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="338_valueCoarse">
+      <gate description="338_valueCoarse" events="/3/@events.72"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="339_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="340_valueCoarse">
+      <gate type="AND" description="340_valueCoarse" events="/3/@events.74"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="341_early">
+      <gate description="341_early" events="/3/@events.75"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="342_early">
+      <gate description="342_early" events="/3/@events.76"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="343_early">
+      <gate description="343_early" events="/3/@events.77 /3/@events.80"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="344_early">
+      <gate type="AND" description="344_early" events="/3/@events.78"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="345_commission">
+      <gate description="345_commission" events="/3/@events.79"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="346_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="347_early">
+      <gate description="347_early" events="/3/@events.81"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="348_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="349_valueCoarse">
+      <gate type="AND" description="349_valueCoarse" events="/3/@events.83"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="350_commission">
+      <gate description="350_commission" events="/3/@events.84"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="351_commission">
+      <gate description="351_commission" events="/3/@events.85"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="352_commission"/>
+    <events type="Intermediate" name="cip_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cip_o port in controller_1" description="353_commission">
+      <gate description="353_commission" events="/3/@events.87"/>
+    </events>
+    <events type="Intermediate" name="csc_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at csc_i port in controller_1" description="354_valueCoarse">
+      <gate description="354_valueCoarse" events="/3/@events.88 /3/@events.137 /3/@events.146"/>
+    </events>
+    <events type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="355_valueCoarse">
+      <gate description="355_valueCoarse" events="/3/@events.89"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="356_valueCoarse">
+      <gate description="356_valueCoarse" events="/3/@events.90 /3/@events.97 /3/@events.114"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="357_valueCoarse">
+      <gate description="357_valueCoarse" events="/3/@events.91"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="358_valueCoarse">
+      <gate description="358_valueCoarse" events="/3/@events.92 /3/@events.94"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="359_valueCoarse">
+      <gate description="359_valueCoarse" events="/3/@events.93"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="360_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="361_valueCoarse">
+      <gate description="361_valueCoarse" events="/3/@events.95"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="362_valueCoarse">
+      <gate description="362_valueCoarse" events="/3/@events.96"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="363_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="364_valueCoarse">
+      <gate description="364_valueCoarse" events="/3/@events.98"/>
+    </events>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="365_valueCoarse">
+      <gate description="365_valueCoarse" events="/3/@events.99 /3/@events.101 /3/@events.110"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="366_valueCoarse">
+      <gate description="366_valueCoarse" events="/3/@events.100"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="367_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="368_valueCoarse">
+      <gate type="AND" description="368_valueCoarse" events="/3/@events.102"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="369_early">
+      <gate description="369_early" events="/3/@events.103"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="370_early">
+      <gate description="370_early" events="/3/@events.104"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="371_early">
+      <gate description="371_early" events="/3/@events.105 /3/@events.108"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="372_early">
+      <gate type="AND" description="372_early" events="/3/@events.106"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="373_commission">
+      <gate description="373_commission" events="/3/@events.107"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="374_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="375_early">
+      <gate description="375_early" events="/3/@events.109"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="376_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="377_valueCoarse">
+      <gate type="AND" description="377_valueCoarse" events="/3/@events.111"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="378_commission">
+      <gate description="378_commission" events="/3/@events.112"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="379_commission">
+      <gate description="379_commission" events="/3/@events.113"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="380_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="381_valueCoarse">
+      <gate description="381_valueCoarse" events="/3/@events.115 /3/@events.121"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="382_valueCoarse">
+      <gate description="382_valueCoarse" events="/3/@events.116 /3/@events.118"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="383_valueCoarse">
+      <gate description="383_valueCoarse" events="/3/@events.117"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="384_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="385_valueCoarse">
+      <gate description="385_valueCoarse" events="/3/@events.119"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="386_valueCoarse">
+      <gate description="386_valueCoarse" events="/3/@events.120"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="387_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="388_valueCoarse">
+      <gate description="388_valueCoarse" events="/3/@events.122 /3/@events.124 /3/@events.133"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="389_valueCoarse">
+      <gate description="389_valueCoarse" events="/3/@events.123"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="390_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="391_valueCoarse">
+      <gate type="AND" description="391_valueCoarse" events="/3/@events.125"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="392_early">
+      <gate description="392_early" events="/3/@events.126"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="393_early">
+      <gate description="393_early" events="/3/@events.127"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="394_early">
+      <gate description="394_early" events="/3/@events.128 /3/@events.131"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="395_early">
+      <gate type="AND" description="395_early" events="/3/@events.129"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="396_commission">
+      <gate description="396_commission" events="/3/@events.130"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="397_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="398_early">
+      <gate description="398_early" events="/3/@events.132"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="399_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="400_valueCoarse">
+      <gate type="AND" description="400_valueCoarse" events="/3/@events.134"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="401_commission">
+      <gate description="401_commission" events="/3/@events.135"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="402_commission">
+      <gate description="402_commission" events="/3/@events.136"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="403_commission"/>
+    <events type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="404_valueCoarse">
+      <gate description="404_valueCoarse" events="/3/@events.138"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="405_valueCoarse">
+      <gate description="405_valueCoarse" events="/3/@events.139"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="406_valueCoarse">
+      <gate description="406_valueCoarse" events="/3/@events.140"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpvp_i port in bp_sensor_1" description="407_valueCoarse">
+      <gate description="407_valueCoarse" events="/3/@events.141 /3/@events.143"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="408_valueCoarse">
+      <gate description="408_valueCoarse" events="/3/@events.142"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="409_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="410_valueCoarse">
+      <gate description="410_valueCoarse" events="/3/@events.144"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="411_valueCoarse">
+      <gate description="411_valueCoarse" events="/3/@events.145"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="412_valueCoarse"/>
+    <events type="Intermediate" name="scc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scc_o port in sensor_controller_1" description="413_valueCoarse">
+      <gate description="413_valueCoarse" events="/3/@events.147 /3/@events.155"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="414_valueCoarse">
+      <gate description="414_valueCoarse" events="/3/@events.148"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="415_valueCoarse">
+      <gate description="415_valueCoarse" events="/3/@events.149"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpvp_i port in bp_sensor_1" description="416_valueCoarse">
+      <gate description="416_valueCoarse" events="/3/@events.150 /3/@events.152"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="417_valueCoarse">
+      <gate description="417_valueCoarse" events="/3/@events.151"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="418_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="419_valueCoarse">
+      <gate description="419_valueCoarse" events="/3/@events.153"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="420_valueCoarse">
+      <gate description="420_valueCoarse" events="/3/@events.154"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="421_valueCoarse"/>
+    <events type="Intermediate" name="scnmt_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scnmt_i port in sensor_controller_1" description="422_valueCoarse">
+      <gate description="422_valueCoarse" events="/3/@events.156 /3/@events.163 /3/@events.180"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="423_valueCoarse">
+      <gate description="423_valueCoarse" events="/3/@events.157"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="424_valueCoarse">
+      <gate description="424_valueCoarse" events="/3/@events.158 /3/@events.160"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="425_valueCoarse">
+      <gate description="425_valueCoarse" events="/3/@events.159"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="426_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="427_valueCoarse">
+      <gate description="427_valueCoarse" events="/3/@events.161"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="428_valueCoarse">
+      <gate description="428_valueCoarse" events="/3/@events.162"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="429_valueCoarse"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="430_valueCoarse">
+      <gate description="430_valueCoarse" events="/3/@events.164"/>
+    </events>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="431_valueCoarse">
+      <gate description="431_valueCoarse" events="/3/@events.165 /3/@events.167 /3/@events.176"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="432_valueCoarse">
+      <gate description="432_valueCoarse" events="/3/@events.166"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="433_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="434_valueCoarse">
+      <gate type="AND" description="434_valueCoarse" events="/3/@events.168"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="435_early">
+      <gate description="435_early" events="/3/@events.169"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="436_early">
+      <gate description="436_early" events="/3/@events.170"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="437_early">
+      <gate description="437_early" events="/3/@events.171 /3/@events.174"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="438_early">
+      <gate type="AND" description="438_early" events="/3/@events.172"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="439_commission">
+      <gate description="439_commission" events="/3/@events.173"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="440_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="441_early">
+      <gate description="441_early" events="/3/@events.175"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="442_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="443_valueCoarse">
+      <gate type="AND" description="443_valueCoarse" events="/3/@events.177"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="444_commission">
+      <gate description="444_commission" events="/3/@events.178"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="445_commission">
+      <gate description="445_commission" events="/3/@events.179"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="446_commission"/>
+    <events type="Intermediate" name="nmtsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtsc_o port in nmt_sensor_1" description="447_valueCoarse">
+      <gate description="447_valueCoarse" events="/3/@events.181 /3/@events.187"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtvp_i port in nmt_sensor_1" description="448_valueCoarse">
+      <gate description="448_valueCoarse" events="/3/@events.182 /3/@events.184"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="449_valueCoarse">
+      <gate description="449_valueCoarse" events="/3/@events.183"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="450_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="451_valueCoarse">
+      <gate description="451_valueCoarse" events="/3/@events.185"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="452_valueCoarse">
+      <gate description="452_valueCoarse" events="/3/@events.186"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="453_valueCoarse"/>
+    <events type="Intermediate" name="nmtel_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at nmtel_i port in nmt_sensor_1" description="454_valueCoarse">
+      <gate description="454_valueCoarse" events="/3/@events.188 /3/@events.190 /3/@events.199"/>
+    </events>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="455_valueCoarse">
+      <gate description="455_valueCoarse" events="/3/@events.189"/>
+    </events>
+    <events name="elnmt_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="456_valueCoarse"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="457_valueCoarse">
+      <gate type="AND" description="457_valueCoarse" events="/3/@events.191"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="458_early">
+      <gate description="458_early" events="/3/@events.192"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="459_early">
+      <gate description="459_early" events="/3/@events.193"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="460_early">
+      <gate description="460_early" events="/3/@events.194 /3/@events.197"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="461_early">
+      <gate type="AND" description="461_early" events="/3/@events.195"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="462_commission">
+      <gate description="462_commission" events="/3/@events.196"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="463_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="464_early">
+      <gate description="464_early" events="/3/@events.198"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="465_early"/>
+    <events type="Intermediate" name="elnmt_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at elnmt_o port in electrode_1" description="466_valueCoarse">
+      <gate type="AND" description="466_valueCoarse" events="/3/@events.200"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="467_commission">
+      <gate description="467_commission" events="/3/@events.201"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="468_commission">
+      <gate description="468_commission" events="/3/@events.202"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="469_commission"/>
+    <events type="Intermediate" name="cip_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cip_o port in controller_1" description="470_commission">
+      <gate description="470_commission" events="/3/@events.204"/>
+    </events>
+    <events type="Intermediate" name="csc_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at csc_i port in controller_1" description="471_omission">
+      <gate description="471_omission" events="/3/@events.205 /3/@events.209 /3/@events.216"/>
+    </events>
+    <events type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="472_omission">
+      <gate description="472_omission" events="/3/@events.206"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scnmt_i port in sensor_controller_1" description="473_omission">
+      <gate description="473_omission" events="/3/@events.207"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="474_omission">
+      <gate description="474_omission" events="/3/@events.208"/>
+    </events>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="475_omission"/>
+    <events type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="476_omission">
+      <gate description="476_omission" events="/3/@events.210 /3/@events.213"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at scbp_i port in sensor_controller_1" description="477_valueSubtle">
+      <gate description="477_valueSubtle" events="/3/@events.211"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="478_valueSubtle">
+      <gate description="478_valueSubtle" events="/3/@events.212"/>
+    </events>
+    <events name="bpsc_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at bpsc_o port in bp_sensor_1" description="479_valueSubtle"/>
+    <events type="Intermediate" name="scnmt_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scnmt_i port in sensor_controller_1" description="480_omission">
+      <gate description="480_omission" events="/3/@events.214"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="481_omission">
+      <gate description="481_omission" events="/3/@events.215"/>
+    </events>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="482_omission"/>
+    <events type="Intermediate" name="scc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scc_o port in sensor_controller_1" description="483_omission">
+      <gate description="483_omission" events="/3/@events.217 /3/@events.225"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at scbp_i port in sensor_controller_1" description="484_valueCoarse">
+      <gate description="484_valueCoarse" events="/3/@events.218"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpsc_o port in bp_sensor_1" description="485_valueCoarse">
+      <gate description="485_valueCoarse" events="/3/@events.219"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at bpvp_i port in bp_sensor_1" description="486_valueCoarse">
+      <gate description="486_valueCoarse" events="/3/@events.220 /3/@events.222"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="487_valueCoarse">
+      <gate description="487_valueCoarse" events="/3/@events.221"/>
+    </events>
+    <events name="prsp_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="488_valueCoarse"/>
+    <events type="Intermediate" name="prsp_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prsp_o port in pressure_sensor_1" description="489_valueCoarse">
+      <gate description="489_valueCoarse" events="/3/@events.223"/>
+    </events>
+    <events type="Intermediate" name="prvp_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at prvp_i port in pressure_sensor_1" description="490_valueCoarse">
+      <gate description="490_valueCoarse" events="/3/@events.224"/>
+    </events>
+    <events type="External" name="vitalParameters+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at vitalParameters port in VisionAir" description="491_valueCoarse"/>
+    <events type="Intermediate" name="scnmt_i+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at scnmt_i port in sensor_controller_1" description="492_omission">
+      <gate description="492_omission" events="/3/@events.226"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="493_omission">
+      <gate description="493_omission" events="/3/@events.227"/>
+    </events>
+    <events name="nmtsc_o+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at nmtsc_o port in nmt_sensor_1" description="494_omission"/>
+    <events type="Intermediate" name="cip_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cip_o port in controller_1" description="495_commission">
+      <gate description="495_commission" events="/3/@events.229"/>
+    </events>
+    <events type="Intermediate" name="csc_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at csc_i port in controller_1" description="496_late">
+      <gate description="496_late" events="/3/@events.230 /3/@events.236 /3/@events.242"/>
+    </events>
+    <events type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="497_late">
+      <gate description="497_late" events="/3/@events.231"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scbp_i port in sensor_controller_1" description="498_late">
+      <gate description="498_late" events="/3/@events.232"/>
+    </events>
+    <events type="Intermediate" name="bpsc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at bpsc_o port in bp_sensor_1" description="499_late">
+      <gate description="499_late" events="/3/@events.233"/>
+    </events>
+    <events type="Intermediate" name="bpvp_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at bpvp_i port in bp_sensor_1" description="500_late">
+      <gate description="500_late" events="/3/@events.234"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at prsp_o port in pressure_sensor_1" description="501_late">
+      <gate description="501_late" events="/3/@events.235"/>
+    </events>
+    <events name="prsp_o+late &#xA;--------------&#xA; INTERNAL FAILURE &lt;late> at prsp_o port in pressure_sensor_1" description="502_late"/>
+    <events type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="503_late">
+      <gate description="503_late" events="/3/@events.237"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scnmt_i port in sensor_controller_1" description="504_late">
+      <gate description="504_late" events="/3/@events.238"/>
+    </events>
+    <events type="Intermediate" name="nmtsc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at nmtsc_o port in nmt_sensor_1" description="505_late">
+      <gate description="505_late" events="/3/@events.239"/>
+    </events>
+    <events type="Intermediate" name="nmtvp_i+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at nmtvp_i port in nmt_sensor_1" description="506_late">
+      <gate description="506_late" events="/3/@events.240"/>
+    </events>
+    <events type="Intermediate" name="prsp_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at prsp_o port in pressure_sensor_1" description="507_late">
+      <gate description="507_late" events="/3/@events.241"/>
+    </events>
+    <events name="prsp_o+late &#xA;--------------&#xA; INTERNAL FAILURE &lt;late> at prsp_o port in pressure_sensor_1" description="508_late"/>
+    <events type="Intermediate" name="scc_o+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at scc_o port in sensor_controller_1" description="509_late">
+      <gate type="AND" description="509_late" events="/3/@events.243 /3/@events.244"/>
+    </events>
+    <events type="Intermediate" name="scbp_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at scbp_i port in sensor_controller_1" description="510_early">
+      <gate description="510_early" events="/3/@events.254"/>
+    </events>
+    <events type="Intermediate" name="scnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at scnmt_i port in sensor_controller_1" description="511_early">
+      <gate description="511_early" events="/3/@events.255"/>
+    </events>
+    <events type="Intermediate" name="ipd_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at ipd_o port in infusion_pump_1" description="512_commission">
+      <gate type="AND" description="512_commission" events="/3/@events.246"/>
+    </events>
+    <events type="Intermediate" name="ippc_i+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at ippc_i port in infusion_pump_1" description="513_valueSubtle">
+      <gate description="513_valueSubtle" events="/3/@events.247"/>
+    </events>
+    <events type="Intermediate" name="cip_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at cip_o port in controller_1" description="514_valueSubtle">
+      <gate type="AND" description="514_valueSubtle" events="/3/@events.248"/>
+    </events>
+    <events type="Intermediate" name="cps_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cps_i port in controller_1" description="515_valueCoarse">
+      <gate description="515_valueCoarse" events="/3/@events.249 /3/@events.251"/>
+    </events>
+    <events type="Intermediate" name="psc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at psc_o port in power_supply_1" description="516_valueCoarse">
+      <gate description="516_valueCoarse" events="/3/@events.250"/>
+    </events>
+    <events name="psc_o+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> at psc_o port in power_supply_1" description="517_valueCoarse"/>
+    <events type="Intermediate" name="psc_o+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at psc_o port in power_supply_1" description="518_valueCoarse">
+      <gate description="518_valueCoarse" events="/3/@events.252"/>
+    </events>
+    <events type="Intermediate" name="ppps_i+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at ppps_i port in power_supply_1" description="519_valueCoarse">
+      <gate description="519_valueCoarse" events="/3/@events.253"/>
+    </events>
+    <events type="External" name="powerPlug+valueCoarse &#xA;--------------&#xA; INJECTED FAILURE &lt;valueCoarse> at powerPlug port in VisionAir" description="520_valueCoarse"/>
+    <events type="Undevelopped" name="UNDEVELOPED FAILURE"/>
+    <events type="Undevelopped" name="UNDEVELOPED FAILURE"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+valueSubtle &#xA;--------------&#xA; TOP FAILURE &lt;valueSubtle> at PatientDiscomfort port in VisionAir">
+    <events type="Intermediate" name="PatientDiscomfort+valueSubtle &#xA;--------------&#xA; TOP FAILURE &lt;valueSubtle> at PatientDiscomfort port in VisionAir" description="521_valueSubtle">
+      <gate description="521_valueSubtle" events="/4/@events.1"/>
+    </events>
+    <events type="Intermediate" name="elpd_o+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at elpd_o port in electrode_1" description="522_valueSubtle">
+      <gate description="522_valueSubtle" events="/4/@events.2"/>
+    </events>
+    <events name="elpd_o+valueSubtle &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueSubtle> at elpd_o port in electrode_1" description="523_valueSubtle"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at PatientDiscomfort port in VisionAir">
+    <events type="Intermediate" name="PatientDiscomfort+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at PatientDiscomfort port in VisionAir" description="524_commission">
+      <gate description="524_commission" events="/5/@events.1"/>
+    </events>
+    <events type="Intermediate" name="elpd_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elpd_o port in electrode_1" description="525_commission">
+      <gate description="525_commission" events="/5/@events.2"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at elnmt_i port in electrode_1" description="526_commission">
+      <gate description="526_commission" events="/5/@events.3"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="527_commission">
+      <gate description="527_commission" events="/5/@events.4"/>
+    </events>
+    <events name="nmtel_o+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> at nmtel_o port in nmt_actuator_1" description="528_commission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of PatientDiscomfort+early &#xA;--------------&#xA; TOP FAILURE &lt;early> at PatientDiscomfort port in VisionAir">
+    <events type="Intermediate" name="PatientDiscomfort+early &#xA;--------------&#xA; TOP FAILURE &lt;early> at PatientDiscomfort port in VisionAir" description="529_early">
+      <gate description="529_early" events="/6/@events.1"/>
+    </events>
+    <events type="Intermediate" name="elpd_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elpd_o port in electrode_1" description="530_early">
+      <gate description="530_early" events="/6/@events.2"/>
+    </events>
+    <events type="Intermediate" name="elnmt_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at elnmt_i port in electrode_1" description="531_early">
+      <gate description="531_early" events="/6/@events.3"/>
+    </events>
+    <events type="Intermediate" name="nmtel_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtel_o port in nmt_actuator_1" description="532_early">
+      <gate description="532_early" events="/6/@events.4"/>
+    </events>
+    <events type="Intermediate" name="nmtc_i+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at nmtc_i port in nmt_actuator_1" description="533_early">
+      <gate description="533_early" events="/6/@events.5 /6/@events.8"/>
+    </events>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="534_early">
+      <gate type="AND" description="534_early" events="/6/@events.6"/>
+    </events>
+    <events type="Intermediate" name="cihu_i+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at cihu_i port in command_interface_1" description="535_commission">
+      <gate description="535_commission" events="/6/@events.7"/>
+    </events>
+    <events type="External" name="Human+commission &#xA;--------------&#xA; INJECTED FAILURE &lt;commission> at Human port in VisionAir" description="536_commission"/>
+    <events type="Intermediate" name="cinmt_o+early &#xA;--------------&#xA; LOCAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="537_early">
+      <gate description="537_early" events="/6/@events.9"/>
+    </events>
+    <events name="cinmt_o+early &#xA;--------------&#xA; INTERNAL FAILURE &lt;early> at cinmt_o port in command_interface_1" description="538_early"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel/>
+</xmi:XMI>

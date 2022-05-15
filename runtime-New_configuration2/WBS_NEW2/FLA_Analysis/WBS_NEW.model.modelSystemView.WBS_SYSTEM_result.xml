@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::WBS_SYSTEM" name="WBS_SYSTEM">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::WBS_SYSTEM::Pedar_Pos1" name="Pedar_Pos1">
+        <flaxml:inputFailure type="late"/>
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::WBS_SYSTEM::Brake_System" name="Brake_System">
+        <outputFailure type="late"/>
+        <outputFailure type="noFailure"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" sourceId="model::modelSystemView::BSCU::ValidBSCU" targetComponent="model::modelSystemView::WBS_SYSTEM::hydraulics_1" targetId="model::modelSystemView::Hydraulics::ValidHydro"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" sourceId="model::modelSystemView::BSCU::CMD_ASBSCU" targetComponent="model::modelSystemView::WBS_SYSTEM::hydraulics_1" targetId="model::modelSystemView::Hydraulics::CMD_ASHydro"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM" sourceId="model::modelSystemView::WBS_SYSTEM::Pedar_Pos1" targetComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" targetId="model::modelSystemView::BSCU::Pedal_Pos2BSCU"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM" sourceId="model::modelSystemView::WBS_SYSTEM::Pedar_Pos1" targetComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" targetId="model::modelSystemView::BSCU::Pedar_Pos1BSCU"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::hydraulics_1" sourceId="model::modelSystemView::Hydraulics::BrakeHydro" targetComponent="model::modelSystemView::WBS_SYSTEM" targetId="model::modelSystemView::WBS_SYSTEM::Brake_System"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::WBS_SYSTEM::bscu_1" name="bscu_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::BSCU::Pedal_Pos2BSCU" name="Pedal_Pos2BSCU">
+            <flaxml:inputFailure type="late"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::BSCU::Pedar_Pos1BSCU" name="Pedar_Pos1BSCU">
+            <flaxml:inputFailure type="late"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::BSCU::ValidBSCU" name="ValidBSCU">
+            <outputFailure type="late"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::BSCU::CMD_ASBSCU" name="CMD_ASBSCU">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="late"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::BSCU::subbscu_1" sourceId="model::modelSystemView::SubBSCU::ValidSubBSCU" targetComponent="model::modelSystemView::BSCU::select_switch_1" targetId="model::modelSystemView::Select_Switch::select2"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BSCU::subbscu_2" sourceId="model::modelSystemView::SubBSCU::ValidSubBSCU" targetComponent="model::modelSystemView::BSCU::select_switch_1" targetId="model::modelSystemView::Select_Switch::select1"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BSCU::select_switch_1" sourceId="model::modelSystemView::Select_Switch::Out" targetComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" targetId="model::modelSystemView::BSCU::CMD_ASBSCU"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" sourceId="model::modelSystemView::BSCU::Pedar_Pos1BSCU" targetComponent="model::modelSystemView::BSCU::subbscu_1" targetId="model::modelSystemView::SubBSCU::Pedar_Pos_Sub"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BSCU::subbscu_1" sourceId="model::modelSystemView::SubBSCU::CMD_ASSubBSCU" targetComponent="model::modelSystemView::BSCU::select_switch_1" targetId="model::modelSystemView::Select_Switch::in1"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BSCU::subbscu_2" sourceId="model::modelSystemView::SubBSCU::CMD_ASSubBSCU" targetComponent="model::modelSystemView::BSCU::select_switch_1" targetId="model::modelSystemView::Select_Switch::in2"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" sourceId="model::modelSystemView::BSCU::Pedal_Pos2BSCU" targetComponent="model::modelSystemView::BSCU::subbscu_2" targetId="model::modelSystemView::SubBSCU::Pedar_Pos_Sub"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BSCU::select_switch_1" sourceId="model::modelSystemView::Select_Switch::outValid" targetComponent="model::modelSystemView::WBS_SYSTEM::bscu_1" targetId="model::modelSystemView::BSCU::ValidBSCU"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::BSCU::subbscu_2" name="subbscu_2">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::SubBSCU::Pedar_Pos_Sub" name="Pedar_Pos_Sub">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="late"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="TestID" name="dumyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::SubBSCU::ValidSubBSCU" name="ValidSubBSCU">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="late"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::SubBSCU::CMD_ASSubBSCU" name="CMD_ASSubBSCU">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="late"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="dumyPort.noFailure->CMD_ASSubBSCU.omission,ValidSubBSCU.omission"/>
+              <flaxml:rule pattern="Pedar_Pos_Sub.late->CMD_ASSubBSCU.omission"/>
+              <flaxml:rule pattern="Pedar_Pos_Sub.late->ValidSubBSCU.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::BSCU::subbscu_1" name="subbscu_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::SubBSCU::Pedar_Pos_Sub" name="Pedar_Pos_Sub">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="late"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="TestID" name="dumyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::SubBSCU::ValidSubBSCU" name="ValidSubBSCU">
+                <outputFailure type="late"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::SubBSCU::CMD_ASSubBSCU" name="CMD_ASSubBSCU">
+                <outputFailure type="late"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="dumyPort.noFailure->CMD_ASSubBSCU.omission,ValidSubBSCU.omission"/>
+              <flaxml:rule pattern="Pedar_Pos_Sub.late->CMD_ASSubBSCU.omission"/>
+              <flaxml:rule pattern="Pedar_Pos_Sub.late->ValidSubBSCU.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::BSCU::select_switch_1" name="select_switch_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::Select_Switch::in2" name="in2">
+                <flaxml:inputFailure type="late"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Select_Switch::select1" name="select1">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="late"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Select_Switch::in1" name="in1">
+                <flaxml:inputFailure type="late"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Select_Switch::select2" name="select2">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="late"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="TestID" name="dumyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::Select_Switch::Out" name="Out">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="late"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::Select_Switch::outValid" name="outValid">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="late"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="in1.omission,in2.omission->Out.omission"/>
+              <flaxml:rule pattern="select1.omission,select2.omission->outValid.omission"/>
+              <flaxml:rule pattern="dumyPort.noFailure->Out.omission,outValid.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::WBS_SYSTEM::hydraulics_1" name="hydraulics_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Hydraulics::CMD_ASHydro" name="CMD_ASHydro">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="late"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Hydraulics::ValidHydro" name="ValidHydro">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="late"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Hydraulics::BrakeHydro" name="BrakeHydro">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="late"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="CMD_ASHydro.omission->BrakeHydro.omission"/>
+          <flaxml:rule pattern="ValidHydro.omission->BrakeHydro.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->BrakeHydro.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

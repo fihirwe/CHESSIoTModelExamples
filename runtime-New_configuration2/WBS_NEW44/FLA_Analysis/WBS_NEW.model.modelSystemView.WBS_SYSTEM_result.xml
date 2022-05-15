@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::WBS_SYSTEM" name="WBS_SYSTEM">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::WBS_SYSTEM::Pedar_Pos1" name="Pedar_Pos1">
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+      <flaxml:inputPort id="model::modelSystemView::WBS_SYSTEM::Pedar_Pos2" name="Pedar_Pos2">
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::WBS_SYSTEM::Brake" name="Brake">
+        <outputFailure type="noFailure"/>
+        <outputFailure type="commission"/>
+        <outputFailure type="omission"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM" sourceId="model::modelSystemView::WBS_SYSTEM::Pedar_Pos1" targetComponent="model::modelSystemView::WBS_SYSTEM::subbscu_1" targetId="model::modelSystemView::SubBSCU::Pedar_Pos"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::hydraulics_1" sourceId="model::modelSystemView::Hydraulics::Hydro_Out" targetComponent="model::modelSystemView::WBS_SYSTEM" targetId="model::modelSystemView::WBS_SYSTEM::Brake"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM" sourceId="model::modelSystemView::WBS_SYSTEM::Pedar_Pos2" targetComponent="model::modelSystemView::WBS_SYSTEM::subbscu_2" targetId="model::modelSystemView::SubBSCU::Pedar_Pos"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::select_switch_1" sourceId="model::modelSystemView::Select_Switch::Select_Pos" targetComponent="model::modelSystemView::WBS_SYSTEM::hydraulics_1" targetId="model::modelSystemView::Hydraulics::Hydro_In"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::subbscu_1" sourceId="model::modelSystemView::SubBSCU::CMD_AS" targetComponent="model::modelSystemView::WBS_SYSTEM::select_switch_1" targetId="model::modelSystemView::Select_Switch::in1"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::WBS_SYSTEM::subbscu_2" sourceId="model::modelSystemView::SubBSCU::CMD_AS" targetComponent="model::modelSystemView::WBS_SYSTEM::select_switch_1" targetId="model::modelSystemView::Select_Switch::in2"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::WBS_SYSTEM::subbscu_1" name="subbscu_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::SubBSCU::Pedar_Pos" name="Pedar_Pos">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SubBSCU::CMD_AS" name="CMD_AS">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="Pedar_Pos.early->CMD_AS.valueSubtle"/>
+          <flaxml:rule pattern="Pedar_Pos.late->CMD_AS.valueCoarse"/>
+          <flaxml:rule pattern="Pedar_Pos.noFailure->CMD_AS.valueCoarse"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::WBS_SYSTEM::select_switch_1" name="select_switch_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Select_Switch::in2" name="in2">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Select_Switch::in1" name="in1">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Select_Switch::Select_Pos" name="Select_Pos">
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="in1.valueSubtle,in2.noFailure->Select_Pos.valueSubtle"/>
+          <flaxml:rule pattern="in1.noFailure,in2.valueCoarse->Select_Pos.valueCoarse"/>
+          <flaxml:rule pattern="in2.valueSubtle,in1.noFailure->Select_Pos.valueSubtle"/>
+          <flaxml:rule pattern="in2.noFailure,in1.valueCoarse->Select_Pos.valueCoarse"/>
+          <flaxml:rule pattern="in1.valueCoarse,in2.valueSubtle ->Select_Pos.valueCoarse"/>
+          <flaxml:rule pattern="in1.noFailure,in2.noFailure->Select_Pos.valueSubtle"/>
+          <flaxml:rule pattern="in1.valueSubtle,in2.valueSubtle ->Select_Pos.valueSubtle"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::WBS_SYSTEM::hydraulics_1" name="hydraulics_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Hydraulics::Hydro_In" name="Hydro_In">
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Hydraulics::Hydro_Out" name="Hydro_Out">
+            <outputFailure type="commission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="Hydro_In.valueSubtle->Hydro_Out.omission"/>
+          <flaxml:rule pattern="Hydro_In.noFailure->Hydro_Out.omission"/>
+          <flaxml:rule pattern="Hydro_In.valueCoarse->Hydro_Out.commission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::WBS_SYSTEM::subbscu_2" name="subbscu_2">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::SubBSCU::Pedar_Pos" name="Pedar_Pos">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SubBSCU::CMD_AS" name="CMD_AS">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="Pedar_Pos.early->CMD_AS.valueSubtle"/>
+          <flaxml:rule pattern="Pedar_Pos.late->CMD_AS.valueCoarse"/>
+          <flaxml:rule pattern="Pedar_Pos.noFailure->CMD_AS.valueCoarse"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

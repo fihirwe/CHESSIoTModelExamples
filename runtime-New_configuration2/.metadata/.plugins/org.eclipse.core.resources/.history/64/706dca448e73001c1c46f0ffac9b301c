@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flamm:CompositeComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flamm="http://www.polarsys.org/chess/fla/flamm" id="model::modelSystemView::HealthCare" name="HealthCare">
+  <outputPorts id="model::modelSystemView::HealthCare::OUT_o" name="OUT_o" connectedPorts="//@components.0/@outputPorts.0" owner="/"/>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::HealthCare::controller_1" name="controller_1">
+    <inputPorts id="model::modelSystemView::Controller::CTL_bp_i" name="CTL_bp_i" connectedPorts="//@components.2/@outputPorts.0" owner="//@components.0"/>
+    <inputPorts id="model::modelSystemView::Controller::CTL_nmt_i" name="CTL_nmt_i" connectedPorts="//@components.1/@outputPorts.0" owner="//@components.0"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.0"/>
+    <outputPorts id="model::modelSystemView::Controller::CTL_out_o" name="CTL_out_o" connectedPorts="//@outputPorts.0" owner="//@components.0"/>
+    <rules>
+      <inputExpression port="//@components.0/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <inputExpression port="//@components.0/@inputPorts.1">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.0/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.0/@inputPorts.2">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.0/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::HealthCare::nmtsensor_1" name="nmtsensor_1">
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.1"/>
+    <outputPorts id="model::modelSystemView::NMTSensor::NMT_ctl_o" name="NMT_ctl_o" connectedPorts="//@components.0/@inputPorts.1" owner="//@components.1"/>
+    <rules>
+      <inputExpression port="//@components.1/@inputPorts.0">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.1/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::HealthCare::bpsensor_1" name="bpsensor_1">
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.2"/>
+    <outputPorts id="model::modelSystemView::BPsensor::BP_ctl_o" name="BP_ctl_o" connectedPorts="//@components.0/@inputPorts.0" owner="//@components.2"/>
+    <rules>
+      <inputExpression port="//@components.2/@inputPorts.0">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.2/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+</flamm:CompositeComponent>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../CHESSIoTplugins_FMEAFTA/org.polarsys.chess.fla.faultTreeAnalysis/models/emfta.ecore">
+  <emfta:FTAModel name="Fault Tree of out+omission&#xA;--------------&#xA; TOP EVENT &lt;omission> in System1 at out port">
+    <events type="Intermediate" name="out+omission&#xA;--------------&#xA; TOP EVENT &lt;omission> in System1 at out port">
+      <gate description="1_omission" events="/3 /4 /5 /0/@events.1 /0/@events.2 /0/@events.3"/>
+    </events>
+    <events name="IMU_imu_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in imu_1 ==> omission at IMU_imu_o port" description="5_omission"/>
+    <events name="GPS_gps_o+omission&#xA;--------------&#xA; INTERNAL FAILURE in gps_1 ==> omission at GPS_gps_o port" description="9_omission"/>
+    <events type="Intermediate" name="RCU_out+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in rcu_1 at RCU_out port" description="10_omission">
+      <gate type="AND" description="10_omission" events="/6 /0/@events.4"/>
+    </events>
+    <events name="TLO_tele+valueCoarse&#xA;--------------&#xA; INTERNAL FAILURE in teleoperation_1 ==> valueCoarse at TLO_tele port" description="13_valueCoarse"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="RCU_out+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in rcu_1 at RCU_out port" description="2_omission"/>
+  <emfta:Event type="Intermediate" name="RCU_out+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in rcu_1 at RCU_out port" description="6_omission"/>
+  <emfta:Event type="Intermediate" name="RCU_out+omission&#xA;--------------&#xA; LOCAL EFFECT &lt;omission> in rcu_1 at RCU_out port" description="10_omission"/>
+  <emfta:Event type="Intermediate" name="RCU_tele+valueCoarse&#xA;--------------&#xA; LOCAL EFFECT &lt;valueCoarse> in rcu_1 at RCU_tele port" description="11_valueCoarse"/>
+</xmi:XMI>

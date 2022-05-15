@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="late failure of Brake_line in WBS_SYSTEM">
+    <events type="Intermediate" name="late failure of Brake_line in WBS_SYSTEM" description="1">
+      <gate description="1"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure of Brake_line in WBS_SYSTEM">
+    <events type="Intermediate" name="omission failure of Brake_line in WBS_SYSTEM" description="2">
+      <gate description="2" events="/1/@events.1 /1/@events.28 /1/@events.32"/>
+    </events>
+    <events type="Intermediate" name="omission failure of Brake in hydraulics_1" description="3">
+      <gate type="AND" description="3" events="/1/@events.2 /1/@events.18"/>
+    </events>
+    <events type="Intermediate" name="omission failure of CMD_AS in hydraulics_1" description="4">
+      <gate description="4" events="/1/@events.3 /1/@events.16"/>
+    </events>
+    <events type="Intermediate" name="omission failure of Out in select_switch_1" description="5">
+      <gate type="AND" description="5" events="/1/@events.4 /1/@events.10"/>
+    </events>
+    <events type="Intermediate" name="omission failure of in1 in select_switch_1" description="6">
+      <gate description="6" events="/1/@events.5 /1/@events.7"/>
+    </events>
+    <events type="Intermediate" name="omission failure of CMD_AS in subbscu_1" description="7">
+      <gate type="AND" description="7" events="/1/@events.6"/>
+    </events>
+    <events name=" INTERNAL failure in subbscu_1" description="8"/>
+    <events type="Intermediate" name="omission failure of CMD_AS in subbscu_1" description="9">
+      <gate type="AND" description="9" events="/1/@events.8"/>
+    </events>
+    <events type="Intermediate" name="late failure of Pedar_Pos in subbscu_1" description="10">
+      <gate description="10" events="/1/@events.9"/>
+    </events>
+    <events type="External" name="late failure INJECTED at Pedar_Pos1 in WBS_SYSTEM" description="11"/>
+    <events type="Intermediate" name="omission failure of in2 in select_switch_1" description="12">
+      <gate description="12" events="/1/@events.11 /1/@events.13"/>
+    </events>
+    <events type="Intermediate" name="omission failure of CMD_AS in subbscu_2" description="13">
+      <gate type="AND" description="13" events="/1/@events.12"/>
+    </events>
+    <events name=" INTERNAL failure in subbscu_2" description="14"/>
+    <events type="Intermediate" name="omission failure of CMD_AS in subbscu_2" description="15">
+      <gate type="AND" description="15" events="/1/@events.14"/>
+    </events>
+    <events type="Intermediate" name="late failure of Pedar_Pos in subbscu_2" description="16">
+      <gate description="16" events="/1/@events.15"/>
+    </events>
+    <events type="External" name="late failure INJECTED at Pedar_Pos2 in WBS_SYSTEM" description="17"/>
+    <events type="Intermediate" name="omission failure of Out in select_switch_1" description="18">
+      <gate type="AND" description="18" events="/1/@events.17"/>
+    </events>
+    <events name=" INTERNAL failure in select_switch_1" description="19"/>
+    <events type="Intermediate" name="omission failure of Valid in hydraulics_1" description="20">
+      <gate description="20" events="/1/@events.19 /1/@events.26"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outValid in select_switch_1" description="21">
+      <gate type="AND" description="21" events="/1/@events.20 /1/@events.23"/>
+    </events>
+    <events type="Intermediate" name="omission failure of select1 in select_switch_1" description="22">
+      <gate description="22" events="/1/@events.21"/>
+    </events>
+    <events type="Intermediate" name="omission failure of Valid in subbscu_2" description="23">
+      <gate type="AND" description="23" events="/1/@events.22"/>
+    </events>
+    <events name=" INTERNAL failure in subbscu_2" description="24"/>
+    <events type="Intermediate" name="omission failure of select2 in select_switch_1" description="25">
+      <gate description="25" events="/1/@events.24"/>
+    </events>
+    <events type="Intermediate" name="omission failure of Valid in subbscu_1" description="26">
+      <gate type="AND" description="26" events="/1/@events.25"/>
+    </events>
+    <events name=" INTERNAL failure in subbscu_1" description="27"/>
+    <events type="Intermediate" name="omission failure of outValid in select_switch_1" description="28">
+      <gate type="AND" description="28" events="/1/@events.27"/>
+    </events>
+    <events name=" INTERNAL failure in select_switch_1" description="29"/>
+    <events type="Intermediate" name="omission failure of Brake in hydraulics_1" description="30">
+      <gate type="AND" description="30" events="/1/@events.29"/>
+    </events>
+    <events type="Intermediate" name="omission failure of inFluid in hydraulics_1" description="31">
+      <gate description="31" events="/1/@events.30"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outFluid in fluidreservoir_1" description="32">
+      <gate type="AND" description="32" events="/1/@events.31"/>
+    </events>
+    <events name=" INTERNAL failure in fluidreservoir_1" description="33"/>
+    <events type="Intermediate" name="omission failure of Brake in hydraulics_1" description="34">
+      <gate type="AND" description="34" events="/1/@events.33"/>
+    </events>
+    <events name=" INTERNAL failure in hydraulics_1" description="35"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

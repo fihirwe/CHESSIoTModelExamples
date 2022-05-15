@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="omission failure of Brake in WBS_SYSTEM">
+    <events type="Intermediate" name="omission failure of Brake in WBS_SYSTEM">
+      <gate events="/0/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure of Hydro_Out in hydraulics_1">
+      <gate events="/0/@events.2"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure of Hydro_In in hydraulics_1">
+      <gate events="/0/@events.3"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure of Select_Pos in select_switch_1">
+      <gate type="AND"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="commission failure of Brake in WBS_SYSTEM">
+    <events type="Intermediate" name="commission failure of Brake in WBS_SYSTEM">
+      <gate events="/1/@events.1"/>
+    </events>
+    <events type="Intermediate" name="commission failure of Hydro_Out in hydraulics_1">
+      <gate events="/1/@events.2"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure of Hydro_In in hydraulics_1">
+      <gate events="/1/@events.3"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure of Select_Pos in select_switch_1">
+      <gate type="AND" events="/1/@events.4 /1/@events.6 /1/@events.8"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure of in2 in select_switch_1">
+      <gate events="/1/@events.5"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure of CMD_AS in subbscu_2">
+      <gate/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure of in1 in select_switch_1">
+      <gate events="/1/@events.7"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure of CMD_AS in subbscu_1">
+      <gate/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure of in1 in select_switch_1">
+      <gate events="/1/@events.9"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure of CMD_AS in subbscu_1">
+      <gate/>
+    </events>
+  </emfta:FTAModel>
+</xmi:XMI>

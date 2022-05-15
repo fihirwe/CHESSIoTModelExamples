@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../CHESSIoTplugins_FMEAFTA/org.polarsys.chess.fla.faultTreeAnalysis/models/emfta.ecore">
+  <emfta:FTAModel name="omission failure at the OUT_o of HealthCare">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: omission failure at the OUT_o of HealthCare" probability="0.999999960008">
+      <gate description="1" events="/2 /3 /0/@events.1 /0/@events.4"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the CTL_out_o of controller_1" probability="4.0E-8" description="2">
+      <gate type="AND" description="2" events="/4 /5 /0/@events.2 /0/@events.3"/>
+    </events>
+    <events name=" INTERNAL failure in bpsensor_1" probability="2.0E-4" description="5"/>
+    <events name=" INTERNAL failure in nmtsensor_1" probability="2.0E-4" description="8"/>
+    <events name=" INTERNAL failure in controller_1" probability="2.0E-4" description="10"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="omission failure at the CTL_out_o of controller_1" description="2"/>
+  <emfta:Event type="Intermediate" name="omission failure at the CTL_out_o of controller_1" description="9"/>
+  <emfta:Event type="Intermediate" name="omission failure at the CTL_bp_i of controller_1" description="3"/>
+  <emfta:Event type="Intermediate" name="omission failure at the CTL_nmt_i of controller_1" description="6"/>
+</xmi:XMI>

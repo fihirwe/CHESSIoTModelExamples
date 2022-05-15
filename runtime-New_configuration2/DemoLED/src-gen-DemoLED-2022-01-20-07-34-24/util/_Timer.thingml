@@ -1,0 +1,26 @@
+
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+
+import "_Datatypes.thingml"
+
+thing fragment TimerMsgs {
+	message timer_start(id : UInt8, time : UInt32) @timer_start "true";
+	message timer_cancel(id : UInt8) @timer_cancel "true";
+	message timer_timeout(id : UInt8) @timeout "true";
+	message ms25_tic() @xms_tic "25";
+	message ms500_tic() @xms_tic "500";
+}
+
+protocol Timer;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="omission failure at the outDataNODE of NODE">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: omission failure at the outDataNODE of NODE" probability="2.002E-04">
+      <gate description="1" events="/2 /3 /4 /0/@events.1 /0/@events.2 /0/@events.7"/>
+    </events>
+    <events name=" INTERNAL failure in computingboard1_1" probability="2.000E-07" description="3"/>
+    <events type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" probability="1.600E-27" description="4">
+      <gate type="AND" description="4" events="/5 /6 /7 /8 /0/@events.3 /0/@events.4 /0/@events.5 /0/@events.6"/>
+    </events>
+    <events name=" INTERNAL failure in buzzer_1" probability="2.000E-07" description="7"/>
+    <events name=" INTERNAL failure in gazsensor_1" probability="2.000E-07" description="10"/>
+    <events name=" INTERNAL failure in humiditysensor_1" probability="2.000E-07" description="13"/>
+    <events name=" INTERNAL failure in led_1" probability="2.000E-07" description="16"/>
+    <events type="External" name="omission failure INJECTED at inPowerNode in NODE" probability="2.000E-04" description="19"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="2"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="4"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outDataBoard of computingboard1_1" description="17"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromBuzzer of computingboard1_1" description="5"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromGAZ of computingboard1_1" description="8"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromHumidity of computingboard1_1" description="11"/>
+  <emfta:Event type="Intermediate" name="omission failure at the fromLED of computingboard1_1" description="14"/>
+</xmi:XMI>

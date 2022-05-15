@@ -1,0 +1,35 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+
+import "../util/_DataTypes.thingml"
+import "../util/_Timer.thingml"
+import "Payloads.thingml"
+
+thing Arduino includes _DataTypes, _Timer
+	{ 
+					property  toLED : 
+		
+
+	}
+configuration Arduino
+	{
+ 		instance arduino:Arduino
+ 		instance redled:RedLED
+ 		instance ledoff:LedOFF
+ 		instance demoled:DemoLED
+ 		instance room2:Room2
+ 		instance ledon:LedON
+		connector inled.arduino => inled.arduino
+		connector toled.arduino => toled.arduino
+}

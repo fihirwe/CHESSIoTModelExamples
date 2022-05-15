@@ -1,0 +1,51 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+import "../../util/_Datatypes.thingml"
+import "../../util/_Timer.thingml"
+
+thing fragment ButtonMsgs 
+{
+	message press ();
+	message release ();
+}
+
+thing BUTTON includes ButtonMsgs, TimerMsgs
+{		
+	
+	required port clock_tic {
+		receives ms25_tic
+	}
+	
+	provided port toBoard 
+	{
+		sends press, release
+	}
+	
+	property PIN: UInt8 = 0
+
+	statechart Button init RELEASED {
+	
+		state RELEASED {
+			transition -> PRESSED event clock_tic?ms25_tic
+			guard `digitalRead(`&PIN&`)`
+			action toBoard!press()
+		}
+		
+		state PRESSED {
+			transition -> RELEASED event clock_tic?ms25_tic
+			guard not `digitalRead(`&PIN&`)`
+			action toBoard!release()
+		}
+	}
+}

@@ -1,0 +1,8 @@
+SystemName:testanemee
+BeginModule
+use test
+name:test1
+action:
+	START  service mosquitto
+	REDEPLOY service test
+	

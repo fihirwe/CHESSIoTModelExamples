@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::System" name="System">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::System::speed" name="speed">
+        <flaxml:inputFailure type="noFailure"/>
+        <flaxml:inputFailure type="late"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::System::sensed_speed" name="sensed_speed">
+        <outputFailure type="noFailure"/>
+        <outputFailure type="omission"/>
+        <outputFailure type="commission"/>
+      </flaxml:outputPort>
+      <flaxml:outputPort id="model::modelSystemView::System::sensed_speed_is_present" name="sensed_speed_is_present">
+        <outputFailure type="noFailure"/>
+        <outputFailure type="omission"/>
+        <outputFailure type="commission"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::sensor2" sourceId="model::modelSystemView::SpeedSensor::sensed_speed_is_present" targetComponent="model::modelSystemView::System::selector" targetId="model::modelSystemView::Selector::input2_is_present"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::sensor2" sourceId="model::modelSystemView::SpeedSensor::sensed_speed" targetComponent="model::modelSystemView::System::selector" targetId="model::modelSystemView::Selector::input2"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::selector" sourceId="model::modelSystemView::Selector::sensor2_in_use" targetComponent="model::modelSystemView::System::monitor2" targetId="model::modelSystemView::MonitorPresence::enabled"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::monitor1" sourceId="model::modelSystemView::MonitorPresence::absence_alarm" targetComponent="model::modelSystemView::System::selector" targetId="model::modelSystemView::Selector::absence_alarm_1"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::sensor2" sourceId="model::modelSystemView::SpeedSensor::sensed_speed_is_present" targetComponent="model::modelSystemView::System::monitor2" targetId="model::modelSystemView::MonitorPresence::input_is_present"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System" sourceId="model::modelSystemView::System::speed" targetComponent="model::modelSystemView::System::sensor2" targetId="model::modelSystemView::SpeedSensor::speed"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::selector" sourceId="model::modelSystemView::Selector::output_is_present" targetComponent="model::modelSystemView::System" targetId="model::modelSystemView::System::sensed_speed_is_present"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::sensor1" sourceId="model::modelSystemView::SpeedSensor::sensed_speed" targetComponent="model::modelSystemView::System::selector" targetId="model::modelSystemView::Selector::input1"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System" sourceId="model::modelSystemView::System::speed" targetComponent="model::modelSystemView::System::sensor1" targetId="model::modelSystemView::SpeedSensor::speed"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::sensor1" sourceId="model::modelSystemView::SpeedSensor::sensed_speed_is_present" targetComponent="model::modelSystemView::System::monitor1" targetId="model::modelSystemView::MonitorPresence::input_is_present"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::sensor1" sourceId="model::modelSystemView::SpeedSensor::sensed_speed_is_present" targetComponent="model::modelSystemView::System::selector" targetId="model::modelSystemView::Selector::input1_is_present"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::monitor2" sourceId="model::modelSystemView::MonitorPresence::absence_alarm" targetComponent="model::modelSystemView::System::selector" targetId="model::modelSystemView::Selector::absence_alarm_2"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::selector" sourceId="model::modelSystemView::Selector::output" targetComponent="model::modelSystemView::System" targetId="model::modelSystemView::System::sensed_speed"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::selector" sourceId="model::modelSystemView::Selector::sensor1_in_use" targetComponent="model::modelSystemView::System::monitor1" targetId="model::modelSystemView::MonitorPresence::enabled"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System::monitor1" name="monitor1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::MonitorPresence::enabled" name="enabled">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="commission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::MonitorPresence::input_is_present" name="input_is_present">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="commission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::MonitorPresence::absence_alarm" name="absence_alarm">
+            <outputFailure type="commission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="input_is_present.omission->absence_alarm.noFailure"/>
+          <flaxml:rule pattern="input_is_present.noFailure->absence_alarm.omission"/>
+          <flaxml:rule pattern="input_is_present.commission->absence_alarm.commission"/>
+          <flaxml:rule pattern="enabled.omission->absence_alarm.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System::sensor2" name="sensor2">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::SpeedSensor::speed" name="speed">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="late"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SpeedSensor::sensed_speed_is_present" name="sensed_speed_is_present">
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="commission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::SpeedSensor::sensed_speed" name="sensed_speed">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="speed.noFailure->sensed_speed_is_present.omission"/>
+          <flaxml:rule pattern="speed.late->sensed_speed_is_present.commission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System::selector" name="selector">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Selector::input2_is_present" name="input2_is_present">
+            <flaxml:inputFailure type="commission"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Selector::input1" name="input1">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Selector::input2" name="input2">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Selector::input1_is_present" name="input1_is_present">
+            <flaxml:inputFailure type="commission"/>
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Selector::absence_alarm_2" name="absence_alarm_2">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="commission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Selector::absence_alarm_1" name="absence_alarm_1">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="commission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Selector::output_is_present" name="output_is_present">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="commission"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Selector::output" name="output">
+            <outputFailure type="omission"/>
+            <outputFailure type="commission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Selector::sensor2_in_use" name="sensor2_in_use">
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="commission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Selector::sensor1_in_use" name="sensor1_in_use">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="commission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="input1_is_present.omission,absence_alarm_1.omission->output_is_present.omission"/>
+          <flaxml:rule pattern="input2_is_present.omission,absence_alarm_2.omission->output_is_present.omission"/>
+          <flaxml:rule pattern="input1_is_present.omission,input2_is_present.omission->output_is_present.omission"/>
+          <flaxml:rule pattern="absence_alarm_2.commission,input2_is_present.commission->output_is_present.commission"/>
+          <flaxml:rule pattern="absence_alarm_1.commission,input1_is_present.commission->output_is_present.commission"/>
+          <flaxml:rule pattern="absence_alarm_2.noFailure->sensor2_in_use.omission"/>
+          <flaxml:rule pattern="absence_alarm_1.noFailure->sensor1_in_use.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System::sensor1" name="sensor1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::SpeedSensor::speed" name="speed">
+            <flaxml:inputFailure type="late"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SpeedSensor::sensed_speed" name="sensed_speed">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::SpeedSensor::sensed_speed_is_present" name="sensed_speed_is_present">
+            <outputFailure type="commission"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="speed.noFailure->sensed_speed_is_present.omission"/>
+          <flaxml:rule pattern="speed.late->sensed_speed_is_present.commission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System::monitor2" name="monitor2">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::MonitorPresence::enabled" name="enabled">
+            <flaxml:inputFailure type="commission"/>
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::MonitorPresence::input_is_present" name="input_is_present">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="commission"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::MonitorPresence::absence_alarm" name="absence_alarm">
+            <outputFailure type="omission"/>
+            <outputFailure type="commission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="input_is_present.omission->absence_alarm.noFailure"/>
+          <flaxml:rule pattern="input_is_present.noFailure->absence_alarm.omission"/>
+          <flaxml:rule pattern="input_is_present.commission->absence_alarm.commission"/>
+          <flaxml:rule pattern="enabled.omission->absence_alarm.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

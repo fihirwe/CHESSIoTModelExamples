@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../CHESSIoTplugins_FMEAFTA/org.polarsys.chess.fla.faultTreeGenerator/models/emfta.ecore">
+  <emfta:FTAModel name="valueCoarse failure at the ipDiagnostic of VisionAir">
+    <events type="Intermediate" name="valueCoarse failure at the ipDiagnostic of VisionAir" description="1">
+      <gate description="1"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the ipDiagnostic of VisionAir">
+    <events type="Intermediate" name="omission failure at the ipDiagnostic of VisionAir" description="2">
+      <gate description="2" events="/1/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ipd_o of infusionpump_1" description="3">
+      <gate type="AND" description="3" events="/1/@events.2"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ippc_i of infusionpump_1" description="4">
+      <gate description="4" events="/1/@events.3"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the cip_o of controller_1" description="5">
+      <gate type="AND" description="5" events="/1/@events.4 /1/@events.5"/>
+    </events>
+    <events name=" INTERNAL failure in controller_1" description="6"/>
+    <events name=" INTERNAL failure in controller_1" description="7"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="commission failure at the ipDiagnostic of VisionAir">
+    <events type="Intermediate" name="commission failure at the ipDiagnostic of VisionAir" description="8">
+      <gate description="8" events="/2/@events.1 /2/@events.46"/>
+    </events>
+    <events type="Intermediate" name="commission failure at the ipd_o of infusionpump_1" description="9">
+      <gate type="AND" description="9" events="/2/@events.2"/>
+    </events>
+    <events type="Intermediate" name="commission failure at the ippc_i of infusionpump_1" description="10">
+      <gate description="10" events="/2/@events.3 /2/@events.23 /2/@events.38"/>
+    </events>
+    <events type="Intermediate" name="commission failure at the cip_o of controller_1" description="11">
+      <gate type="AND" description="11" events="/2/@events.4 /2/@events.22"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the csp_i of controller_1" description="12">
+      <gate description="12" events="/2/@events.5 /2/@events.10 /2/@events.15"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the scsp_o of sensorcontroller_1" description="13">
+      <gate type="AND" description="13" events="/2/@events.6 /2/@events.9"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the scbp_i of sensorcontroller_1" description="14">
+      <gate description="14" events="/2/@events.7"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the bpsc_o of blodpressuresensor_1" description="15">
+      <gate type="AND" description="15" events="/2/@events.8"/>
+    </events>
+    <events name=" INTERNAL failure in blodpressuresensor_1" description="16"/>
+    <events name=" INTERNAL failure in sensorcontroller_1" description="17"/>
+    <events type="Intermediate" name="valueSubtle failure at the scsp_o of sensorcontroller_1" description="18">
+      <gate type="AND" description="18" events="/2/@events.11 /2/@events.12"/>
+    </events>
+    <events name=" INTERNAL failure in sensorcontroller_1" description="19"/>
+    <events type="Intermediate" name="valueSubtle failure at the scnmt_i of sensorcontroller_1" description="20">
+      <gate description="20" events="/2/@events.13"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the nmtsc_o of nmtsensor_1" description="21">
+      <gate type="AND" description="21" events="/2/@events.14"/>
+    </events>
+    <events name=" INTERNAL failure in nmtsensor_1" description="22"/>
+    <events type="Intermediate" name="valueSubtle failure at the scsp_o of sensorcontroller_1" description="23">
+      <gate type="AND" description="23" events="/2/@events.16 /2/@events.19"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the scbp_i of sensorcontroller_1" description="24">
+      <gate description="24" events="/2/@events.17"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the bpsc_o of blodpressuresensor_1" description="25">
+      <gate type="AND" description="25" events="/2/@events.18"/>
+    </events>
+    <events name=" INTERNAL failure in blodpressuresensor_1" description="26"/>
+    <events type="Intermediate" name="valueSubtle failure at the scnmt_i of sensorcontroller_1" description="27">
+      <gate description="27" events="/2/@events.20"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the nmtsc_o of nmtsensor_1" description="28">
+      <gate type="AND" description="28" events="/2/@events.21"/>
+    </events>
+    <events name=" INTERNAL failure in nmtsensor_1" description="29"/>
+    <events name=" INTERNAL failure in controller_1" description="30"/>
+    <events type="Intermediate" name="commission failure at the cip_o of controller_1" description="31">
+      <gate type="AND" description="31" events="/2/@events.24 /2/@events.37"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the csp_i of controller_1" description="32">
+      <gate description="32" events="/2/@events.25 /2/@events.31"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the scsp_o of sensorcontroller_1" description="33">
+      <gate type="AND" description="33" events="/2/@events.26 /2/@events.27"/>
+    </events>
+    <events type="Intermediate" name="wildcard failure at the scbp_i of sensorcontroller_1" description="34">
+      <gate description="34"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the scnmt_i of sensorcontroller_1" description="35">
+      <gate description="35" events="/2/@events.28"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the nmtsc_o of nmtsensor_1" description="36">
+      <gate type="AND" description="36" events="/2/@events.29"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the nmtvp_i of nmtsensor_1" description="37">
+      <gate description="37" events="/2/@events.30"/>
+    </events>
+    <events type="External" name="valueCoarse failure INJECTED at vitalParameters in VisionAir" description="38"/>
+    <events type="Intermediate" name="valueCoarse failure at the scsp_o of sensorcontroller_1" description="39">
+      <gate type="AND" description="39" events="/2/@events.32 /2/@events.36"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the scbp_i of sensorcontroller_1" description="40">
+      <gate description="40" events="/2/@events.33"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the bpsc_o of blodpressuresensor_1" description="41">
+      <gate type="AND" description="41" events="/2/@events.34"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the bpvp_i of blodpressuresensor_1" description="42">
+      <gate description="42" events="/2/@events.35"/>
+    </events>
+    <events type="External" name="valueCoarse failure INJECTED at vitalParameters in VisionAir" description="43"/>
+    <events type="Intermediate" name="wildcard failure at the scnmt_i of sensorcontroller_1" description="44">
+      <gate description="44"/>
+    </events>
+    <events name=" INTERNAL failure in controller_1" description="45"/>
+    <events type="Intermediate" name="commission failure at the cip_o of controller_1" description="46">
+      <gate type="AND" description="46" events="/2/@events.39 /2/@events.45"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the csp_i of controller_1" description="47">
+      <gate description="47" events="/2/@events.40"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the scsp_o of sensorcontroller_1" description="48">
+      <gate type="AND" description="48" events="/2/@events.41 /2/@events.42"/>
+    </events>
+    <events name=" INTERNAL failure in sensorcontroller_1" description="49"/>
+    <events type="Intermediate" name="omission failure at the scnmt_i of sensorcontroller_1" description="50">
+      <gate description="50" events="/2/@events.43"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the nmtsc_o of nmtsensor_1" description="51">
+      <gate type="AND" description="51" events="/2/@events.44"/>
+    </events>
+    <events name=" INTERNAL failure in nmtsensor_1" description="52"/>
+    <events name=" INTERNAL failure in controller_1" description="53"/>
+    <events type="Intermediate" name="commission failure at the ipd_o of infusionpump_1" description="54">
+      <gate type="AND" description="54" events="/2/@events.47"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the ippc_i of infusionpump_1" description="55">
+      <gate description="55" events="/2/@events.48"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the cip_o of controller_1" description="56">
+      <gate type="AND" description="56" events="/2/@events.49 /2/@events.55"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the csp_i of controller_1" description="57">
+      <gate description="57" events="/2/@events.50"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the scsp_o of sensorcontroller_1" description="58">
+      <gate type="AND" description="58" events="/2/@events.51 /2/@events.52"/>
+    </events>
+    <events name=" INTERNAL failure in sensorcontroller_1" description="59"/>
+    <events type="Intermediate" name="omission failure at the scnmt_i of sensorcontroller_1" description="60">
+      <gate description="60" events="/2/@events.53"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the nmtsc_o of nmtsensor_1" description="61">
+      <gate type="AND" description="61" events="/2/@events.54"/>
+    </events>
+    <events name=" INTERNAL failure in nmtsensor_1" description="62"/>
+    <events type="Intermediate" name="valueCoarse failure at the cps_i of controller_1" description="63">
+      <gate description="63" events="/2/@events.56"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the psc_o of powersupply_1" description="64">
+      <gate type="AND" description="64" events="/2/@events.57"/>
+    </events>
+    <events name=" INTERNAL failure in powersupply_1" description="65"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="commission failure at the uiDiagnostics of VisionAir">
+    <events type="Intermediate" name="commission failure at the uiDiagnostics of VisionAir" description="66">
+      <gate description="66" events="/3/@events.1"/>
+    </events>
+    <events type="Intermediate" name="commission failure at the uid_o of userinterface_1" description="67">
+      <gate type="AND" description="67" events="/3/@events.2"/>
+    </events>
+    <events name=" INTERNAL failure in userinterface_1" description="68"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueCoarse failure at the uiDiagnostics of VisionAir">
+    <events type="Intermediate" name="valueCoarse failure at the uiDiagnostics of VisionAir" description="69">
+      <gate description="69"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueSubtle failure at the uiDiagnostics of VisionAir">
+    <events type="Intermediate" name="valueSubtle failure at the uiDiagnostics of VisionAir" description="70">
+      <gate description="70"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the uiDiagnostics of VisionAir">
+    <events type="Intermediate" name="omission failure at the uiDiagnostics of VisionAir" description="71">
+      <gate description="71" events="/6/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the uid_o of userinterface_1" description="72">
+      <gate type="AND" description="72" events="/6/@events.2"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the uic_i of userinterface_1" description="73">
+      <gate description="73" events="/6/@events.3 /6/@events.23 /6/@events.38 /6/@events.46"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the cui_o of controller_1" description="74">
+      <gate type="AND" description="74" events="/6/@events.4 /6/@events.22"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the csp_i of controller_1" description="75">
+      <gate description="75" events="/6/@events.5 /6/@events.10 /6/@events.15"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the scsp_o of sensorcontroller_1" description="76">
+      <gate type="AND" description="76" events="/6/@events.6 /6/@events.9"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the scbp_i of sensorcontroller_1" description="77">
+      <gate description="77" events="/6/@events.7"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the bpsc_o of blodpressuresensor_1" description="78">
+      <gate type="AND" description="78" events="/6/@events.8"/>
+    </events>
+    <events name=" INTERNAL failure in blodpressuresensor_1" description="79"/>
+    <events name=" INTERNAL failure in sensorcontroller_1" description="80"/>
+    <events type="Intermediate" name="valueSubtle failure at the scsp_o of sensorcontroller_1" description="81">
+      <gate type="AND" description="81" events="/6/@events.11 /6/@events.12"/>
+    </events>
+    <events name=" INTERNAL failure in sensorcontroller_1" description="82"/>
+    <events type="Intermediate" name="valueSubtle failure at the scnmt_i of sensorcontroller_1" description="83">
+      <gate description="83" events="/6/@events.13"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the nmtsc_o of nmtsensor_1" description="84">
+      <gate type="AND" description="84" events="/6/@events.14"/>
+    </events>
+    <events name=" INTERNAL failure in nmtsensor_1" description="85"/>
+    <events type="Intermediate" name="valueSubtle failure at the scsp_o of sensorcontroller_1" description="86">
+      <gate type="AND" description="86" events="/6/@events.16 /6/@events.19"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the scbp_i of sensorcontroller_1" description="87">
+      <gate description="87" events="/6/@events.17"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the bpsc_o of blodpressuresensor_1" description="88">
+      <gate type="AND" description="88" events="/6/@events.18"/>
+    </events>
+    <events name=" INTERNAL failure in blodpressuresensor_1" description="89"/>
+    <events type="Intermediate" name="valueSubtle failure at the scnmt_i of sensorcontroller_1" description="90">
+      <gate description="90" events="/6/@events.20"/>
+    </events>
+    <events type="Intermediate" name="valueSubtle failure at the nmtsc_o of nmtsensor_1" description="91">
+      <gate type="AND" description="91" events="/6/@events.21"/>
+    </events>
+    <events name=" INTERNAL failure in nmtsensor_1" description="92"/>
+    <events name=" INTERNAL failure in controller_1" description="93"/>
+    <events type="Intermediate" name="omission failure at the cui_o of controller_1" description="94">
+      <gate type="AND" description="94" events="/6/@events.24 /6/@events.37"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the csp_i of controller_1" description="95">
+      <gate description="95" events="/6/@events.25 /6/@events.31"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the scsp_o of sensorcontroller_1" description="96">
+      <gate type="AND" description="96" events="/6/@events.26 /6/@events.27"/>
+    </events>
+    <events type="Intermediate" name="wildcard failure at the scbp_i of sensorcontroller_1" description="97">
+      <gate description="97"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the scnmt_i of sensorcontroller_1" description="98">
+      <gate description="98" events="/6/@events.28"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the nmtsc_o of nmtsensor_1" description="99">
+      <gate type="AND" description="99" events="/6/@events.29"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the nmtvp_i of nmtsensor_1" description="100">
+      <gate description="100" events="/6/@events.30"/>
+    </events>
+    <events type="External" name="valueCoarse failure INJECTED at vitalParameters in VisionAir" description="101"/>
+    <events type="Intermediate" name="valueCoarse failure at the scsp_o of sensorcontroller_1" description="102">
+      <gate type="AND" description="102" events="/6/@events.32 /6/@events.36"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the scbp_i of sensorcontroller_1" description="103">
+      <gate description="103" events="/6/@events.33"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the bpsc_o of blodpressuresensor_1" description="104">
+      <gate type="AND" description="104" events="/6/@events.34"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the bpvp_i of blodpressuresensor_1" description="105">
+      <gate description="105" events="/6/@events.35"/>
+    </events>
+    <events type="External" name="valueCoarse failure INJECTED at vitalParameters in VisionAir" description="106"/>
+    <events type="Intermediate" name="wildcard failure at the scnmt_i of sensorcontroller_1" description="107">
+      <gate description="107"/>
+    </events>
+    <events name=" INTERNAL failure in controller_1" description="108"/>
+    <events type="Intermediate" name="omission failure at the cui_o of controller_1" description="109">
+      <gate type="AND" description="109" events="/6/@events.39 /6/@events.45"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the csp_i of controller_1" description="110">
+      <gate description="110" events="/6/@events.40"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the scsp_o of sensorcontroller_1" description="111">
+      <gate type="AND" description="111" events="/6/@events.41 /6/@events.42"/>
+    </events>
+    <events name=" INTERNAL failure in sensorcontroller_1" description="112"/>
+    <events type="Intermediate" name="omission failure at the scnmt_i of sensorcontroller_1" description="113">
+      <gate description="113" events="/6/@events.43"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the nmtsc_o of nmtsensor_1" description="114">
+      <gate type="AND" description="114" events="/6/@events.44"/>
+    </events>
+    <events name=" INTERNAL failure in nmtsensor_1" description="115"/>
+    <events name=" INTERNAL failure in controller_1" description="116"/>
+    <events type="Intermediate" name="omission failure at the cui_o of controller_1" description="117">
+      <gate type="AND" description="117" events="/6/@events.47 /6/@events.53"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the csp_i of controller_1" description="118">
+      <gate description="118" events="/6/@events.48"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the scsp_o of sensorcontroller_1" description="119">
+      <gate type="AND" description="119" events="/6/@events.49 /6/@events.50"/>
+    </events>
+    <events name=" INTERNAL failure in sensorcontroller_1" description="120"/>
+    <events type="Intermediate" name="omission failure at the scnmt_i of sensorcontroller_1" description="121">
+      <gate description="121" events="/6/@events.51"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the nmtsc_o of nmtsensor_1" description="122">
+      <gate type="AND" description="122" events="/6/@events.52"/>
+    </events>
+    <events name=" INTERNAL failure in nmtsensor_1" description="123"/>
+    <events type="Intermediate" name="valueCoarse failure at the cps_i of controller_1" description="124">
+      <gate description="124" events="/6/@events.54"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the psc_o of powersupply_1" description="125">
+      <gate type="AND" description="125" events="/6/@events.55"/>
+    </events>
+    <events name=" INTERNAL failure in powersupply_1" description="126"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

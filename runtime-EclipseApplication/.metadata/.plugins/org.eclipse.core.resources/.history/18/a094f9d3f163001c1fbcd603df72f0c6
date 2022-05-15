@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flamm:CompositeComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flamm="http://www.polarsys.org/chess/fla/flamm" id="model::modelSystemView::SYSTEM_Hw1" name="SYSTEM_Hw1">
+  <outputPorts id="model::modelSystemView::SYSTEM_Hw1::output" name="output" connectedPorts="//@components.3/@outputPorts.0" owner="/"/>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::SYSTEM_Hw1::gateway1" name="gateway1">
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" connectedPorts="//@components.0/@inputPorts.1" owner="//@components.0"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" connectedPorts="//@components.0/@inputPorts.0" owner="//@components.0"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.0"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.0"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.0"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" connectedPorts="//@components.0/@outputPorts.1" owner="//@components.0"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" connectedPorts="//@components.0/@outputPorts.0" owner="//@components.0"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.0"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.0"/>
+    <rules>
+      <inputExpression port="//@components.0/@inputPorts.4">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.0/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.0/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.0/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::SYSTEM_Hw1::server2" name="server2">
+    <inputPorts id="model::modelSystemView::Server1::inServer" name="inServer" connectedPorts="//@components.2/@outputPorts.0" owner="//@components.1"/>
+    <inputPorts id="model::modelSystemView::Server1::inServer" name="inServer" owner="//@components.1"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.1"/>
+    <outputPorts id="model::modelSystemView::Server1::outServer" name="outServer" connectedPorts="//@components.3/@inputPorts.0" owner="//@components.1"/>
+    <outputPorts id="model::modelSystemView::Server1::outServer" name="outServer" owner="//@components.1"/>
+    <rules>
+      <inputExpression port="//@components.1/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.1/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.1/@inputPorts.2">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.1/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::SYSTEM_Hw1::gateway4" name="gateway4">
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" connectedPorts="//@components.2/@inputPorts.1" owner="//@components.2"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" connectedPorts="//@components.2/@inputPorts.0" owner="//@components.2"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.2"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.2"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.2"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" connectedPorts="//@components.1/@inputPorts.0" owner="//@components.2"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.2"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.2"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.2"/>
+    <rules>
+      <inputExpression port="//@components.2/@inputPorts.4">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.2/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.2/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.2/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::SYSTEM_Hw1::computer_1" name="computer_1">
+    <inputPorts id="model::modelSystemView::ExternalComputer::inData" name="inData" connectedPorts="//@components.1/@outputPorts.0" owner="//@components.3"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.3"/>
+    <outputPorts id="model::modelSystemView::ExternalComputer::data" name="data" connectedPorts="//@outputPorts.0" owner="//@components.3"/>
+    <rules>
+      <inputExpression port="//@components.3/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.3/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.3/@inputPorts.1">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.3/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:CompositeComponent" id="model::modelSystemView::SYSTEM_Hw1::physicalentity1_1" name="physicalentity1_1">
+    <outputPorts id="model::modelSystemView::PhysicalEntity1::outNode2" name="outNode2" connectedPorts="//@components.4/@components.3/@outputPorts.0 //@components.6/@inputPorts.0" owner="//@components.4"/>
+    <outputPorts id="model::modelSystemView::PhysicalEntity1::outNode1" name="outNode1" connectedPorts="//@components.4/@components.2/@outputPorts.0" owner="//@components.4"/>
+    <outputPorts id="model::modelSystemView::PhysicalEntity1::outNode4" name="outNode4" connectedPorts="//@components.4/@components.4/@outputPorts.0" owner="//@components.4"/>
+    <outputPorts id="model::modelSystemView::PhysicalEntity1::outNode3" name="outNode3" connectedPorts="//@components.4/@components.1/@outputPorts.0" owner="//@components.4"/>
+    <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::PhysicalEntity1::powersource_1" name="powersource_1">
+      <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.0"/>
+      <outputPorts id="model::modelSystemView::PowerSource::outPower" name="outPower" connectedPorts="//@components.4/@components.3/@inputPorts.0 //@components.4/@components.4/@inputPorts.0 //@components.4/@components.2/@inputPorts.0 //@components.4/@components.1/@inputPorts.0" owner="//@components.4/@components.0"/>
+      <rules>
+        <inputExpression port="//@components.4/@components.0/@inputPorts.0">
+          <failures id="noFailure"/>
+        </inputExpression>
+        <outputExpression port="//@components.4/@components.0/@outputPorts.0">
+          <failures type="failure" id="omission"/>
+        </outputExpression>
+      </rules>
+    </components>
+    <components xsi:type="flamm:CompositeComponent" id="model::modelSystemView::PhysicalEntity1::node_4" name="node_4">
+      <inputPorts id="model::modelSystemView::NODE::inPowerNode" name="inPowerNode" connectedPorts="//@components.4/@components.1/@components.4/@inputPorts.2 //@components.4/@components.0/@outputPorts.0" owner="//@components.4/@components.1"/>
+      <outputPorts id="model::modelSystemView::NODE::outDataNODE" name="outDataNODE" connectedPorts="//@components.4/@components.1/@components.4/@outputPorts.0 //@components.4/@outputPorts.3" owner="//@components.4/@components.1"/>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::led_1" name="led_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.1/@components.0"/>
+        <outputPorts id="model::modelSystemView::LED::outLED" name="outLED" connectedPorts="//@components.4/@components.1/@components.4/@inputPorts.3" owner="//@components.4/@components.1/@components.0"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.1/@components.0/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.1/@components.0/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::gazsensor_1" name="gazsensor_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.1/@components.1"/>
+        <outputPorts id="model::modelSystemView::GAZSensor::outGAZ" name="outGAZ" connectedPorts="//@components.4/@components.1/@components.4/@inputPorts.1" owner="//@components.4/@components.1/@components.1"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.1/@components.1/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.1/@components.1/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::buzzer_1" name="buzzer_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.1/@components.2"/>
+        <outputPorts id="model::modelSystemView::BUZZER::outBuzzer" name="outBuzzer" connectedPorts="//@components.4/@components.1/@components.4/@inputPorts.4" owner="//@components.4/@components.1/@components.2"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.1/@components.2/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.1/@components.2/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::humiditysensor_1" name="humiditysensor_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.1/@components.3"/>
+        <outputPorts id="model::modelSystemView::HumiditySensor::outHumidity" name="outHumidity" connectedPorts="//@components.4/@components.1/@components.4/@inputPorts.0" owner="//@components.4/@components.1/@components.3"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.1/@components.3/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.1/@components.3/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::computingboard1_1" name="computingboard1_1">
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromHumidity" name="fromHumidity" connectedPorts="//@components.4/@components.1/@components.3/@outputPorts.0" owner="//@components.4/@components.1/@components.4"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromGAZ" name="fromGAZ" connectedPorts="//@components.4/@components.1/@components.1/@outputPorts.0" owner="//@components.4/@components.1/@components.4"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::powerInBoard" name="powerInBoard" connectedPorts="//@components.4/@components.1/@inputPorts.0" owner="//@components.4/@components.1/@components.4"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromLED" name="fromLED" connectedPorts="//@components.4/@components.1/@components.0/@outputPorts.0" owner="//@components.4/@components.1/@components.4"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromBuzzer" name="fromBuzzer" connectedPorts="//@components.4/@components.1/@components.2/@outputPorts.0" owner="//@components.4/@components.1/@components.4"/>
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.1/@components.4"/>
+        <outputPorts id="model::modelSystemView::ComputingBoard1::outDataBoard" name="outDataBoard" connectedPorts="//@components.4/@components.1/@outputPorts.0" owner="//@components.4/@components.1/@components.4"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.1/@components.4/@inputPorts.5">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.1/@components.4/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+        <rules>
+          <inputExpression port="//@components.4/@components.1/@components.4/@inputPorts.4">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.1/@components.4/@inputPorts.1">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.1/@components.4/@inputPorts.0">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.1/@components.4/@inputPorts.3">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.1/@components.4/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+        <rules>
+          <inputExpression port="//@components.4/@components.1/@components.4/@inputPorts.2">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.1/@components.4/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+    </components>
+    <components xsi:type="flamm:CompositeComponent" id="model::modelSystemView::PhysicalEntity1::node_1" name="node_1">
+      <inputPorts id="model::modelSystemView::NODE::inPowerNode" name="inPowerNode" connectedPorts="//@components.4/@components.2/@components.0/@inputPorts.2 //@components.4/@components.0/@outputPorts.0" owner="//@components.4/@components.2"/>
+      <outputPorts id="model::modelSystemView::NODE::outDataNODE" name="outDataNODE" connectedPorts="//@components.4/@components.2/@components.0/@outputPorts.0 //@components.4/@outputPorts.1" owner="//@components.4/@components.2"/>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::computingboard1_1" name="computingboard1_1">
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromLED" name="fromLED" connectedPorts="//@components.4/@components.2/@components.1/@outputPorts.0" owner="//@components.4/@components.2/@components.0"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromGAZ" name="fromGAZ" connectedPorts="//@components.4/@components.2/@components.4/@outputPorts.0" owner="//@components.4/@components.2/@components.0"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::powerInBoard" name="powerInBoard" connectedPorts="//@components.4/@components.2/@inputPorts.0" owner="//@components.4/@components.2/@components.0"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromBuzzer" name="fromBuzzer" connectedPorts="//@components.4/@components.2/@components.2/@outputPorts.0" owner="//@components.4/@components.2/@components.0"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromHumidity" name="fromHumidity" connectedPorts="//@components.4/@components.2/@components.3/@outputPorts.0" owner="//@components.4/@components.2/@components.0"/>
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.2/@components.0"/>
+        <outputPorts id="model::modelSystemView::ComputingBoard1::outDataBoard" name="outDataBoard" connectedPorts="//@components.4/@components.2/@outputPorts.0" owner="//@components.4/@components.2/@components.0"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.2/@components.0/@inputPorts.5">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.2/@components.0/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+        <rules>
+          <inputExpression port="//@components.4/@components.2/@components.0/@inputPorts.3">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.2/@components.0/@inputPorts.1">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.2/@components.0/@inputPorts.4">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.2/@components.0/@inputPorts.0">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.2/@components.0/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+        <rules>
+          <inputExpression port="//@components.4/@components.2/@components.0/@inputPorts.2">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.2/@components.0/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::led_1" name="led_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.2/@components.1"/>
+        <outputPorts id="model::modelSystemView::LED::outLED" name="outLED" connectedPorts="//@components.4/@components.2/@components.0/@inputPorts.0" owner="//@components.4/@components.2/@components.1"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.2/@components.1/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.2/@components.1/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::buzzer_1" name="buzzer_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.2/@components.2"/>
+        <outputPorts id="model::modelSystemView::BUZZER::outBuzzer" name="outBuzzer" connectedPorts="//@components.4/@components.2/@components.0/@inputPorts.3" owner="//@components.4/@components.2/@components.2"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.2/@components.2/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.2/@components.2/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::humiditysensor_1" name="humiditysensor_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.2/@components.3"/>
+        <outputPorts id="model::modelSystemView::HumiditySensor::outHumidity" name="outHumidity" connectedPorts="//@components.4/@components.2/@components.0/@inputPorts.4" owner="//@components.4/@components.2/@components.3"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.2/@components.3/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.2/@components.3/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::gazsensor_1" name="gazsensor_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.2/@components.4"/>
+        <outputPorts id="model::modelSystemView::GAZSensor::outGAZ" name="outGAZ" connectedPorts="//@components.4/@components.2/@components.0/@inputPorts.1" owner="//@components.4/@components.2/@components.4"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.2/@components.4/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.2/@components.4/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+    </components>
+    <components xsi:type="flamm:CompositeComponent" id="model::modelSystemView::PhysicalEntity1::node_2" name="node_2">
+      <inputPorts id="model::modelSystemView::NODE::inPowerNode" name="inPowerNode" connectedPorts="//@components.4/@components.3/@components.3/@inputPorts.3 //@components.4/@components.0/@outputPorts.0" owner="//@components.4/@components.3"/>
+      <outputPorts id="model::modelSystemView::NODE::outDataNODE" name="outDataNODE" connectedPorts="//@components.4/@components.3/@components.3/@outputPorts.0 //@components.4/@outputPorts.0" owner="//@components.4/@components.3"/>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::buzzer_1" name="buzzer_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.3/@components.0"/>
+        <outputPorts id="model::modelSystemView::BUZZER::outBuzzer" name="outBuzzer" connectedPorts="//@components.4/@components.3/@components.3/@inputPorts.4" owner="//@components.4/@components.3/@components.0"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.3/@components.0/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.3/@components.0/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::led_1" name="led_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.3/@components.1"/>
+        <outputPorts id="model::modelSystemView::LED::outLED" name="outLED" connectedPorts="//@components.4/@components.3/@components.3/@inputPorts.2" owner="//@components.4/@components.3/@components.1"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.3/@components.1/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.3/@components.1/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::gazsensor_1" name="gazsensor_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.3/@components.2"/>
+        <outputPorts id="model::modelSystemView::GAZSensor::outGAZ" name="outGAZ" connectedPorts="//@components.4/@components.3/@components.3/@inputPorts.0" owner="//@components.4/@components.3/@components.2"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.3/@components.2/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.3/@components.2/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::computingboard1_1" name="computingboard1_1">
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromGAZ" name="fromGAZ" connectedPorts="//@components.4/@components.3/@components.2/@outputPorts.0" owner="//@components.4/@components.3/@components.3"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromHumidity" name="fromHumidity" connectedPorts="//@components.4/@components.3/@components.4/@outputPorts.0" owner="//@components.4/@components.3/@components.3"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromLED" name="fromLED" connectedPorts="//@components.4/@components.3/@components.1/@outputPorts.0" owner="//@components.4/@components.3/@components.3"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::powerInBoard" name="powerInBoard" connectedPorts="//@components.4/@components.3/@inputPorts.0" owner="//@components.4/@components.3/@components.3"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromBuzzer" name="fromBuzzer" connectedPorts="//@components.4/@components.3/@components.0/@outputPorts.0" owner="//@components.4/@components.3/@components.3"/>
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.3/@components.3"/>
+        <outputPorts id="model::modelSystemView::ComputingBoard1::outDataBoard" name="outDataBoard" connectedPorts="//@components.4/@components.3/@outputPorts.0" owner="//@components.4/@components.3/@components.3"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.3/@components.3/@inputPorts.5">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.3/@components.3/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+        <rules>
+          <inputExpression port="//@components.4/@components.3/@components.3/@inputPorts.4">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.3/@components.3/@inputPorts.0">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.3/@components.3/@inputPorts.1">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.3/@components.3/@inputPorts.2">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.3/@components.3/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+        <rules>
+          <inputExpression port="//@components.4/@components.3/@components.3/@inputPorts.3">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.3/@components.3/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::humiditysensor_1" name="humiditysensor_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.3/@components.4"/>
+        <outputPorts id="model::modelSystemView::HumiditySensor::outHumidity" name="outHumidity" connectedPorts="//@components.4/@components.3/@components.3/@inputPorts.1" owner="//@components.4/@components.3/@components.4"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.3/@components.4/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.3/@components.4/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+    </components>
+    <components xsi:type="flamm:CompositeComponent" id="model::modelSystemView::PhysicalEntity1::node_3" name="node_3">
+      <inputPorts id="model::modelSystemView::NODE::inPowerNode" name="inPowerNode" connectedPorts="//@components.4/@components.4/@components.4/@inputPorts.1 //@components.4/@components.0/@outputPorts.0" owner="//@components.4/@components.4"/>
+      <outputPorts id="model::modelSystemView::NODE::outDataNODE" name="outDataNODE" connectedPorts="//@components.4/@components.4/@components.4/@outputPorts.0 //@components.4/@outputPorts.2" owner="//@components.4/@components.4"/>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::humiditysensor_1" name="humiditysensor_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.4/@components.0"/>
+        <outputPorts id="model::modelSystemView::HumiditySensor::outHumidity" name="outHumidity" connectedPorts="//@components.4/@components.4/@components.4/@inputPorts.2" owner="//@components.4/@components.4/@components.0"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.4/@components.0/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.4/@components.0/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::gazsensor_1" name="gazsensor_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.4/@components.1"/>
+        <outputPorts id="model::modelSystemView::GAZSensor::outGAZ" name="outGAZ" connectedPorts="//@components.4/@components.4/@components.4/@inputPorts.0" owner="//@components.4/@components.4/@components.1"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.4/@components.1/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.4/@components.1/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::buzzer_1" name="buzzer_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.4/@components.2"/>
+        <outputPorts id="model::modelSystemView::BUZZER::outBuzzer" name="outBuzzer" connectedPorts="//@components.4/@components.4/@components.4/@inputPorts.4" owner="//@components.4/@components.4/@components.2"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.4/@components.2/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.4/@components.2/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::led_1" name="led_1">
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.4/@components.3"/>
+        <outputPorts id="model::modelSystemView::LED::outLED" name="outLED" connectedPorts="//@components.4/@components.4/@components.4/@inputPorts.3" owner="//@components.4/@components.4/@components.3"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.4/@components.3/@inputPorts.0">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.4/@components.3/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+      <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::NODE::computingboard1_1" name="computingboard1_1">
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromGAZ" name="fromGAZ" connectedPorts="//@components.4/@components.4/@components.1/@outputPorts.0" owner="//@components.4/@components.4/@components.4"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::powerInBoard" name="powerInBoard" connectedPorts="//@components.4/@components.4/@inputPorts.0" owner="//@components.4/@components.4/@components.4"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromHumidity" name="fromHumidity" connectedPorts="//@components.4/@components.4/@components.0/@outputPorts.0" owner="//@components.4/@components.4/@components.4"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromLED" name="fromLED" connectedPorts="//@components.4/@components.4/@components.3/@outputPorts.0" owner="//@components.4/@components.4/@components.4"/>
+        <inputPorts id="model::modelSystemView::ComputingBoard1::fromBuzzer" name="fromBuzzer" connectedPorts="//@components.4/@components.4/@components.2/@outputPorts.0" owner="//@components.4/@components.4/@components.4"/>
+        <inputPorts id="TestID" name="dumyPort" owner="//@components.4/@components.4/@components.4"/>
+        <outputPorts id="model::modelSystemView::ComputingBoard1::outDataBoard" name="outDataBoard" connectedPorts="//@components.4/@components.4/@outputPorts.0" owner="//@components.4/@components.4/@components.4"/>
+        <rules>
+          <inputExpression port="//@components.4/@components.4/@components.4/@inputPorts.5">
+            <failures id="noFailure"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.4/@components.4/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+        <rules>
+          <inputExpression port="//@components.4/@components.4/@components.4/@inputPorts.4">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.4/@components.4/@inputPorts.0">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.4/@components.4/@inputPorts.2">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <inputExpression port="//@components.4/@components.4/@components.4/@inputPorts.3">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.4/@components.4/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+        <rules>
+          <inputExpression port="//@components.4/@components.4/@components.4/@inputPorts.1">
+            <failures type="failure" id="omission"/>
+          </inputExpression>
+          <outputExpression port="//@components.4/@components.4/@components.4/@outputPorts.0">
+            <failures type="failure" id="omission"/>
+          </outputExpression>
+        </rules>
+      </components>
+    </components>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::SYSTEM_Hw1::gateway2" name="gateway2">
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" connectedPorts="//@components.5/@inputPorts.1" owner="//@components.5"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" connectedPorts="//@components.5/@inputPorts.0" owner="//@components.5"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.5"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.5"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.5"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" connectedPorts="//@components.7/@inputPorts.0" owner="//@components.5"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.5"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.5"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.5"/>
+    <rules>
+      <inputExpression port="//@components.5/@inputPorts.4">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.5/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.5/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.5/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::SYSTEM_Hw1::gateway3" name="gateway3">
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" connectedPorts="//@components.4/@outputPorts.0" owner="//@components.6"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.6"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.6"/>
+    <inputPorts id="model::modelSystemView::Gateway1::inGate" name="inGate" owner="//@components.6"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.6"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" connectedPorts="//@components.6/@outputPorts.1" owner="//@components.6"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" connectedPorts="//@components.6/@outputPorts.0" owner="//@components.6"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.6"/>
+    <outputPorts id="model::modelSystemView::Gateway1::outGate" name="outGate" owner="//@components.6"/>
+    <rules>
+      <inputExpression port="//@components.6/@inputPorts.4">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.6/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.6/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.6/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::SYSTEM_Hw1::server1" name="server1">
+    <inputPorts id="model::modelSystemView::Server1::inServer" name="inServer" connectedPorts="//@components.5/@outputPorts.0" owner="//@components.7"/>
+    <inputPorts id="model::modelSystemView::Server1::inServer" name="inServer" owner="//@components.7"/>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.7"/>
+    <outputPorts id="model::modelSystemView::Server1::outServer" name="outServer" connectedPorts="//@components.7/@outputPorts.1" owner="//@components.7"/>
+    <outputPorts id="model::modelSystemView::Server1::outServer" name="outServer" connectedPorts="//@components.7/@outputPorts.0" owner="//@components.7"/>
+    <rules>
+      <inputExpression port="//@components.7/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.7/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.7/@inputPorts.2">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.7/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+</flamm:CompositeComponent>

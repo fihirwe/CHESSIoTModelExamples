@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../configuration/org.eclipse.osgi/1412/0/.cp/models/emfta.ecore">
+  <emfta:FTAModel name="omission failure of outSensedValue in System">
+    <events type="Intermediate" name="omission failure of outSensedValue in System" description="1">
+      <gate description="1" events="/0/@events.1 /0/@events.8 /0/@events.26"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outTransmit in rfmodule_1" description="2">
+      <gate type="AND" description="2" events="/0/@events.2"/>
+    </events>
+    <events type="Intermediate" name="omission failure of inRFPower in rfmodule_1" description="3">
+      <gate description="3" events="/0/@events.3 /0/@events.6"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outPower in powercontroller_1" description="4">
+      <gate type="AND" description="4" events="/0/@events.4"/>
+    </events>
+    <events type="Intermediate" name="late failure of inPower in powercontroller_1" description="5">
+      <gate description="5" events="/0/@events.5"/>
+    </events>
+    <events type="External" name="late failure INJECTED at inSystem in System" description="6"/>
+    <events type="Intermediate" name="omission failure of outPower in powercontroller_1" description="7">
+      <gate type="AND" description="7" events="/0/@events.7"/>
+    </events>
+    <events name=" INTERNAL failure in powercontroller_1" description="8"/>
+    <events type="Intermediate" name="omission failure of outTransmit in rfmodule_1" description="9">
+      <gate type="AND" description="9" events="/0/@events.9"/>
+    </events>
+    <events type="Intermediate" name="omission failure of inRFSensedValue in rfmodule_1" description="10">
+      <gate description="10" events="/0/@events.10 /0/@events.17 /0/@events.24"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outBoardRF in iotboard1_1" description="11">
+      <gate type="AND" description="11" events="/0/@events.11 /0/@events.14"/>
+    </events>
+    <events type="Intermediate" name="omission failure of inBoardGaz in iotboard1_1" description="12">
+      <gate description="12" events="/0/@events.12"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outGazSensor in gazsensor_1" description="13">
+      <gate type="AND" description="13" events="/0/@events.13"/>
+    </events>
+    <events name=" INTERNAL failure in gazsensor_1" description="14"/>
+    <events type="Intermediate" name="omission failure of inBoardTemp in iotboard1_1" description="15">
+      <gate description="15" events="/0/@events.15"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outTempHumSensor in hum/tempsensor_1" description="16">
+      <gate type="AND" description="16" events="/0/@events.16"/>
+    </events>
+    <events name=" INTERNAL failure in hum/tempsensor_1" description="17"/>
+    <events type="Intermediate" name="omission failure of outBoardRF in iotboard1_1" description="18">
+      <gate type="AND" description="18" events="/0/@events.18"/>
+    </events>
+    <events type="Intermediate" name="omission failure of inBoardPower in iotboard1_1" description="19">
+      <gate description="19" events="/0/@events.19 /0/@events.22"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outPower in powercontroller_1" description="20">
+      <gate type="AND" description="20" events="/0/@events.20"/>
+    </events>
+    <events type="Intermediate" name="late failure of inPower in powercontroller_1" description="21">
+      <gate description="21" events="/0/@events.21"/>
+    </events>
+    <events type="External" name="late failure INJECTED at inSystem in System" description="22"/>
+    <events type="Intermediate" name="omission failure of outPower in powercontroller_1" description="23">
+      <gate type="AND" description="23" events="/0/@events.23"/>
+    </events>
+    <events name=" INTERNAL failure in powercontroller_1" description="24"/>
+    <events type="Intermediate" name="omission failure of outBoardRF in iotboard1_1" description="25">
+      <gate type="AND" description="25" events="/0/@events.25"/>
+    </events>
+    <events name=" INTERNAL failure in iotboard1_1" description="26"/>
+    <events type="Intermediate" name="omission failure of outTransmit in rfmodule_1" description="27">
+      <gate type="AND" description="27" events="/0/@events.27"/>
+    </events>
+    <events name=" INTERNAL failure in rfmodule_1" description="28"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="late failure of outSensedValue in System">
+    <events type="Intermediate" name="late failure of outSensedValue in System" description="29">
+      <gate description="29"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure of outLED in System">
+    <events type="Intermediate" name="omission failure of outLED in System" description="30">
+      <gate description="30" events="/2/@events.1 /2/@events.3"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outLED in led_1" description="31">
+      <gate type="AND" description="31" events="/2/@events.2"/>
+    </events>
+    <events name=" INTERNAL failure in led_1" description="32"/>
+    <events type="Intermediate" name="omission failure of outLED in led_1" description="33">
+      <gate type="AND" description="33" events="/2/@events.4"/>
+    </events>
+    <events type="Intermediate" name="omission failure of inLED in led_1" description="34">
+      <gate description="34" events="/2/@events.5 /2/@events.12"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outBoardLED in iotboard1_1" description="35">
+      <gate type="AND" description="35" events="/2/@events.6"/>
+    </events>
+    <events type="Intermediate" name="omission failure of inBoardPower in iotboard1_1" description="36">
+      <gate description="36" events="/2/@events.7 /2/@events.10"/>
+    </events>
+    <events type="Intermediate" name="omission failure of outPower in powercontroller_1" description="37">
+      <gate type="AND" description="37" events="/2/@events.8"/>
+    </events>
+    <events type="Intermediate" name="late failure of inPower in powercontroller_1" description="38">
+      <gate description="38" events="/2/@events.9"/>
+    </events>
+    <events type="External" name="late failure INJECTED at inSystem in System" description="39"/>
+    <events type="Intermediate" name="omission failure of outPower in powercontroller_1" description="40">
+      <gate type="AND" description="40" events="/2/@events.11"/>
+    </events>
+    <events name=" INTERNAL failure in powercontroller_1" description="41"/>
+    <events type="Intermediate" name="omission failure of outBoardLED in iotboard1_1" description="42">
+      <gate type="AND" description="42" events="/2/@events.13"/>
+    </events>
+    <events name=" INTERNAL failure in iotboard1_1" description="43"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="late failure of outLED in System">
+    <events type="Intermediate" name="late failure of outLED in System" description="44">
+      <gate description="44"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

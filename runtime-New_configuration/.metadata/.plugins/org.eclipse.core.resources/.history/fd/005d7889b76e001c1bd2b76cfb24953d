@@ -1,0 +1,37 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+
+import "../util/_DataTypes.thingml"
+import "../util/_Timer.thingml"
+import "Payloads.thingml"
+
+
+thing VirtualBoard1 includes _DataTypes, _Timer
+	{ 
+					property  fromRED : 
+					property  fromGREEN : 
+		
+
+	}
+configuration VirtualBoard1
+	{
+ 		instance demoled:DemoLED
+ 		instance virtualboard1:VirtualBoard1
+ 		instance led:LED
+ 		instance room:Room
+		connector fromred.virtualboard1 => fromred.virtualboard1
+		connector redin.virtualboard1 => redin.virtualboard1
+		connector greenin.virtualboard1 => greenin.virtualboard1
+		connector fromgreen.virtualboard1 => fromgreen.virtualboard1
+}

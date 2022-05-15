@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flamm:CompositeComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flamm="http://www.polarsys.org/chess/fla/flamm" id="model::modelSystemView::System" name="System">
+  <inputPorts id="model::modelSystemView::System::inSystem" name="inSystem" connectedPorts="//@components.1/@inputPorts.0" owner="/">
+    <failures id="noFailure"/>
+    <failures type="failure" id="valueSubtle"/>
+  </inputPorts>
+  <outputPorts id="model::modelSystemView::System::outSystem" name="outSystem" connectedPorts="//@components.2/@outputPorts.0" owner="/">
+    <failures id="noFailure" previousFailures="//@components.2/@outputPorts.0/@failures.0"/>
+    <failures type="failure" id="valueSubtle" previousFailures="//@components.2/@outputPorts.0/@failures.1"/>
+    <failures type="failure" id="omission" previousFailures="//@components.2/@outputPorts.0/@failures.2"/>
+  </outputPorts>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::System::sensor_1" name="sensor_1">
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.0">
+      <failures id="noFailure"/>
+    </inputPorts>
+    <outputPorts id="model::modelSystemView::sensor::sensedValue" name="sensedValue" connectedPorts="//@components.2/@inputPorts.1" owner="//@components.0">
+      <failures id="noFailure"/>
+      <failures type="failure" id="omission" previousFailures="//@components.0/@inputPorts.0/@failures.0" raisedByRule="//@components.0/@rules.0"/>
+    </outputPorts>
+    <rules>
+      <inputExpression port="//@components.0/@inputPorts.0">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.0/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::System::relay_1" name="relay_1">
+    <inputPorts id="model::modelSystemView::Relay::inRelay" name="inRelay" connectedPorts="//@inputPorts.0" owner="//@components.1">
+      <failures id="noFailure" previousFailures="//@inputPorts.0/@failures.0"/>
+      <failures type="failure" id="valueSubtle" previousFailures="//@inputPorts.0/@failures.1"/>
+    </inputPorts>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.1">
+      <failures id="noFailure"/>
+    </inputPorts>
+    <outputPorts id="model::modelSystemView::Relay::outRelay" name="outRelay" connectedPorts="//@components.2/@inputPorts.0" owner="//@components.1">
+      <failures id="noFailure" previousFailures="//@components.1/@inputPorts.1/@failures.0 //@components.1/@inputPorts.0/@failures.0" raisedByRule="//@components.1/@implicitFiredRules.1 //@components.1/@implicitFiredRules.2"/>
+      <failures type="failure" id="valueSubtle" previousFailures="//@components.1/@inputPorts.0/@failures.1" raisedByRule="//@components.1/@implicitFiredRules.0"/>
+    </outputPorts>
+    <rules>
+      <inputExpression port="//@components.1/@inputPorts.0">
+        <failures type="failure" id="valueSubtle"/>
+      </inputExpression>
+      <outputExpression port="//@components.1/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.1/@inputPorts.1">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.1/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <implicitFiredRules>
+      <inputExpression port="//@components.1/@inputPorts.0">
+        <failures type="failure" id="valueSubtle"/>
+      </inputExpression>
+    </implicitFiredRules>
+    <implicitFiredRules>
+      <inputExpression port="//@components.1/@inputPorts.1">
+        <failures id="noFailure"/>
+      </inputExpression>
+    </implicitFiredRules>
+    <implicitFiredRules>
+      <inputExpression port="//@components.1/@inputPorts.0">
+        <failures id="noFailure"/>
+      </inputExpression>
+    </implicitFiredRules>
+  </components>
+  <components xsi:type="flamm:SimpleComponent" id="model::modelSystemView::System::iotboard1_1" name="iotboard1_1">
+    <inputPorts id="model::modelSystemView::IoTBoard1::inFromRelay" name="inFromRelay" connectedPorts="//@components.1/@outputPorts.0" owner="//@components.2">
+      <failures id="noFailure" previousFailures="//@components.1/@outputPorts.0/@failures.0"/>
+      <failures type="failure" id="valueSubtle" previousFailures="//@components.1/@outputPorts.0/@failures.1"/>
+    </inputPorts>
+    <inputPorts id="model::modelSystemView::IoTBoard1::inFromSensor" name="inFromSensor" connectedPorts="//@components.0/@outputPorts.0" owner="//@components.2">
+      <failures id="noFailure" previousFailures="//@components.0/@outputPorts.0/@failures.0"/>
+      <failures type="failure" id="omission" previousFailures="//@components.0/@outputPorts.0/@failures.1"/>
+    </inputPorts>
+    <inputPorts id="TestID" name="dumyPort" owner="//@components.2">
+      <failures id="noFailure"/>
+    </inputPorts>
+    <outputPorts id="model::modelSystemView::IoTBoard1::outputBoard" name="outputBoard" connectedPorts="//@outputPorts.0" owner="//@components.2">
+      <failures id="noFailure" previousFailures="//@components.2/@inputPorts.2/@failures.0 //@components.2/@inputPorts.1/@failures.0 //@components.2/@inputPorts.0/@failures.0" raisedByRule="//@components.2/@implicitFiredRules.2 //@components.2/@implicitFiredRules.3 //@components.2/@implicitFiredRules.4"/>
+      <failures type="failure" id="valueSubtle" previousFailures="//@components.2/@inputPorts.0/@failures.1" raisedByRule="//@components.2/@implicitFiredRules.0"/>
+      <failures type="failure" id="omission" previousFailures="//@components.2/@inputPorts.1/@failures.1" raisedByRule="//@components.2/@implicitFiredRules.1"/>
+    </outputPorts>
+    <rules>
+      <inputExpression port="//@components.2/@inputPorts.1">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.2/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.2/@inputPorts.0">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+      <outputExpression port="//@components.2/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <rules>
+      <inputExpression port="//@components.2/@inputPorts.2">
+        <failures id="noFailure"/>
+      </inputExpression>
+      <outputExpression port="//@components.2/@outputPorts.0">
+        <failures type="failure" id="omission"/>
+      </outputExpression>
+    </rules>
+    <implicitFiredRules>
+      <inputExpression port="//@components.2/@inputPorts.0">
+        <failures type="failure" id="valueSubtle"/>
+      </inputExpression>
+    </implicitFiredRules>
+    <implicitFiredRules>
+      <inputExpression port="//@components.2/@inputPorts.1">
+        <failures type="failure" id="omission"/>
+      </inputExpression>
+    </implicitFiredRules>
+    <implicitFiredRules>
+      <inputExpression port="//@components.2/@inputPorts.2">
+        <failures id="noFailure"/>
+      </inputExpression>
+    </implicitFiredRules>
+    <implicitFiredRules>
+      <inputExpression port="//@components.2/@inputPorts.1">
+        <failures id="noFailure"/>
+      </inputExpression>
+    </implicitFiredRules>
+    <implicitFiredRules>
+      <inputExpression port="//@components.2/@inputPorts.0">
+        <failures id="noFailure"/>
+      </inputExpression>
+    </implicitFiredRules>
+  </components>
+</flamm:CompositeComponent>

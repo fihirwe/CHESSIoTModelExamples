@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::IoTBoard" name="IoTBoard">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::IoTBoard::in_Humidity" name="in_Humidity">
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+      <flaxml:inputPort id="model::modelSystemView::IoTBoard::in_Temperature" name="in_Temperature">
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+      <flaxml:inputPort id="TestID" name="dumyPort">
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::IoTBoard::sensedValue" name="sensedValue">
+        <outputFailure type="noFailure"/>
+      </flaxml:outputPort>
+      <flaxml:outputPort id="model::modelSystemView::IoTBoard::outLight" name="outLight">
+        <outputFailure type="noFailure"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:rules>
+      <flaxml:rule pattern="in_Humidity.omission,in_Temperature.omission->sensedValue.omission"/>
+      <flaxml:rule pattern="dumyPort.noFailure->outLight.omission,sensedValue.omission"/>
+    </flaxml:rules>
+  </flaxml:component>
+</flaxml:system>

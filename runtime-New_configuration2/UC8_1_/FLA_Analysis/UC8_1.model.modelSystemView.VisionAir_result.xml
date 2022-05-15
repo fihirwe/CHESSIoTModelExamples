@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::VisionAir" name="VisionAir">
+    <flaxml:inputPorts/>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::VisionAir::ui_diag" name="ui_diag">
+        <outputFailure type="valueCoarse"/>
+        <outputFailure type="noFailure"/>
+      </flaxml:outputPort>
+      <flaxml:outputPort id="model::modelSystemView::VisionAir::ip_diag" name="ip_diag">
+        <outputFailure type="noFailure"/>
+        <outputFailure type="valueCoarse"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::powersupply_1" sourceId="model::modelSystemView::PowerSupply::psctl_out" targetComponent="model::modelSystemView::VisionAir::controller_1" targetId="model::modelSystemView::Controller::ctlps_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::infusionpump_1" sourceId="model::modelSystemView::InfusionPump::ipd_out" targetComponent="model::modelSystemView::VisionAir" targetId="model::modelSystemView::VisionAir::ip_diag"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::controller_1" sourceId="model::modelSystemView::Controller::ctlui_out" targetComponent="model::modelSystemView::VisionAir::userinterface_1" targetId="model::modelSystemView::UserInterface::uictl_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::bpsensor_1" sourceId="model::modelSystemView::BPSensor::bpsp_out" targetComponent="model::modelSystemView::VisionAir::sensorprocessing_1" targetId="model::modelSystemView::SensorProcessing::spbp_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::sensorprocessing_1" sourceId="model::modelSystemView::SensorProcessing::spctl_out" targetComponent="model::modelSystemView::VisionAir::controller_1" targetId="model::modelSystemView::Controller::ctlsp_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::controller_1" sourceId="model::modelSystemView::Controller::ctlip_out" targetComponent="model::modelSystemView::VisionAir::infusionpump_1" targetId="model::modelSystemView::InfusionPump::ipctl_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::nmtsensor_1" sourceId="model::modelSystemView::NMTSensor::nmtsp_out" targetComponent="model::modelSystemView::VisionAir::sensorprocessing_1" targetId="model::modelSystemView::SensorProcessing::spnmt_in"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::userinterface_1" sourceId="model::modelSystemView::UserInterface::uid_out" targetComponent="model::modelSystemView::VisionAir" targetId="model::modelSystemView::VisionAir::ui_diag"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::VisionAir::bpsensor_1" name="bpsensor_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::BPSensor::bpsp_out" name="bpsp_out">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->bpsp_out.valueSubtle"/>
+          <flaxml:rule pattern="dumyPort.noFailure->bpsp_out.valueCoarse"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::VisionAir::infusionpump_1" name="infusionpump_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::InfusionPump::ipctl_in" name="ipctl_in">
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::InfusionPump::ipd_out" name="ipd_out">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="ipctl_in.commission ->ipd_out.commission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->ipd_out.commission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::VisionAir::userinterface_1" name="userinterface_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::UserInterface::uictl_in" name="uictl_in">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::UserInterface::uid_out" name="uid_out">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="uictl_in.omission->uid_out.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->uid_out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::VisionAir::powersupply_1" name="powersupply_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::PowerSupply::psctl_out" name="psctl_out">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->psctl_out.valueCoarse"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::VisionAir::sensorprocessing_1" name="sensorprocessing_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::SensorProcessing::spnmt_in" name="spnmt_in">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::SensorProcessing::spbp_in" name="spbp_in">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SensorProcessing::spctl_out" name="spctl_out">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="spbp_in.valueSubtle->spctl_out.valueSubtle"/>
+          <flaxml:rule pattern="spnmt_in.valueSubtle->spctl_out.valueSubtle"/>
+          <flaxml:rule pattern="spbp_in.valueSubtle,spnmt_in.valueSubtle->spctl_out.valueSubtle"/>
+          <flaxml:rule pattern="spnmt_in.valueCoarse->spctl_out.valueCoarse"/>
+          <flaxml:rule pattern="spbp_in.valueCoarse,spnmt_in.valueCoarse->spctl_out.valueCoarse"/>
+          <flaxml:rule pattern="spnmt_in.omission->spctl_out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::VisionAir::nmtsensor_1" name="nmtsensor_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::NMTSensor::nmtsp_out" name="nmtsp_out">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->nmtsp_out.valueSubtle"/>
+          <flaxml:rule pattern="dumyPort.noFailure->nmtsp_out.valueCoarse"/>
+          <flaxml:rule pattern="dumyPort.noFailure->nmtsp_out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::VisionAir::controller_1" name="controller_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Controller::ctlps_in" name="ctlps_in">
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Controller::ctlsp_in" name="ctlsp_in">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Controller::ctlui_out" name="ctlui_out">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Controller::ctlip_out" name="ctlip_out">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueCoarse"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->ctlip_out.commission,ctlui_out.omission"/>
+          <flaxml:rule pattern="ctlsp_in.valueSubtle->ctlip_out.commission,ctlui_out.omission"/>
+          <flaxml:rule pattern="ctlsp_in.valueCoarse ->ctlip_out.commission,ctlui_out.omission"/>
+          <flaxml:rule pattern="ctlsp_in.omission->ctlip_out.commission,ctlui_out.omission"/>
+          <flaxml:rule pattern="ctlps_in.valueCoarse ->ctlip_out.commission,ctlui_out.omission"/>
+          <flaxml:rule pattern="ctlsp_in.valueSubtle,ctlps_in.valueCoarse ->ctlip_out.commission,ctlui_out.omission"/>
+          <flaxml:rule pattern="ctlsp_in.valueCoarse,ctlps_in.valueCoarse ->ctlip_out.commission,ctlui_out.omission"/>
+          <flaxml:rule pattern="ctlsp_in.omission,ctlps_in.valueCoarse ->ctlip_out.commission,ctlui_out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

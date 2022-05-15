@@ -1,0 +1,64 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+import "../util/_Datatypes.thingml"
+import "../util/_Timer.thingml"
+import "Room2_subs/LED.thingml"
+
+thing fragment BoardMessages {
+}
+
+thing Board includes TimerMsgs,BoardMessages,LEDMessages { 
+	required port toLED{
+	sends LedON,LedOFF
+	}
+	required port timerport{
+	receives timer_out
+	sends timer_start
+	}
+
+statechart BOARD_SM init 	OFFSTATE{
+state ONSTATE{
+	on entry 
+	  do
+		toLED!LedON()
+		timer!timer_start(0, 1500)
+	  end
+	
+	transition -> OFFSTATE event e: timerport?timer_out
+	}
+state OFFSTATE{
+	on entry 
+	  do
+		toLED!LedOFF()
+		timer!timer_start(0, 1200)
+	  end
+	
+	transition -> ONSTATE event e: timerport?timer_out
+	}
+}
+}
+
+protocol Timer;
+
+configuration BoardApp{
+	instance arduinoObj : Board
+	instance redledObj : LED
+	connector arduinoObj.toLED
+
+ => 
+redledObj.inLED
+
+
+
+}

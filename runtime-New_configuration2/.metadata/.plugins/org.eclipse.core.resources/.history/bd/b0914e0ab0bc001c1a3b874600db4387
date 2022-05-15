@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::System1" name="System1">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::System1::in" name="in">
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::System1::out" name="out">
+        <outputFailure type="noFailure"/>
+        <outputFailure type="omission"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::System1::rcu_1" sourceId="model::modelSystemView::RCU::RCU_gps_o" targetComponent="model::modelSystemView::System1::gps_1" targetId="model::modelSystemView::GPS::GPS_gps"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System1::rcu_1" sourceId="model::modelSystemView::RCU::RCU_imo_o" targetComponent="model::modelSystemView::System1::imu_1" targetId="model::modelSystemView::IMU::IMU_imu"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System1" sourceId="model::modelSystemView::System1::in" targetComponent="model::modelSystemView::System1::teleoperation_1" targetId="model::modelSystemView::Teleoperation::TLO_tele_i"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System1::rcu_1" sourceId="model::modelSystemView::RCU::RCU_out" targetComponent="model::modelSystemView::System1" targetId="model::modelSystemView::System1::out"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System1::gps_1" sourceId="model::modelSystemView::GPS::GPS_gps_o" targetComponent="model::modelSystemView::System1::rcu_1" targetId="model::modelSystemView::RCU::RCU_gps"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System1::imu_1" sourceId="model::modelSystemView::IMU::IMU_imu_o" targetComponent="model::modelSystemView::System1::rcu_1" targetId="model::modelSystemView::RCU::RCU_imu"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System1::teleoperation_1" sourceId="model::modelSystemView::Teleoperation::TLO_tele" targetComponent="model::modelSystemView::System1::rcu_1" targetId="model::modelSystemView::RCU::RCU_tele"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System1::teleoperation_1" name="teleoperation_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Teleoperation::TLO_tele_i" name="TLO_tele_i">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Teleoperation::TLO_tele" name="TLO_tele">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="TLO_tele_i.noFailure->TLO_tele.noFailure,TLO_tele.valueCoarse"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System1::rcu_1" name="rcu_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::RCU::RCU_gps" name="RCU_gps">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::RCU::RCU_imu" name="RCU_imu">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::RCU::RCU_tele" name="RCU_tele">
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::RCU::RCU_gps_o" name="RCU_gps_o">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::RCU::RCU_out" name="RCU_out">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::RCU::RCU_imo_o" name="RCU_imo_o">
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="RCU_tele.noFailure,RCU_imu.noFailure,RCU_gps.noFailure->RCU_out.noFailure"/>
+          <flaxml:rule pattern="RCU_tele.noFailure,RCU_imu.omission,RCU_gps.noFailure->RCU_out.omission"/>
+          <flaxml:rule pattern="RCU_tele.noFailure,RCU_imu.noFailure,RCU_gps.omission->RCU_out.omission"/>
+          <flaxml:rule pattern="RCU_tele.valueCoarse,RCU_imu.noFailure,RCU_gps.noFailure->RCU_out.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System1::imu_1" name="imu_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::IMU::IMU_imu" name="IMU_imu">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::IMU::IMU_imu_o" name="IMU_imu_o">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="IMU_imu.noFailure->IMU_imu_o.noFailure,IMU_imu_o.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System1::gps_1" name="gps_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::GPS::GPS_gps" name="GPS_gps">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::GPS::GPS_gps_o" name="GPS_gps_o">
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="GPS_gps.noFailure->GPS_gps_o.noFailure,GPS_gps_o.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

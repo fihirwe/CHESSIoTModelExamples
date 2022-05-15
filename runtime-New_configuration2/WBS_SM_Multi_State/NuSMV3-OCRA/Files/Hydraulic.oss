@@ -1,0 +1,8 @@
+
+@requires discrete-time
+COMPONENT Hydraulic system
+INTERFACE
+INPUT CMD_AS : boolean ;
+INPUT Valid : boolean ;
+OUTPUT Brake : boolean ;
+CONTRACT Hydraulic_Brake_Time assume : TRUE ; guarantee : always ( ( CMD_AS or not Valid ) implies ( in the future ( Brake ) ) ) ;

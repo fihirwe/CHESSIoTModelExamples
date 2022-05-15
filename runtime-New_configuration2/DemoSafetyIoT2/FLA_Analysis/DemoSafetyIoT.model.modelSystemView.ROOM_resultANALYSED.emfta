@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="omission failure at the lightPort of ROOM">
+    <events type="Intermediate" name="omission failure at the lightPort of ROOM">
+      <gate type="AND" description="4" events="/4 /0/@events.1"/>
+    </events>
+    <events name=" INTERNAL failure in iotboard_1" description="5"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the sensedValue of ROOM">
+    <events type="Intermediate" name="omission failure at the sensedValue of ROOM" description="8">
+      <gate description="8" events="/5 /6 /1/@events.1 /1/@events.10"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the sensedValue of iotboard_1" description="9">
+      <gate type="AND" description="9" events="/7 /8 /1/@events.2 /1/@events.3"/>
+    </events>
+    <events name=" INTERNAL failure in HumiditySensor" description="12"/>
+    <events type="Intermediate" name="omission failure at the in_Temperature of iotboard_1" description="13">
+      <gate description="13" events="/9 /10 /11 /12 /1/@events.4 /1/@events.7 /1/@events.8 /1/@events.9"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the INLastDown2 of powerSource" description="15">
+      <gate description="15" events="/13 /14 /1/@events.5 /1/@events.6"/>
+    </events>
+    <events name=" INTERNAL failure in TempSensor" description="19"/>
+    <events name=" INTERNAL failure in regulator" description="21"/>
+    <events name=" INTERNAL failure in powerSource" description="23"/>
+    <events name=" INTERNAL failure in TempSensor" description="27"/>
+    <events name=" INTERNAL failure in batterySource" description="29"/>
+    <events name=" INTERNAL failure in iotboard_1" description="31"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event name=" INTERNAL failure in iotboard_1" description="5"/>
+  <emfta:Event type="Intermediate" name="omission failure at the sensedValue of iotboard_1" description="9"/>
+  <emfta:Event type="Intermediate" name="omission failure at the sensedValue of iotboard_1" description="30"/>
+  <emfta:Event type="Intermediate" name="omission failure at the in_Humidity of iotboard_1" description="10"/>
+  <emfta:Event type="Intermediate" name="omission failure at the in_Temperature of iotboard_1" description="13"/>
+  <emfta:Event type="Intermediate" name="omission failure at the OUTLastDow2 of powerSource" description="14"/>
+  <emfta:Event type="Intermediate" name="omission failure at the OUTLastDow2 of powerSource" description="22"/>
+  <emfta:Event type="Intermediate" name="omission failure at the OUTLastDown1 of batterySource" description="24"/>
+  <emfta:Event type="Intermediate" name="omission failure at the OUTLastDown1 of batterySource" description="28"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outB of regulator" description="16"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outB of regulator" description="20"/>
+</xmi:XMI>

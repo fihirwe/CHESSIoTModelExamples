@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="omission failure of sensed_speed in System">
+    <events type="External" name="omission failure of sensed_speed in System">
+      <gate description="1"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="commission failure of sensed_speed in System">
+    <events type="External" name="commission failure of sensed_speed in System">
+      <gate description="2"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure of sensed_speed_is_present in System">
+    <events type="External" name="omission failure of sensed_speed_is_present in System">
+      <gate description="3" events="/60 /61 /62 /2/@events.1 /2/@events.6 /2/@events.11"/>
+    </events>
+    <events type="External" name="omission failure of output_is_present in selector">
+      <gate type="AND" description="4" events="/63 /64 /2/@events.2 /2/@events.3"/>
+    </events>
+    <events name=" INTERNAL failure in sensor1" description="7"/>
+    <events type="External" name="omission failure of absence_alarm_1 in selector">
+      <gate description="8" events="/65 /66 /2/@events.4 /2/@events.5"/>
+    </events>
+    <events name=" INTERNAL failure in monitor1" description="10"/>
+    <events name=" INTERNAL failure in selector" description="14"/>
+    <events type="External" name="omission failure of output_is_present in selector">
+      <gate type="AND" description="15" events="/67 /68 /2/@events.7 /2/@events.8"/>
+    </events>
+    <events name=" INTERNAL failure in sensor2" description="18"/>
+    <events type="External" name="omission failure of absence_alarm_2 in selector">
+      <gate description="19" events="/69 /70 /2/@events.9 /2/@events.10"/>
+    </events>
+    <events name=" INTERNAL failure in monitor2" description="21"/>
+    <events name=" INTERNAL failure in selector" description="25"/>
+    <events type="External" name="omission failure of output_is_present in selector">
+      <gate type="AND" description="26" events="/71 /72 /2/@events.12 /2/@events.13"/>
+    </events>
+    <events name=" INTERNAL failure in sensor1" description="29"/>
+    <events name=" INTERNAL failure in sensor2" description="32"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="commission failure of sensed_speed_is_present in System">
+    <events type="External" name="commission failure of sensed_speed_is_present in System">
+      <gate description="33" events="/73 /74 /3/@events.1 /3/@events.4"/>
+    </events>
+    <events type="External" name="commission failure of output_is_present in selector">
+      <gate type="AND" description="34" events="/75 /76 /3/@events.2 /3/@events.3"/>
+    </events>
+    <events type="External" name="late failure INJECTED at speed in System" description="40"/>
+    <events type="External" name="late failure INJECTED at speed in System" description="44"/>
+    <events type="External" name="commission failure of output_is_present in selector">
+      <gate type="AND" description="45" events="/77 /78 /3/@events.5 /3/@events.6"/>
+    </events>
+    <events type="External" name="late failure INJECTED at speed in System" description="51"/>
+    <events type="External" name="late failure INJECTED at speed in System" description="55"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="External" name="omission failure of output_is_present in selector" description="4"/>
+  <emfta:Event type="External" name="omission failure of output_is_present in selector" description="15"/>
+  <emfta:Event type="External" name="omission failure of output_is_present in selector" description="26"/>
+  <emfta:Event type="External" name="omission failure of input1_is_present in selector" description="5"/>
+  <emfta:Event type="External" name="omission failure of absence_alarm_1 in selector" description="8"/>
+  <emfta:Event type="External" name="omission failure of absence_alarm in monitor1" description="9"/>
+  <emfta:Event type="External" name="omission failure of absence_alarm in monitor1" description="11"/>
+  <emfta:Event type="External" name="omission failure of input2_is_present in selector" description="16"/>
+  <emfta:Event type="External" name="omission failure of absence_alarm_2 in selector" description="19"/>
+  <emfta:Event type="External" name="omission failure of absence_alarm in monitor2" description="20"/>
+  <emfta:Event type="External" name="omission failure of absence_alarm in monitor2" description="22"/>
+  <emfta:Event type="External" name="omission failure of input1_is_present in selector" description="27"/>
+  <emfta:Event type="External" name="omission failure of input2_is_present in selector" description="30"/>
+  <emfta:Event type="External" name="commission failure of output_is_present in selector" description="34"/>
+  <emfta:Event type="External" name="commission failure of output_is_present in selector" description="45"/>
+  <emfta:Event type="External" name="commission failure of absence_alarm_2 in selector" description="35"/>
+  <emfta:Event type="External" name="commission failure of input2_is_present in selector" description="41"/>
+  <emfta:Event type="External" name="commission failure of absence_alarm_1 in selector" description="46"/>
+  <emfta:Event type="External" name="commission failure of input1_is_present in selector" description="52"/>
+</xmi:XMI>

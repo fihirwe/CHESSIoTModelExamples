@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<emfta:FTAModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta" name="commission failure at the OUT_o of HealthCare">
+  <events type="Intermediate" name="commission failure at the OUT_o of HealthCare" probability="7.836E+05" description="1">
+    <gate description="1" events="//@events.1"/>
+  </events>
+  <events type="Intermediate" name="commission failure at the CTL_out_o of controller_1" probability="7.836E+05" description="2">
+    <gate type="AND" description="2" events="//@events.2 //@events.3"/>
+  </events>
+  <events name=" INTERNAL failure in controller_1" probability="7.836E+05" description="3"/>
+  <events type="Intermediate" name="valueSubtle failure at the CTL_nmt_i of controller_1" probability="7.836E+05" description="4">
+    <gate description="4" events="//@events.4"/>
+  </events>
+  <events type="Intermediate" name="valueSubtle failure at the NMT_ctl_o of nmt_1" probability="7.836E+05" description="5">
+    <gate type="AND" description="5" events="//@events.5"/>
+  </events>
+  <events name=" INTERNAL failure in nmt_1" probability="7.836E+05" description="6"/>
+</emfta:FTAModel>

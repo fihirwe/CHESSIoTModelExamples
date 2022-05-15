@@ -1,0 +1,25 @@
+MODULE main
+
+VAR
+state         : { OK,
+                  failure
+                };
+
+IVAR
+fault_Monitor : boolean;
+fault_Command : boolean;
+Pedal_Pos     : boolean;
+CMD_AS        : boolean;
+
+DEFINE
+Valid            := state!=failure;
+fault		 := (fault_Command | fault_Monitor);
+
+INIT
+state = OK
+
+TRANS
+(state = OK & !fault  & next(state) = OK & (Pedal_Pos -> CMD_AS)) |
+(state = OK & fault & next(state) = failure) |
+(state = failure & next(state) = failure)
+

@@ -1,0 +1,257 @@
+thing fragment BoardMessages {
+}
+thing Board includes TimerMsgs , BoardMessages , LEDMessages , FANMessages , ButtonMsgs {
+	required port toLED {
+		sends LedON sends LedOFF
+	}
+	required port toFAN {
+		sends FanON sends FanOFF
+	}
+	required port fromButton {
+		receives press receives release
+	}
+	required port port_Timer {
+		sends timer_start receives timer_timeout
+	}
+	statechart Board init Waiting {
+		state Waiting {
+			on entry do
+				toLED!LedON()
+				toFAN!FanOFF()
+			end
+			transition -> FanOnLedOFF
+		}
+		state FanOnLedOFF {
+			on entry do
+				toFAN!FanON()
+				toLED!LedOFF()
+				port_Timer!timer_start(0, 1000)
+			end
+			transition -> FanOFFLedON
+			event fromButton?release
+		}
+		state FanOFFLedON {
+			on entry do
+				toFAN!FanOFF()
+				toLED!LedON()
+				port_Timer!timer_start(1, 1000)
+			end
+			transition -> FanOnLedOFF
+			event fromButton?press
+		}
+	}
+}
+datatype Byte<1>
+	@type_checker "Integer"
+	@c_type "uint8_t"
+	@c_byte_size "1"
+	@java_type "byte"
+	@java_primitive "true"
+datatype Boolean<2>
+	@type_checker "Boolean"
+	@c_type "bool"
+	@c_byte_size "2"
+	@java_type "boolean"
+	@java_primitive "true"
+datatype Integer<2>
+	@type_checker "Integer"
+	@c_type "int"
+	@c_byte_size "2"
+	@java_type "short"
+	@java_primitive "true"
+	@ros_type "int16"
+datatype UInt8<1>
+	@type_checker "Integer"
+	@c_type "uint8_t"
+	@c_byte_size "1"
+	@java_type "short"
+	@java_primitive "true"
+datatype Int8<1>
+	@type_checker "Integer"
+	@c_type "int8_t"
+	@c_byte_size "1"
+	@java_type "byte"
+	@java_primitive "true"
+datatype UInt16<2>
+	@type_checker "Integer"
+	@c_type "uint16_t"
+	@c_byte_size "2"
+	@java_type "int"
+	@java_primitive "true"
+datatype Int16<2>
+	@type_checker "Integer"
+	@c_type "int16_t"
+	@c_byte_size "2"
+	@java_type "short"
+	@java_primitive "true"
+datatype Int32<4>
+	@type_checker "Integer"
+	@c_type "int32_t"
+	@c_byte_size "4"
+	@java_type "int"
+	@java_primitive "true"
+datatype UInt32<4>
+	@c_type "uint32_t"
+	@java_type "long"
+	@java_primitive "true"
+datatype Long<4>
+	@type_checker "Integer"
+	@c_type "long"
+	@c_byte_size "4"
+	@java_type "int"
+	@java_primitive "true"
+datatype ULong<4>
+	@type_checker "Integer"
+	@c_type "unsigned long"
+	@c_byte_size "4"
+	@java_type "long"
+	@java_primitive "true"
+datatype Double<8>
+	@type_checker "Real"
+	@c_type "double"
+	@c_byte_size "8"
+	@java_type "float"
+	@java_primitive "true"
+datatype Float<8>
+	@type_checker "Real"
+	@c_type "float"
+	@c_byte_size "8"
+	@java_type "float"
+	@java_primitive "true"
+datatype Char<1>
+	@type_checker "Character"
+	@c_type "char"
+	@c_byte_size "1"
+	@java_type "char"
+	@js_type "char"
+	@java_primitive "true"
+object String
+	@c_type "char *"
+	@c_byte_size "*"
+	@java_type "String"
+	@js_type "String"
+enumeration DigitalState
+	@type_checker "Integer"
+	@java_type "byte"
+	@java_primitive "true"
+	@c_byte_size "1"
+	@c_type "uint8_t"
+	{
+	LOW @enum_val "0"
+	HIGH @enum_val "1"
+}
+datatype LongLong<8>
+	@type_checker "Integer"
+	@c_type "long long"
+	@c_byte_size "8"
+	@java_type "long"
+	@java_primitive "true"
+thing fragment TimerMsgs {
+	message timer_start(id : UInt8, time : UInt32)
+	@timer_start "true" message timer_cancel(id : UInt8)
+	@timer_cancel "true" message timer_timeout(id : UInt8)
+	@timeout "true"
+	message ms25_tic()
+	@xms_tic "25"
+	message ms500_tic()
+	@xms_tic "500"
+}
+thing fragment LEDMessages {
+	message LedON()
+	message LedOFF()
+}
+thing LED includes TimerMsgs , LEDMessages {
+	provided port inLED {
+		receives LedON receives LedOFF
+	}
+	property PIN11 : UInt8 = 11
+	statechart LED_SM init READY {
+		state READY {
+			on entry do
+				`pinMode(` & PIN11 & `, OUTPUT);`
+			end
+			internal
+			event inLED?LedOFF
+			action do
+				`digitalWrite(` & PIN11 & `, LOW);`
+			end
+			internal
+			event inLED?LedON
+			action do
+				`digitalWrite(` & PIN11 & `,HIGH);`
+			end
+		}
+	}
+}
+thing fragment FANMessages {
+	message FanON()
+	message FanOFF()
+}
+thing FAN includes TimerMsgs , FANMessages {
+	provided port inFAN {
+		receives FanON receives FanOFF
+	}
+	property PIN12 : UInt8 = 12
+	statechart FAN init StandBy {
+		state StandBy {
+			on entry do
+				`pinMode(` & PIN12 & `, OUTPUT);`
+			end
+			internal
+			event inFAN?FanOFF
+			action do
+				`digitalWrite(` & PIN12 & `, LOW);`
+			end
+			internal
+			event inFAN?FanON
+			action do
+				`digitalWrite(` & PIN12 & `,HIGH);`
+			end
+		}
+	}
+}
+thing fragment ButtonMsgs {
+	message press()
+	message release()
+}
+thing BUTTON includes ButtonMsgs , TimerMsgs {
+	required port clock_tic {
+		receives ms25_tic
+	}
+	provided port toBoard {
+		sends press sends release
+	}
+	property PIN : UInt8 = 0
+	statechart Button init RELEASED {
+		state RELEASED {
+			transition -> PRESSED
+			event clock_tic?ms25_tic
+			guard `digitalRead(` & PIN & `)`
+			action toBoard!press()
+		}
+		state PRESSED {
+			transition -> RELEASED
+			event clock_tic?ms25_tic
+			guard not `digitalRead(` & PIN & `)`
+			action toBoard!release()
+		}
+	}
+}
+protocol Timer
+
+protocol Timer
+
+configuration BoardApp {
+	instance arduinoObj : Board
+	instance redledObj : LED
+	instance fabObj : FAN
+	instance buttonObj : BUTTON
+	connector arduinoObj.fromButton => buttonObj . toBoard
+	connector arduinoObj.toFAN => fabObj . inFAN
+	connector arduinoObj.toLED => redledObj . inLED
+	connector arduinoObj.port_Timer over Timer
+	connector buttonObj.clock_tic over Timer
+	set redledObj.PIN11 = 11
+	set fabObj.PIN12 = 12
+	set buttonObj.PIN = 0
+}

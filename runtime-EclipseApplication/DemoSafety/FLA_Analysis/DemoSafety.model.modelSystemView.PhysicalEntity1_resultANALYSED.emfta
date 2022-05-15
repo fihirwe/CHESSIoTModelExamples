@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../cleanNovember212/org.polarsys.chess.fla.faultTreeAnalysis/models/emfta.ecore">
+  <emfta:FTAModel name="omission failure of sensedValue in PhysicalEntity1">
+    <events type="External" name="omission failure of sensedValue in PhysicalEntity1">
+      <gate description="1" events="/4 /5 /0/@events.1 /0/@events.12"/>
+    </events>
+    <events type="External" name="omission failure of inSensed in rfmodule1_1" description="3">
+      <gate description="3" events="/6 /7 /0/@events.2 /0/@events.11"/>
+    </events>
+    <events type="External" name="omission failure of sensedValue in iotboard_1" description="4">
+      <gate type="AND" description="4" events="/8 /9 /0/@events.3 /0/@events.4"/>
+    </events>
+    <events name=" INTERNAL failure in HumiditySensor" description="7"/>
+    <events type="External" name="omission failure of in_Temperature in iotboard_1" description="8">
+      <gate description="8" events="/10 /11 /12 /13 /0/@events.5 /0/@events.8 /0/@events.9 /0/@events.10"/>
+    </events>
+    <events type="External" name="omission failure of INLastDown2 in block2_1" description="10">
+      <gate description="10" events="/14 /15 /0/@events.6 /0/@events.7"/>
+    </events>
+    <events name=" INTERNAL failure in TempSensor" description="14"/>
+    <events name=" INTERNAL failure in innerSimple_1" description="16"/>
+    <events name=" INTERNAL failure in block2_1" description="18"/>
+    <events name=" INTERNAL failure in TempSensor" description="22"/>
+    <events name=" INTERNAL failure in lastdown_1" description="24"/>
+    <events name=" INTERNAL failure in iotboard_1" description="26"/>
+    <events name=" INTERNAL failure in rfmodule1_1" description="28"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure of lightPort in PhysicalEntity1">
+    <events type="External" name="omission failure of lightPort in PhysicalEntity1">
+      <gate description="29" events="/16 /17 /1/@events.1 /1/@events.2"/>
+    </events>
+    <events name=" INTERNAL failure in iotboard_1" description="33"/>
+    <events name=" INTERNAL failure in led_1" description="35"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="External" name="omission failure of outBroadcast in rfmodule1_1" description="2"/>
+  <emfta:Event type="External" name="omission failure of outBroadcast in rfmodule1_1" description="27"/>
+  <emfta:Event type="External" name="omission failure of sensedValue in iotboard_1" description="4"/>
+  <emfta:Event type="External" name="omission failure of sensedValue in iotboard_1" description="25"/>
+  <emfta:Event type="External" name="omission failure of in_Humidity in iotboard_1" description="5"/>
+  <emfta:Event type="External" name="omission failure of in_Temperature in iotboard_1" description="8"/>
+  <emfta:Event type="External" name="omission failure of OUTLastDow2 in block2_1" description="9"/>
+  <emfta:Event type="External" name="omission failure of OUTLastDow2 in block2_1" description="17"/>
+  <emfta:Event type="External" name="omission failure of OUTLastDown1 in lastdown_1" description="19"/>
+  <emfta:Event type="External" name="omission failure of OUTLastDown1 in lastdown_1" description="23"/>
+  <emfta:Event type="External" name="omission failure of outB in innerSimple_1" description="11"/>
+  <emfta:Event type="External" name="omission failure of outB in innerSimple_1" description="15"/>
+  <emfta:Event type="External" name="omission failure of outLED in led_1" description="30"/>
+  <emfta:Event type="External" name="omission failure of outLED in led_1" description="34"/>
+</xmi:XMI>

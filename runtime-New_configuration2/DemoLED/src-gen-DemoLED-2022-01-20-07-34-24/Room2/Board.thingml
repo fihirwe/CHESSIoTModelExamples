@@ -1,0 +1,82 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+import "../util/_Datatypes.thingml"
+import "../util/_Timer.thingml"
+import "Room2_subs/LED.thingml"
+import "Room2_subs/FAN.thingml"
+import "Room2_subs/BUTTON.thingml"
+
+thing fragment BoardMessages {
+}
+
+thing Board includes TimerMsgs,BoardMessages,LEDMessages,FANMessages,ButtonMsgs { 
+	required port toLED{
+	sends LedON,LedOFF
+	}
+	required port toFAN{
+	sends FanON,FanOFF
+	}
+	required port fromButton{
+	receives press,release
+	}
+	required port port_Timer{
+	sends timer_start
+	}
+
+	statechart Board init Waiting {
+	
+		state Waiting {
+
+			on entry do
+				toLED!LedON()
+				toFAN!FanOFF()
+			end
+			transition -> FanOnLedOFF
+			}
+		state FanOnLedOFF {
+			on entry do
+				toFAN!FanON()
+				toLED!LedOFF()
+				port_Timer!timer_start(0, 1000)
+			end
+		transition -> FanOFFLedON event fromButton?release
+		}
+		state FanOFFLedON {	
+			on entry do
+				toFAN!FanOFF()
+				toLED!LedON()
+				port_Timer!timer_start(1, 1000)
+			end
+		transition -> FanOnLedOFF event fromButton?press
+		}	
+	}
+}
+
+protocol Timer;
+
+configuration BoardApp{
+	instance arduinoObj : Board
+	instance redledObj : LED
+	instance fabObj:FAN
+	instance buttonObj : BUTTON
+	
+	connector arduinoObj.fromButton => buttonObj.toBoard
+	connector arduinoObj.toFAN => fabObj.inFAN
+	connector arduinoObj.toLED => redledObj.inLED
+	connector arduinoObj.port_Timer over Timer
+	connector buttonObj.clock_tic over Timer
+		set redledObj.PIN11 = 11
+		set fabObj.PIN12 = 12
+		set buttonObj.PIN = 0
+	}

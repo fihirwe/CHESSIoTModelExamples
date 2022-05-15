@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="Fault Tree of system_monitor_out+valueSubtle &#xA;--------------&#xA; TOP FAILURE &lt;valueSubtle> at system_monitor_out port in PMSystem">
+    <events type="Intermediate" name="system_monitor_out+valueSubtle &#xA;--------------&#xA; TOP FAILURE &lt;valueSubtle> at system_monitor_out port in PMSystem" description="1_valueSubtle">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/15 /0/@events.1"/>
+    </events>
+    <events type="Undevelopped" name="UNDEVELOPED FAILURE" description="unknown_undeveloped"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of system_monitor_out+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at system_monitor_out port in PMSystem">
+    <events type="Intermediate" name="system_monitor_out+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at system_monitor_out port in PMSystem" probability="1.500E-07">
+      <gate description="2_omission" events="/16 /17 /18 /1/@events.1 /1/@events.2 /1/@events.15"/>
+    </events>
+    <events name="monitor_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> Monitor fails internally or badly connected" probability="1.000E-08" description="4_omission"/>
+    <events type="Intermediate" name="monitor_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at monitor_out port in monitor" probability="1.400E-07" description="6_omission">
+      <gate description="6_omission" events="/19 /20 /1/@events.3 /1/@events.4"/>
+    </events>
+    <events name="server_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> Server down" probability="2.000E-08" description="8_omission"/>
+    <events type="Intermediate" name="server_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at server_out port in server" probability="1.200E-07" description="10_omission">
+      <gate description="10_omission" events="/21 /22 /1/@events.5 /1/@events.6"/>
+    </events>
+    <events name="trans_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> Gateway malfunction due to unknown issues" probability="3.000E-08" description="12_omission"/>
+    <events type="Intermediate" name="trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at trans_out port in transciever" probability="9.000E-08" description="14_omission">
+      <gate description="14_omission" events="/23 /24 /25 /1/@events.7 /1/@events.8 /1/@events.9"/>
+    </events>
+    <events name="cont_trans_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at cont_trans_out port in controller" description="16_omission"/>
+    <events type="External" name="sys_power_in+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> Problem with the system's power source" probability="9.000E-08" description="19_omission"/>
+    <events type="Intermediate" name="cont_trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_trans_out port in controller" probability="1.935E-38" description="20_omission">
+      <gate type="AND" description="20_omission" events="/26 /27 /28 /29 /30 /1/@events.10 /1/@events.11 /1/@events.12 /1/@events.13 /1/@events.14"/>
+    </events>
+    <events name="ecgsens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> ECG sensor  fails completely or broken" probability="1.800E-08" description="23_omission"/>
+    <events name="eegsens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> EEG sensor  fails completely or broken" probability="1.600E-08" description="26_omission"/>
+    <events name="psens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> Pressure sensor fails completely or broken" probability="6.000E-08" description="29_omission"/>
+    <events name="spo2sens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> SPO2Sensor  fails completely or broken" probability="8.000E-08" description="32_omission"/>
+    <events name="tempsens_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> Temperature sensor  fails completely or broken" probability="1.400E-08" description="35_omission"/>
+    <events name="human_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> at human_out port in human" description="39_omission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of system_monitor_out+valueCoarse &#xA;--------------&#xA; TOP FAILURE &lt;valueCoarse> at system_monitor_out port in PMSystem">
+    <events type="Intermediate" name="system_monitor_out+valueCoarse &#xA;--------------&#xA; TOP FAILURE &lt;valueCoarse> at system_monitor_out port in PMSystem" probability="1.320E-07" description="46_valueCoarse">
+      <gate description="46_valueCoarse" events="/31 /32 /33 /34 /35 /36 /2/@events.1 /2/@events.2 /2/@events.3 /2/@events.4 /2/@events.5 /2/@events.6"/>
+    </events>
+    <events name="ecgsens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> ECG Sensor starts failing due to age and provides worng readings" probability="1.900E-08" description="50_valueCoarse"/>
+    <events name="eegsens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> EEG sensor starts failing due to age and provides worng readings" probability="1.700E-08" description="54_valueCoarse"/>
+    <events name="psens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> Pressure sensor starts to fails by age and provide wrong readings" probability="7.000E-08" description="58_valueCoarse"/>
+    <events name="spo2sens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> SPO2Sensor starts failing due to age and provides worng readings" probability="1.100E-08" description="62_valueCoarse"/>
+    <events name="tempsens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> Temperature sensor starts failing due to age and provides worng readings" probability="1.500E-08" description="66_valueCoarse"/>
+    <events type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="67_valueCoarse">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/37 /2/@events.7"/>
+    </events>
+    <events type="Intermediate" name="trans_cont_in+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at trans_cont_in port in controller" description="75_valueSubtle">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/38 /2/@events.8"/>
+    </events>
+    <events type="External" name="sys_hum_in+late &#xA;--------------&#xA; INJECTED FAILURE &lt;late> at sys_hum_in port in PMSystem" description="77_late"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of system_alarm_out+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at system_alarm_out port in PMSystem">
+    <events type="Intermediate" name="system_alarm_out+commission &#xA;--------------&#xA; TOP FAILURE &lt;commission> at system_alarm_out port in PMSystem" probability="1.720E-07">
+      <gate description="78_commission" events="/39 /40 /3/@events.1 /3/@events.15"/>
+    </events>
+    <events type="Intermediate" name="alarm_out+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at alarm_out port in alarm" probability="1.320E-07" description="80_commission">
+      <gate description="80_commission" events="/41 /42 /3/@events.2 /3/@events.12"/>
+    </events>
+    <events type="Intermediate" name="mon_alarm_out+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at mon_alarm_out port in monitor" probability="1.320E-07" description="81_commission">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/43 /3/@events.3"/>
+    </events>
+    <events type="Intermediate" name="trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at trans_out port in transciever" probability="1.320E-07" description="86_valueCoarse">
+      <gate description="86_valueCoarse" events="/44 /45 /46 /47 /48 /49 /3/@events.4 /3/@events.5 /3/@events.6 /3/@events.7 /3/@events.8 /3/@events.9"/>
+    </events>
+    <events name="ecgsens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> ECG Sensor starts failing due to age and provides worng readings" probability="1.900E-08" description="90_valueCoarse"/>
+    <events name="eegsens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> EEG sensor starts failing due to age and provides worng readings" probability="1.700E-08" description="94_valueCoarse"/>
+    <events name="psens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> Pressure sensor starts to fails by age and provide wrong readings" probability="7.000E-08" description="98_valueCoarse"/>
+    <events name="spo2sens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> SPO2Sensor starts failing due to age and provides worng readings" probability="1.100E-08" description="102_valueCoarse"/>
+    <events name="tempsens_out+valueCoarse &#xA;--------------&#xA; INTERNAL FAILURE &lt;valueCoarse> Temperature sensor starts failing due to age and provides worng readings" probability="1.500E-08" description="106_valueCoarse"/>
+    <events type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="107_valueCoarse">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/50 /3/@events.10"/>
+    </events>
+    <events type="Intermediate" name="trans_cont_in+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at trans_cont_in port in controller" description="115_valueSubtle">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/51 /3/@events.11"/>
+    </events>
+    <events type="External" name="sys_hum_in+late &#xA;--------------&#xA; INJECTED FAILURE &lt;late> at sys_hum_in port in PMSystem" description="117_late"/>
+    <events type="Intermediate" name="mon_alarm_out+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at mon_alarm_out port in monitor" description="118_commission">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/52 /3/@events.13"/>
+    </events>
+    <events type="Intermediate" name="hum_mon_in+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at hum_mon_in port in monitor" description="120_valueSubtle">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/53 /3/@events.14"/>
+    </events>
+    <events type="External" name="sys_hum_in+late &#xA;--------------&#xA; INJECTED FAILURE &lt;late> at sys_hum_in port in PMSystem" description="122_late"/>
+    <events name="alarm_out+commission &#xA;--------------&#xA; INTERNAL FAILURE &lt;commission> Alarm system start to fail increasingly due to age" probability="4.000E-08" description="124_commission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of system_alarm_out+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at system_alarm_out port in PMSystem">
+    <events type="Intermediate" name="system_alarm_out+omission &#xA;--------------&#xA; TOP FAILURE &lt;omission> at system_alarm_out port in PMSystem" probability="5.000E-08" description="126_omission">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/4/@events.1"/>
+    </events>
+    <events name="alarm_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> Alarm system fails completery or broken" probability="5.000E-08" description="127_omission"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of system_alarm_out+valueSubtle &#xA;--------------&#xA; TOP FAILURE &lt;valueSubtle> at system_alarm_out port in PMSystem">
+    <events type="Intermediate" name="system_alarm_out+valueSubtle &#xA;--------------&#xA; TOP FAILURE &lt;valueSubtle> at system_alarm_out port in PMSystem" description="128_valueSubtle">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/55 /5/@events.1"/>
+    </events>
+    <events type="Undevelopped" name="UNDEVELOPED FAILURE" description="unknown_undeveloped"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="Fault Tree of system_alarm_out+valueCoarse &#xA;--------------&#xA; TOP FAILURE &lt;valueCoarse> at system_alarm_out port in PMSystem">
+    <events type="Intermediate" name="system_alarm_out+valueCoarse &#xA;--------------&#xA; TOP FAILURE &lt;valueCoarse> at system_alarm_out port in PMSystem" description="129_valueCoarse">
+      <gate type="INTERMEDIATE" description="propagations and/or &#xA; transformations" events="/56 /6/@events.1"/>
+    </events>
+    <events type="Undevelopped" name="UNDEVELOPED FAILURE" description="unknown_undeveloped"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="UNDEVELOPED FAILURE" description="unknown_undeveloped"/>
+  <emfta:Event type="Intermediate" name="monitor_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at monitor_out port in monitor" description="3_omission"/>
+  <emfta:Event type="Intermediate" name="monitor_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at monitor_out port in monitor" description="5_omission"/>
+  <emfta:Event type="Intermediate" name="monitor_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at monitor_out port in monitor" description="36_omission"/>
+  <emfta:Event type="Intermediate" name="server_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at server_out port in server" description="7_omission"/>
+  <emfta:Event type="Intermediate" name="server_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at server_out port in server" description="9_omission"/>
+  <emfta:Event type="Intermediate" name="trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at trans_out port in transciever" description="11_omission"/>
+  <emfta:Event type="Intermediate" name="trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at trans_out port in transciever" description="13_omission"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_trans_out port in controller" description="15_omission"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_trans_out port in controller" description="17_omission"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at cont_trans_out port in controller" description="20_omission"/>
+  <emfta:Event type="Intermediate" name="ecg_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at ecg_cont_in port in controller" description="21_omission"/>
+  <emfta:Event type="Intermediate" name="eeg_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at eeg_cont_in port in controller" description="24_omission"/>
+  <emfta:Event type="Intermediate" name="press_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at press_cont_in port in controller" description="27_omission"/>
+  <emfta:Event type="Intermediate" name="spo_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at spo_cont_in port in controller" description="30_omission"/>
+  <emfta:Event type="Intermediate" name="temp_cont_in+omission &#xA;--------------&#xA; LOCAL FAILURE &lt;omission> at temp_cont_in port in controller" description="33_omission"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="47_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="51_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="55_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="59_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="63_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="67_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="trans_cont_in+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at trans_cont_in port in controller" description="68_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="human_in+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at human_in port in human" description="76_late"/>
+  <emfta:Event type="Intermediate" name="alarm_out+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at alarm_out port in alarm" description="79_commission"/>
+  <emfta:Event type="Intermediate" name="alarm_out+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at alarm_out port in alarm" description="123_commission"/>
+  <emfta:Event type="Intermediate" name="mon_alarm_out+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at mon_alarm_out port in monitor" description="81_commission"/>
+  <emfta:Event type="Intermediate" name="mon_alarm_out+commission &#xA;--------------&#xA; LOCAL FAILURE &lt;commission> at mon_alarm_out port in monitor" description="118_commission"/>
+  <emfta:Event type="Intermediate" name="monitor_in+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at monitor_in port in monitor" description="82_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="87_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="91_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="95_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="99_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="103_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="cont_trans_out+valueCoarse &#xA;--------------&#xA; LOCAL FAILURE &lt;valueCoarse> at cont_trans_out port in controller" description="107_valueCoarse"/>
+  <emfta:Event type="Intermediate" name="trans_cont_in+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at trans_cont_in port in controller" description="108_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="human_in+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at human_in port in human" description="116_late"/>
+  <emfta:Event type="Intermediate" name="hum_mon_in+valueSubtle &#xA;--------------&#xA; LOCAL FAILURE &lt;valueSubtle> at hum_mon_in port in monitor" description="119_valueSubtle"/>
+  <emfta:Event type="Intermediate" name="human_in+late &#xA;--------------&#xA; LOCAL FAILURE &lt;late> at human_in port in human" description="121_late"/>
+  <emfta:Event name="alarm_out+omission &#xA;--------------&#xA; INTERNAL FAILURE &lt;omission> Alarm system fails completery or broken" description="127_omission"/>
+  <emfta:Event type="Intermediate" name="UNDEVELOPED FAILURE" description="unknown_undeveloped"/>
+  <emfta:Event type="Intermediate" name="UNDEVELOPED FAILURE" description="unknown_undeveloped"/>
+</xmi:XMI>

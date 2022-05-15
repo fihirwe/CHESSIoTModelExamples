@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="omission failure at the out of System1">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: omission failure at the out of System1" description="1">
+      <gate description="1" events="/0/@events.1 /0/@events.7 /0/@events.13"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the RCU_out of rcu_1" description="2">
+      <gate type="AND" description="2" events="/0/@events.2 /0/@events.3 /0/@events.6"/>
+    </events>
+    <events name=" INTERNAL failure in rcu_1" description="3"/>
+    <events type="Intermediate" name="omission failure at the RCU_imu of rcu_1" description="4">
+      <gate description="4" events="/0/@events.4"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the IMU_imu_o of imu_1" description="5">
+      <gate type="AND" description="5" events="/0/@events.5"/>
+    </events>
+    <events name=" INTERNAL failure in imu_1" description="6"/>
+    <events name=" INTERNAL failure in rcu_1" description="7"/>
+    <events type="Intermediate" name="omission failure at the RCU_out of rcu_1" description="8">
+      <gate type="AND" description="8" events="/0/@events.8 /0/@events.9 /0/@events.10"/>
+    </events>
+    <events name=" INTERNAL failure in rcu_1" description="9"/>
+    <events name=" INTERNAL failure in rcu_1" description="10"/>
+    <events type="Intermediate" name="omission failure at the RCU_gps of rcu_1" description="11">
+      <gate description="11" events="/0/@events.11"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the GPS_gps_o of gps_1" description="12">
+      <gate type="AND" description="12" events="/0/@events.12"/>
+    </events>
+    <events name=" INTERNAL failure in gps_1" description="13"/>
+    <events type="Intermediate" name="omission failure at the RCU_out of rcu_1" description="14">
+      <gate type="AND" description="14" events="/0/@events.14 /0/@events.17 /0/@events.18"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the RCU_tele of rcu_1" description="15">
+      <gate description="15" events="/0/@events.15"/>
+    </events>
+    <events type="Intermediate" name="valueCoarse failure at the TLO_tele of teleoperation_1" description="16">
+      <gate type="AND" description="16" events="/0/@events.16"/>
+    </events>
+    <events name=" INTERNAL failure in teleoperation_1" description="17"/>
+    <events name=" INTERNAL failure in rcu_1" description="18"/>
+    <events name=" INTERNAL failure in rcu_1" description="19"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::A" name="A">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::A::inA" name="inA">
+        <flaxml:inputFailure type="valueSubtle"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::A::outA" name="outA"/>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::A::b_1" sourceId="model::modelSystemView::BComposite::out1B" targetComponent="model::modelSystemView::A::c_1" targetId="model::modelSystemView::C::in1C"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::A::c_1" sourceId="model::modelSystemView::C::outC" targetComponent="model::modelSystemView::A" targetId="model::modelSystemView::A::outA"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::A::b_1" sourceId="model::modelSystemView::BComposite::out2B" targetComponent="model::modelSystemView::A::c_1" targetId="model::modelSystemView::C::in2C"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::A" sourceId="model::modelSystemView::A::inA" targetComponent="model::modelSystemView::A::b_1" targetId="model::modelSystemView::BComposite::inB"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::A::c_1" name="c_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::C::in2C" name="in2C"/>
+          <flaxml:inputPort id="model::modelSystemView::C::in1C" name="in1C"/>
+          <flaxml:inputPort id="TestID" name="dumyPort"/>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::C::outC" name="outC"/>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="in1C.omission,in2C.omission->outC.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outC.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::A::b_1" name="b_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::BComposite::inB" name="inB">
+            <flaxml:inputFailure type="valueSubtle"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::BComposite::out1B" name="out1B"/>
+          <flaxml:outputPort id="model::modelSystemView::BComposite::out2B" name="out2B"/>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::A::b_1" sourceId="model::modelSystemView::BComposite::inB" targetComponent="model::modelSystemView::BComposite::block1_1" targetId="model::modelSystemView::SubB1::in1BSub1"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BComposite::block1_1" sourceId="model::modelSystemView::SubB1::out1BSub1" targetComponent="model::modelSystemView::BComposite::block2_1" targetId="model::modelSystemView::SubB2::in1Block2"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BComposite::sub4_1" sourceId="model::modelSystemView::SubB4::outSub4" targetComponent="model::modelSystemView::A::b_1" targetId="model::modelSystemView::BComposite::out1B"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BComposite::block1_1" sourceId="model::modelSystemView::SubB1::out2BSub1" targetComponent="model::modelSystemView::BComposite::block1_1" targetId="model::modelSystemView::SubB3::inSub3"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BComposite::block1_1" sourceId="model::modelSystemView::SubB3::outSub3" targetComponent="model::modelSystemView::A::b_1" targetId="model::modelSystemView::BComposite::out2B"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::BComposite::block2_1" sourceId="model::modelSystemView::SubB2::out1Block2" targetComponent="model::modelSystemView::A::b_1" targetId="model::modelSystemView::BComposite::out1B"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::BComposite::sub4_1" name="sub4_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="TestID" name="dumyPort"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::SubB4::outSub4" name="outSub4"/>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="dumyPort.noFailure->outSub4.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::BComposite::block1_1" name="block1_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::SubB3::inSub3" name="inSub3"/>
+              <flaxml:inputPort id="TestID" name="dumyPort"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::SubB3::outSub3" name="outSub3"/>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="inSub3.commission->outSub3.omission"/>
+              <flaxml:rule pattern="dumyPort.noFailure->outSub3.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::BComposite::block2_1" name="block2_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::SubB2::in1Block2" name="in1Block2"/>
+              <flaxml:inputPort id="TestID" name="dumyPort"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::SubB2::out1Block2" name="out1Block2"/>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="in1Block2.omission->out1Block2.noFailure"/>
+              <flaxml:rule pattern="dumyPort.noFailure->out1Block2.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::BComposite::block1_1" name="block1_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::SubB1::in1BSub1" name="in1BSub1">
+                <flaxml:inputFailure type="valueSubtle"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="TestID" name="dumyPort"/>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::SubB1::out1BSub1" name="out1BSub1"/>
+              <flaxml:outputPort id="model::modelSystemView::SubB1::out2BSub1" name="out2BSub1"/>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="in1BSub1.valueCoarse->out1BSub1.omission,out2BSub1.commission"/>
+              <flaxml:rule pattern="dumyPort.noFailure->out1BSub1.omission,out2BSub1.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

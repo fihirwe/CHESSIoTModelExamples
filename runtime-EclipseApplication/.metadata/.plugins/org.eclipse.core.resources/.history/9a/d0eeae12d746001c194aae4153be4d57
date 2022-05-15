@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="commission failure of sensed_speed in System">
+    <events type="Intermediate" name="commission failure of sensed_speed in System" description="1">
+      <gate description="1"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure of sensed_speed in System">
+    <events type="Intermediate" name="omission failure of sensed_speed in System" description="2">
+      <gate description="2"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="commission failure of sensed_speed_is_present in System">
+    <events type="Intermediate" name="commission failure of sensed_speed_is_present in System" description="3">
+      <gate description="3" events="/2/@events.1 /2/@events.12"/>
+    </events>
+    <events type="Intermediate" name="commission failure of output_is_present in selector" description="4">
+      <gate type="AND" description="4" events="/2/@events.2 /2/@events.8"/>
+    </events>
+    <events type="Intermediate" name="commission failure of absence_alarm_2 in selector" description="5">
+      <gate description="5" events="/2/@events.3"/>
+    </events>
+    <events type="Intermediate" name="commission failure of absence_alarm in monitor2" description="6">
+      <gate type="AND" description="6" events="/2/@events.4"/>
+    </events>
+    <events type="Intermediate" name="commission failure of input_is_present in monitor2" description="7">
+      <gate description="7" events="/2/@events.5"/>
+    </events>
+    <events type="Intermediate" name="commission failure of sensed_speed_is_present in sensor2" description="8">
+      <gate type="AND" description="8" events="/2/@events.6"/>
+    </events>
+    <events type="Intermediate" name="late failure of speed in sensor2" description="9">
+      <gate description="9" events="/2/@events.7"/>
+    </events>
+    <events type="External" name="late failure INJECTED at speed in System" description="10"/>
+    <events type="Intermediate" name="commission failure of input2_is_present in selector" description="11">
+      <gate description="11" events="/2/@events.9"/>
+    </events>
+    <events type="Intermediate" name="commission failure of sensed_speed_is_present in sensor2" description="12">
+      <gate type="AND" description="12" events="/2/@events.10"/>
+    </events>
+    <events type="Intermediate" name="late failure of speed in sensor2" description="13">
+      <gate description="13" events="/2/@events.11"/>
+    </events>
+    <events type="External" name="late failure INJECTED at speed in System" description="14"/>
+    <events type="Intermediate" name="commission failure of output_is_present in selector" description="15">
+      <gate type="AND" description="15" events="/2/@events.13 /2/@events.19"/>
+    </events>
+    <events type="Intermediate" name="commission failure of absence_alarm_1 in selector" description="16">
+      <gate description="16" events="/2/@events.14"/>
+    </events>
+    <events type="Intermediate" name="commission failure of absence_alarm in monitor1" description="17">
+      <gate type="AND" description="17" events="/2/@events.15"/>
+    </events>
+    <events type="Intermediate" name="commission failure of input_is_present in monitor1" description="18">
+      <gate description="18" events="/2/@events.16"/>
+    </events>
+    <events type="Intermediate" name="commission failure of sensed_speed_is_present in sensor1" description="19">
+      <gate type="AND" description="19" events="/2/@events.17"/>
+    </events>
+    <events type="Intermediate" name="late failure of speed in sensor1" description="20">
+      <gate description="20" events="/2/@events.18"/>
+    </events>
+    <events type="External" name="late failure INJECTED at speed in System" description="21"/>
+    <events type="Intermediate" name="commission failure of input1_is_present in selector" description="22">
+      <gate description="22" events="/2/@events.20"/>
+    </events>
+    <events type="Intermediate" name="commission failure of sensed_speed_is_present in sensor1" description="23">
+      <gate type="AND" description="23" events="/2/@events.21"/>
+    </events>
+    <events type="Intermediate" name="late failure of speed in sensor1" description="24">
+      <gate description="24" events="/2/@events.22"/>
+    </events>
+    <events type="External" name="late failure INJECTED at speed in System" description="25"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure of sensed_speed_is_present in System">
+    <events type="Intermediate" name="omission failure of sensed_speed_is_present in System" description="26">
+      <gate description="26" events="/3/@events.1 /3/@events.12 /3/@events.23"/>
+    </events>
+    <events type="Intermediate" name="omission failure of output_is_present in selector" description="27">
+      <gate type="AND" description="27" events="/3/@events.2 /3/@events.5"/>
+    </events>
+    <events type="Intermediate" name="omission failure of input1_is_present in selector" description="28">
+      <gate description="28" events="/3/@events.3"/>
+    </events>
+    <events type="Intermediate" name="omission failure of sensed_speed_is_present in sensor1" description="29">
+      <gate type="AND" description="29" events="/3/@events.4"/>
+    </events>
+    <events name=" INTERNAL failure in sensor1" description="30"/>
+    <events type="Intermediate" name="omission failure of absence_alarm_1 in selector" description="31">
+      <gate description="31" events="/3/@events.6 /3/@events.8"/>
+    </events>
+    <events type="Intermediate" name="omission failure of absence_alarm in monitor1" description="32">
+      <gate type="AND" description="32" events="/3/@events.7"/>
+    </events>
+    <events name=" INTERNAL failure in monitor1" description="33"/>
+    <events type="Intermediate" name="omission failure of absence_alarm in monitor1" description="34">
+      <gate type="AND" description="34" events="/3/@events.9"/>
+    </events>
+    <events type="Intermediate" name="omission failure of enabled in monitor1" description="35">
+      <gate description="35" events="/3/@events.10"/>
+    </events>
+    <events type="Intermediate" name="omission failure of sensor1_in_use in selector" description="36">
+      <gate type="AND" description="36" events="/3/@events.11"/>
+    </events>
+    <events name=" INTERNAL failure in selector" description="37"/>
+    <events type="Intermediate" name="omission failure of output_is_present in selector" description="38">
+      <gate type="AND" description="38" events="/3/@events.13 /3/@events.16"/>
+    </events>
+    <events type="Intermediate" name="omission failure of input2_is_present in selector" description="39">
+      <gate description="39" events="/3/@events.14"/>
+    </events>
+    <events type="Intermediate" name="omission failure of sensed_speed_is_present in sensor2" description="40">
+      <gate type="AND" description="40" events="/3/@events.15"/>
+    </events>
+    <events name=" INTERNAL failure in sensor2" description="41"/>
+    <events type="Intermediate" name="omission failure of absence_alarm_2 in selector" description="42">
+      <gate description="42" events="/3/@events.17 /3/@events.19"/>
+    </events>
+    <events type="Intermediate" name="omission failure of absence_alarm in monitor2" description="43">
+      <gate type="AND" description="43" events="/3/@events.18"/>
+    </events>
+    <events name=" INTERNAL failure in monitor2" description="44"/>
+    <events type="Intermediate" name="omission failure of absence_alarm in monitor2" description="45">
+      <gate type="AND" description="45" events="/3/@events.20"/>
+    </events>
+    <events type="Intermediate" name="omission failure of enabled in monitor2" description="46">
+      <gate description="46" events="/3/@events.21"/>
+    </events>
+    <events type="Intermediate" name="omission failure of sensor2_in_use in selector" description="47">
+      <gate type="AND" description="47" events="/3/@events.22"/>
+    </events>
+    <events name=" INTERNAL failure in selector" description="48"/>
+    <events type="Intermediate" name="omission failure of output_is_present in selector" description="49">
+      <gate type="AND" description="49" events="/3/@events.24 /3/@events.27"/>
+    </events>
+    <events type="Intermediate" name="omission failure of input1_is_present in selector" description="50">
+      <gate description="50" events="/3/@events.25"/>
+    </events>
+    <events type="Intermediate" name="omission failure of sensed_speed_is_present in sensor1" description="51">
+      <gate type="AND" description="51" events="/3/@events.26"/>
+    </events>
+    <events name=" INTERNAL failure in sensor1" description="52"/>
+    <events type="Intermediate" name="omission failure of input2_is_present in selector" description="53">
+      <gate description="53" events="/3/@events.28"/>
+    </events>
+    <events type="Intermediate" name="omission failure of sensed_speed_is_present in sensor2" description="54">
+      <gate type="AND" description="54" events="/3/@events.29"/>
+    </events>
+    <events name=" INTERNAL failure in sensor2" description="55"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

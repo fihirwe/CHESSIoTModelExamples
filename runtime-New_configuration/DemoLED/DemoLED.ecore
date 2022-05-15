@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="DemoLED" nsURI="http:///DemoLED.ecore" nsPrefix="DemoLED">
+  <eSubpackages name="modelRequirementView" nsURI="http:///DemoLED/modelRequirementView.ecore"
+      nsPrefix="DemoLED.modelRequirementView"/>
+  <eSubpackages name="modelSystemView" nsURI="http:///DemoLED/modelSystemView.ecore"
+      nsPrefix="DemoLED.modelSystemView">
+    <eClassifiers xsi:type="ecore:EClass" name="SYSTEM_Hw1">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="physicalboard1_1" ordered="false"
+          lowerBound="1" eType="#//modelSystemView/PhysicalBoard1" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sensorblock1_1" ordered="false"
+          lowerBound="1" eType="#//modelSystemView/SensorBlock1" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PhysicalBoard1">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowport1" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SensorBlock1">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowport1" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Contract1">
+      <eOperations name="Contract1_Assume" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+      <eOperations name="Contract1_Guarantee" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+        <eParameters name="diagnostics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDiagnosticChain">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The chain of diagnostics to which problems are to be appended."/>
+          </eAnnotations>
+        </eParameters>
+        <eParameters name="context">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+            <details key="documentation" value="The cache of context-specific information."/>
+          </eAnnotations>
+          <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap">
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+            <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+          </eGenericType>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="modelComponentView" nsURI="http:///DemoLED/modelComponentView.ecore"
+      nsPrefix="DemoLED.modelComponentView">
+    <eSubpackages name="ThingLayer" nsURI="http:///DemoLED/modelComponentView/ThingLayer.ecore"
+        nsPrefix="DemoLED.modelComponentView.ThingLayer">
+      <eClassifiers xsi:type="ecore:EClass" name="DemoLED">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="room2" ordered="false"
+            lowerBound="1" eType="#//modelComponentView/ThingLayer/Room2" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Room2">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="arduino" ordered="false"
+            lowerBound="1" eType="#//modelComponentView/ThingLayer/Arduino" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="redled" ordered="false"
+            lowerBound="1" eType="#//modelComponentView/ThingLayer/RedLED" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Arduino">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="toLED" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RedLED">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="inLED" ordered="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="RedLED_LedON"/>
+      <eClassifiers xsi:type="ecore:EClass" name="RedLED_LedOFF"/>
+      <eClassifiers xsi:type="ecore:EClass" name="blink" abstract="true" interface="true"/>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="modelDeploymentView" nsURI="http:///DemoLED/modelDeploymentView.ecore"
+      nsPrefix="DemoLED.modelDeploymentView"/>
+  <eSubpackages name="modelAnalysisView" nsURI="http:///DemoLED/modelAnalysisView.ecore"
+      nsPrefix="DemoLED.modelAnalysisView">
+    <eSubpackages name="modelDependabilityAnalysisView" nsURI="http:///DemoLED/modelAnalysisView/modelDependabilityAnalysisView.ecore"
+        nsPrefix="DemoLED.modelAnalysisView.modelDependabilityAnalysisView"/>
+    <eSubpackages name="modelRTAnalysisView" nsURI="http:///DemoLED/modelAnalysisView/modelRTAnalysisView.ecore"
+        nsPrefix="DemoLED.modelAnalysisView.modelRTAnalysisView"/>
+  </eSubpackages>
+  <eSubpackages name="modelPSMView" nsURI="http:///DemoLED/modelPSMView.ecore" nsPrefix="DemoLED.modelPSMView"/>
+</ecore:EPackage>

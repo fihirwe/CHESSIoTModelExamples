@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::VisionAir" name="VisionAir">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::VisionAir::vitalParameters" name="vitalParameters">
+        <flaxml:inputFailure type="valueCoarse"/>
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+      <flaxml:inputPort id="model::modelSystemView::VisionAir::powerPlug" name="powerPlug">
+        <flaxml:inputFailure type="noFailure"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::VisionAir::ipDiagnostic" name="ipDiagnostic">
+        <outputFailure type="valueCoarse"/>
+        <outputFailure type="noFailure"/>
+        <outputFailure type="commission"/>
+        <outputFailure type="omission"/>
+      </flaxml:outputPort>
+      <flaxml:outputPort id="model::modelSystemView::VisionAir::uiDignostic" name="uiDignostic">
+        <outputFailure type="commission"/>
+        <outputFailure type="valueCoarse"/>
+        <outputFailure type="valueSubtle"/>
+        <outputFailure type="late"/>
+        <outputFailure type="noFailure"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::sensor_processor_1" sourceId="model::modelSystemView::Sensor_Processor::spbppc_o" targetComponent="model::modelSystemView::VisionAir::physiological_controller_1" targetId="model::modelSystemView::Physiological_Controller::pcspbp_i"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir" sourceId="model::modelSystemView::VisionAir::powerPlug" targetComponent="model::modelSystemView::VisionAir::physiological_controller_1" targetId="model::modelSystemView::Physiological_Controller::pppc_i"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::physiological_controller_1" sourceId="model::modelSystemView::Physiological_Controller::pcui_o" targetComponent="model::modelSystemView::VisionAir" targetId="model::modelSystemView::VisionAir::uiDignostic"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir" sourceId="model::modelSystemView::VisionAir::vitalParameters" targetComponent="model::modelSystemView::VisionAir::sensor_processor_1" targetId="model::modelSystemView::Sensor_Processor::spvp_i"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::sensor_processor_1" sourceId="model::modelSystemView::Sensor_Processor::spnmtpc_o" targetComponent="model::modelSystemView::VisionAir::physiological_controller_1" targetId="model::modelSystemView::Physiological_Controller::pcspnmt_i"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::physiological_controller_1" sourceId="model::modelSystemView::Physiological_Controller::pcc_o" targetComponent="model::modelSystemView::VisionAir::infusion_pump_1" targetId="model::modelSystemView::Infusion_Pump::ippc_i"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::infusion_pump_1" sourceId="model::modelSystemView::Infusion_Pump::ipd_o" targetComponent="model::modelSystemView::VisionAir" targetId="model::modelSystemView::VisionAir::ipDiagnostic"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::VisionAir::infusion_pump_1" name="infusion_pump_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Infusion_Pump::ippc_i" name="ippc_i">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Infusion_Pump::ipd_o" name="ipd_o">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="commission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="ippc_i.omission->ipd_o.omission"/>
+          <flaxml:rule pattern="ippc_i.commission->ipd_o.commission"/>
+          <flaxml:rule pattern="ippc_i.valueSubtle->ipd_o.commission"/>
+          <flaxml:rule pattern="ippc_i.noFailure->ipd_o.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::VisionAir::physiological_controller_1" name="physiological_controller_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Physiological_Controller::pcspbp_i" name="pcspbp_i">
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Physiological_Controller::pppc_i" name="pppc_i">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Physiological_Controller::pcspnmt_i" name="pcspnmt_i">
+            <flaxml:inputFailure type="omission"/>
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Physiological_Controller::pcc_o" name="pcc_o">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Physiological_Controller::pcui_o" name="pcui_o">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="commission"/>
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="late"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::Physiological_Controller::sensor_controller_1" sourceId="model::modelSystemView::Sensor_Controller::scc_o" targetComponent="model::modelSystemView::Physiological_Controller::controller_1" targetId="model::modelSystemView::Controller::csc_i"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Physiological_Controller::power_supply_1" sourceId="model::modelSystemView::Power_Supply::psc_o" targetComponent="model::modelSystemView::Physiological_Controller::controller_1" targetId="model::modelSystemView::Controller::cps_i"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Physiological_Controller::user_interface_1" sourceId="model::modelSystemView::User_Interface::uid_o" targetComponent="model::modelSystemView::VisionAir::physiological_controller_1" targetId="model::modelSystemView::Physiological_Controller::pcui_o"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::physiological_controller_1" sourceId="model::modelSystemView::Physiological_Controller::pppc_i" targetComponent="model::modelSystemView::Physiological_Controller::power_supply_1" targetId="model::modelSystemView::Power_Supply::ppps_i"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Physiological_Controller::controller_1" sourceId="model::modelSystemView::Controller::cui_o" targetComponent="model::modelSystemView::Physiological_Controller::user_interface_1" targetId="model::modelSystemView::User_Interface::uic_i"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::physiological_controller_1" sourceId="model::modelSystemView::Physiological_Controller::pcspbp_i" targetComponent="model::modelSystemView::Physiological_Controller::sensor_controller_1" targetId="model::modelSystemView::Sensor_Controller::scbp_i"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::physiological_controller_1" sourceId="model::modelSystemView::Physiological_Controller::pcspnmt_i" targetComponent="model::modelSystemView::Physiological_Controller::sensor_controller_1" targetId="model::modelSystemView::Sensor_Controller::scnmt_i"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Physiological_Controller::controller_1" sourceId="model::modelSystemView::Controller::cip_o" targetComponent="model::modelSystemView::VisionAir::physiological_controller_1" targetId="model::modelSystemView::Physiological_Controller::pcc_o"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Physiological_Controller::sensor_controller_1" name="sensor_controller_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::Sensor_Controller::scnmt_i" name="scnmt_i">
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="omission"/>
+                <flaxml:inputFailure type="valueSubtle"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Sensor_Controller::scbp_i" name="scbp_i">
+                <flaxml:inputFailure type="valueSubtle"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="TestID" name="dumyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::Sensor_Controller::scc_o" name="scc_o">
+                <outputFailure type="valueSubtle"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="scbp_i.wildcard,scnmt_i.valueCoarse->scc_o.valueCoarse"/>
+              <flaxml:rule pattern="scbp_i.valueCoarse,scnmt_i.wildcard->scc_o.valueCoarse"/>
+              <flaxml:rule pattern="scbp_i.valueSubtle,scnmt_i.noFailure->scc_o.valueSubtle"/>
+              <flaxml:rule pattern="scbp_i.noFailure,scnmt_i.valueSubtle->scc_o.valueSubtle"/>
+              <flaxml:rule pattern="scbp_i.valueSubtle,scnmt_i.valueSubtle->scc_o.valueSubtle"/>
+              <flaxml:rule pattern="scbp_i.wildcard,scnmt_i.omission->scc_o.omission"/>
+              <flaxml:rule pattern="dumyPort.noFailure->scc_o.omission,scc_o.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Physiological_Controller::controller_1" name="controller_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::Controller::cps_i" name="cps_i">
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="model::modelSystemView::Controller::csc_i" name="csc_i">
+                <flaxml:inputFailure type="valueSubtle"/>
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="omission"/>
+              </flaxml:inputPort>
+              <flaxml:inputPort id="TestID" name="dumyPort">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::Controller::cui_o" name="cui_o">
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="valueSubtle"/>
+              </flaxml:outputPort>
+              <flaxml:outputPort id="model::modelSystemView::Controller::cip_o" name="cip_o">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="omission"/>
+                <outputFailure type="valueSubtle"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="csc_i.noFailure,cps_i.noFailure->cip_o.omission,cui_o.commission"/>
+              <flaxml:rule pattern="csc_i.valueSubtle,cps_i.noFailure->cip_o.commission,cui_o.omission"/>
+              <flaxml:rule pattern="csc_i.valueCoarse,cps_i.noFailure->cip_o.commission,cui_o.omission"/>
+              <flaxml:rule pattern="csc_i.omission,cps_i.noFailure->cip_o.commission,cui_o.omission"/>
+              <flaxml:rule pattern="csc_i.wildcard,cps_i.valueCoarse->cip_o.valueSubtle,cui_o.omission"/>
+              <flaxml:rule pattern="dumyPort.noFailure->cip_o.commission,cui_o.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Physiological_Controller::power_supply_1" name="power_supply_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::Power_Supply::ppps_i" name="ppps_i">
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::Power_Supply::psc_o" name="psc_o">
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="ppps_i.noFailure->psc_o.valueCoarse"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Physiological_Controller::user_interface_1" name="user_interface_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::User_Interface::uic_i" name="uic_i">
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="valueSubtle"/>
+                <flaxml:inputFailure type="noFailure"/>
+                <flaxml:inputFailure type="omission"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::User_Interface::uid_o" name="uid_o">
+                <outputFailure type="valueSubtle"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="late"/>
+                <outputFailure type="commission"/>
+                <outputFailure type="valueCoarse"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="uic_i.omission->uid_o.late"/>
+              <flaxml:rule pattern="uic_i.noFailure->uid_o.commission"/>
+            </flaxml:rules>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::VisionAir::sensor_processor_1" name="sensor_processor_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Sensor_Processor::spvp_i" name="spvp_i">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueCoarse"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Sensor_Processor::spnmtpc_o" name="spnmtpc_o">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+          <flaxml:outputPort id="model::modelSystemView::Sensor_Processor::spbppc_o" name="spbppc_o">
+            <outputFailure type="valueCoarse"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueSubtle"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:connections>
+          <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::sensor_processor_1" sourceId="model::modelSystemView::Sensor_Processor::spvp_i" targetComponent="model::modelSystemView::Sensor_Processor::nmt_sensor_1" targetId="model::modelSystemView::NMT_Sensor::nmtvp_i"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Sensor_Processor::nmt_sensor_1" sourceId="model::modelSystemView::NMT_Sensor::nmtsc_o" targetComponent="model::modelSystemView::VisionAir::sensor_processor_1" targetId="model::modelSystemView::Sensor_Processor::spnmtpc_o"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::VisionAir::sensor_processor_1" sourceId="model::modelSystemView::Sensor_Processor::spvp_i" targetComponent="model::modelSystemView::Sensor_Processor::bp_sensor_1" targetId="model::modelSystemView::BP_Sensor::bpvp_i"/>
+          <flaxml:connection sourceComponent="model::modelSystemView::Sensor_Processor::bp_sensor_1" sourceId="model::modelSystemView::BP_Sensor::bpsc_o" targetComponent="model::modelSystemView::VisionAir::sensor_processor_1" targetId="model::modelSystemView::Sensor_Processor::spbppc_o"/>
+        </flaxml:connections>
+        <flaxml:components>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Sensor_Processor::nmt_sensor_1" name="nmt_sensor_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::NMT_Sensor::nmtvp_i" name="nmtvp_i">
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::NMT_Sensor::nmtsc_o" name="nmtsc_o">
+                <outputFailure type="omission"/>
+                <outputFailure type="valueCoarse"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueSubtle"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="nmtvp_i.valueCoarse->nmtsc_o.valueCoarse"/>
+              <flaxml:rule pattern="nmtvp_i.noFailure->nmtsc_o.valueSubtle"/>
+              <flaxml:rule pattern="nmtvp_i.noFailure->nmtsc_o.omission"/>
+            </flaxml:rules>
+          </flaxml:component>
+          <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::Sensor_Processor::bp_sensor_1" name="bp_sensor_1">
+            <flaxml:inputPorts>
+              <flaxml:inputPort id="model::modelSystemView::BP_Sensor::bpvp_i" name="bpvp_i">
+                <flaxml:inputFailure type="valueCoarse"/>
+                <flaxml:inputFailure type="noFailure"/>
+              </flaxml:inputPort>
+            </flaxml:inputPorts>
+            <flaxml:outputPorts>
+              <flaxml:outputPort id="model::modelSystemView::BP_Sensor::bpsc_o" name="bpsc_o">
+                <outputFailure type="valueSubtle"/>
+                <outputFailure type="noFailure"/>
+                <outputFailure type="valueCoarse"/>
+              </flaxml:outputPort>
+            </flaxml:outputPorts>
+            <flaxml:rules>
+              <flaxml:rule pattern="bpvp_i.valueCoarse->bpsc_o.valueCoarse"/>
+              <flaxml:rule pattern="bpvp_i.noFailure->bpsc_o.valueSubtle"/>
+            </flaxml:rules>
+          </flaxml:component>
+        </flaxml:components>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

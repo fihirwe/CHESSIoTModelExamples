@@ -1,0 +1,143 @@
+-- Generated using 'Marte2Mast Converter' @ 16/11/2021 - 11:36:17 - user: Ihirwe
+-- Processing Resources
+
+Processing_Resource (
+    Type                   => Regular_Processor
+,   Name                   => SYSTEM.cH_HwProcessor1
+,   Speed_Factor           => 1.0    
+);
+		
+
+
+-- Analysis type: Standard
+-- Schedulers
+
+Scheduler (
+    Type   => Primary_Scheduler
+,   Name   => SYSTEM.cH_HwProcessor1_Scheduler
+,   Policy => (            
+            Type                 => Fixed_Priority
+,           Max_Priority         => 256
+,           Min_Priority         => 1		
+    )	
+,   Host   => SYSTEM.cH_HwProcessor1
+);	
+		
+
+-- Scheduling Servers
+
+
+Scheduling_Server (
+    Type                       => Regular
+,   Name                       => SWSystem.producer_ClientServerPort1_produce_task
+,   Server_Sched_Parameters    => (
+     		   Type		       => Fixed_Priority_Policy 
+      		  ,The_Priority    => 1
+    )
+,   Scheduler                  => SYSTEM.cH_HwProcessor1_Scheduler 	
+);  
+		
+
+
+Scheduling_Server (
+    Type                       => Regular
+,   Name                       => SWSystem.consumer_ClientServerPort1_consume_task
+,   Server_Sched_Parameters    => (
+     		   Type		       => Fixed_Priority_Policy 
+      		  ,The_Priority    => 1
+    )
+,   Scheduler                  => SYSTEM.cH_HwProcessor1_Scheduler 	
+);  
+		
+
+
+-- Resources
+
+
+Shared_Resource (
+    Type         => Immediate_Ceiling_Resource
+,   Name         => SWSystem.consumer_ClientServerPort1_consume_state
+,   Ceiling      => 1
+);		
+
+		
+	
+
+
+
+
+-- Operations
+
+
+Operation (
+    Type                        => Simple,
+    Name                        => SWSystem.producer_ClientServerPort1_operations__produce,
+    Worst_Case_Execution_Time   => 50.0E-3
+);
+
+Operation (
+    Type                        => Simple,
+    Name                        => SWSystem.consumer_ClientServerPort1_operations__consume,
+    Worst_Case_Execution_Time   => 30.0E-3
+);
+
+
+-- Transactions
+
+
+Transaction (
+    Type            => Regular,
+    Name            => SWSystem.producer_ClientServerPort1_produce,
+    External_Events => (
+        (Type 		=> Periodic,
+         Name 		=> InitialNode1,
+         Period 	=> 100.0E-3)
+    ),
+    Internal_Events => (
+        (Type 	=> Regular,
+         Name 	=> SWSystem.producer_ClientServerPort1_produce__Internal_Event_1,
+         Timing_Requirements => (
+                Type              => Hard_Global_Deadline,
+                Deadline          => 100.0E-3,
+                Referenced_Event  => InitialNode1
+         )
+        )
+    ),
+    Event_Handlers  => (
+        (Type                 => Activity,
+         Input_Event          => InitialNode1,
+         Output_Event         => SWSystem.producer_ClientServerPort1_produce__Internal_Event_1,
+         Activity_Operation   => SWSystem.producer_ClientServerPort1_operations__produce,
+         Activity_Server      => SWSystem.producer_ClientServerPort1_produce_task
+        )
+    )
+);
+
+Transaction (
+    Type            => Regular,
+    Name            => SWSystem.consumer_ClientServerPort1_consume,
+    External_Events => (
+        (Type 		        => Sporadic,
+         Name 		        => InitialNode1,
+         Min_Interarrival 	=> 200.0E-3)
+    ),
+    Internal_Events => (
+        (Type 	=> Regular,
+         Name 	=> SWSystem.consumer_ClientServerPort1_consume__Internal_Event_1,
+         Timing_Requirements => (
+                Type              => Hard_Global_Deadline,
+                Deadline          => 200.0E-3,
+                Referenced_Event  => InitialNode1
+         )
+        )
+    ),
+    Event_Handlers  => (
+        (Type                 => Activity,
+         Input_Event          => InitialNode1,
+         Output_Event         => SWSystem.consumer_ClientServerPort1_consume__Internal_Event_1,
+         Activity_Operation   => SWSystem.consumer_ClientServerPort1_operations__consume,
+         Activity_Server      => SWSystem.consumer_ClientServerPort1_consume_task
+        )
+    )
+);
+

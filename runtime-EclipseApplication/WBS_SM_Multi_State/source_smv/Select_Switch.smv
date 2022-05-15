@@ -1,0 +1,27 @@
+MODULE main
+
+
+VAR
+state  : { primary,
+           In2_received,
+           backup };
+Select :   boolean;
+
+IVAR
+Out    :   boolean;
+In1    :   boolean;
+In2    :   boolean;
+
+
+INIT
+(state = primary)
+
+
+TRANS
+(state = primary        & !In2 & Select  & next(state) = primary      & ( In1 -> Out )) |
+(state = primary        & In2  & Select  & next(state) = In2_received & ( In1 -> Out )) |
+(state = primary        &        !Select & next(state) = backup       & ( (In1|In2) ->  Out )) |
+(state = In2_received   & In1  & Select  & next(state) = primary      & ( In1 -> Out )) |
+(state = In2_received   & !In1 & Select  & next(state) = In2_received & ( In1 -> Out )) |
+(state = In2_received          & !Select & next(state) = backup       & (        Out )) |
+(state = backup         &                  next(state) = backup       & ( In2 -> Out ))

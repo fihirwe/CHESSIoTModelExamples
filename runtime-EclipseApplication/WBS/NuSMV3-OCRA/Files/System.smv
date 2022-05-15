@@ -1,0 +1,99 @@
+	
+MODULE main
+	VAR
+		hydraulic : Hydraulic(bscu.CMD_AS,bscu.Valid);
+		bscu : BSCU(Pedal_Pos1,Pedal_Pos2,bscu1_fault_Monitor,bscu2_fault_Monitor,bscu1_fault_Command,bscu2_fault_Command);
+	DEFINE System_Brake_Time_Guarantee := always ( (change(Pedal_Pos1) or change(Pedal_Pos2)) ->
+         (time_until( change(Brake_Line) ) <=10 ));
+	DEFINE System_Brake_Time_Assumption := always (Pedal_Pos1 iff Pedal_Pos2) and 
+(always ( (not bscu1_fault_Monitor) and
+                (not bscu1_fault_Command) and
+                     (not bscu2_fault_Monitor) ) or
+   always ( (not bscu1_fault_Monitor) and
+                (not bscu1_fault_Command) and
+                     (not bscu2_fault_Command) ) or
+   always ( (not bscu1_fault_Monitor) and
+                (not bscu2_fault_Command) and
+                     (not bscu2_fault_Monitor) ) or
+   always ( (not bscu1_fault_Command) and
+                (not bscu2_fault_Command) and
+                     (not bscu2_fault_Monitor) ) );
+	IVAR	
+
+	
+-- END MODULE System --
+	
+MODULE Hydraulic(CMD_AS,Valid)
+	VAR
+	DEFINE Hydraulic_Brake_Time_Guarantee := always (change(CMD_AS) -> (time_until(change(Brake_Line)) <= 5 ));
+	DEFINE Hydraulic_Brake_Time_Assumption := TRUE;
+	IVAR	
+
+	
+-- END MODULE Hydraulic --
+
+	
+MODULE BSCU(Pedal_Pos1,Pedal_Pos2,bscu1_fault_Monitor,bscu2_fault_Monitor,bscu1_fault_Command,bscu2_fault_Command)
+	VAR
+		bscu1 : SubBSCU(Pedal_Pos1,bscu1_fault_Monitor,bscu1_fault_Command);
+		bscu2 : SubBSCU(Pedal_Pos2,bscu2_fault_Monitor,bscu2_fault_Command);
+		switch : Select_Switch_Impl;
+	DEFINE BSCU_CMD_Time_Assumption := always ( Pedal_Pos1 iff Pedal_Pos2) and 
+  -- no double fault
+  (always ( (not bscu1_fault_Monitor) and
+                (not bscu1_fault_Command) and
+                     (not bscu2_fault_Monitor) ) or
+   always ( (not bscu1_fault_Monitor) and
+                (not bscu1_fault_Command) and
+                     (not bscu2_fault_Command) ) or
+   always ( (not bscu1_fault_Monitor) and
+                (not bscu2_fault_Command) and
+                     (not bscu2_fault_Monitor) ) or
+   always ( (not bscu1_fault_Command) and
+                (not bscu2_fault_Command) and
+                     (not bscu2_fault_Monitor) ) );
+	DEFINE BSCU_CMD_Time_Guarantee := always ( (Valid and ((change(Pedal_Pos1) or change(Pedal_Pos2)))) implies
+   (time_until((change(CMD_AS) or fall(Valid))) <=5 ));
+	DEFINE BSCU_Safety_Assumption := (always ( (not bscu1_fault_Monitor) and
+                (not bscu1_fault_Command) and
+                     (not bscu2_fault_Monitor) ) or
+   always ( (not bscu1_fault_Monitor) and
+                (not bscu1_fault_Command) and
+                     (not bscu2_fault_Command) ) or
+   always ( (not bscu1_fault_Monitor) and
+                (not bscu2_fault_Command) and
+                     (not bscu2_fault_Monitor) ) or
+   always ( (not bscu1_fault_Command) and
+                (not bscu2_fault_Command) and
+                     (not bscu2_fault_Monitor) ) );
+	DEFINE BSCU_Safety_Guarantee := always Valid;
+	DEFINE Define_Valid := Valid := bscu1.Valid or bscu2.Valid;
+	IVAR	
+
+	
+-- END MODULE BSCU --
+	
+MODULE SubBSCU(Pedal_Pos,fault_Monitor,fault_Command)
+	VAR
+	DEFINE SubBSCU_Safety_Guarantee := ( always (not  fault_Command) and always (not fault_Monitor)) implies
+    always Valid;
+	DEFINE TRUE :=  true;
+	DEFINE SubBSCU_CMD_Time_Assumption := TRUE;
+	DEFINE SubBSCU_CMD_Time_Guarantee := always ( (Valid and (change(Pedal_Pos))) implies
+  (time_until(change(CMD_AS) or fall(Valid)) <=2 ));
+	IVAR	
+
+	
+-- END MODULE SubBSCU --
+
+	
+MODULE Select_Switch_Impl(In1,In2,Select)
+	VAR
+		Out : Boolean;
+	IVAR	
+
+	
+-- END MODULE Select_Switch_Impl --
+
+
+

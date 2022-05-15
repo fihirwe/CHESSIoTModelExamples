@@ -1,0 +1,17 @@
+SystemName:testanemee
+
+--BeginModule--
+name:test1
+action:
+	START service MOSQUITTO
+	LOG service  YYYS
+	RUN-module test1
+--EndModule--
+	
+--BeginModule--
+use test1
+name:test3
+action:
+	
+	
+

@@ -1,0 +1,7 @@
+
+COMPONENT system
+INTERFACE
+INPUT CMD_AS : boolean ;
+INPUT Valid : boolean ;
+OUTPUT Brake_Line : continuous ;
+CONTRACT Hydraulic_Brake_Time assume : TRUE ; guarantee : always ( change ( CMD_AS ) -> ( time_until ( change ( Brake_Line ) ) <= 5 ) ) ;

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::SYSTEM_Hw2" name="SYSTEM_Hw2">
+    <flaxml:inputPorts/>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::SYSTEM_Hw2::flowport1" name="flowport1">
+        <outputFailure type="noFailure"/>
+        <outputFailure type="commission"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::SYSTEM_Hw2::system_hw1_1" sourceId="model::modelSystemView::SYSTEM_Hw1::flowport2" targetComponent="model::modelSystemView::SYSTEM_Hw2" targetId="model::modelSystemView::SYSTEM_Hw2::flowport1"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::SYSTEM_Hw2::system_hw1_1" name="system_hw1_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::SYSTEM_Hw1::flowport1" name="flowport1">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::SYSTEM_Hw1::flowport2" name="flowport2">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="commission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="flowport1.noFailure->flowport2.commission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

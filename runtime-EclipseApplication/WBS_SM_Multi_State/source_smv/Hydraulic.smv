@@ -1,0 +1,13 @@
+MODULE main
+
+VAR
+state      : { primary };
+Valid      : boolean;
+
+IVAR
+CMD_AS     : boolean;
+Brake_Line : boolean;
+
+TRANS
+( CMD_AS -> Brake_Line )
+

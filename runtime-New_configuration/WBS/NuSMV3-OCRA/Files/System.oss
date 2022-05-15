@@ -1,0 +1,83 @@
+
+COMPONENT system
+INTERFACE
+INPUT Pedal_Pos1 : boolean ;
+INPUT Pedal_Pos2 : boolean ;
+INPUT bscu1_fault_Monitor : boolean ;
+INPUT bscu2_fault_Monitor : boolean ;
+INPUT bscu1_fault_Command : boolean ;
+INPUT bscu2_fault_Command : boolean ;
+OUTPUT Brake_Line : continuous ;
+CONTRACT System_Brake_Time assume : always ( Pedal_Pos1 iff Pedal_Pos2 ) and ( always ( ( not bscu1_fault_Monitor ) and ( not bscu1_fault_Command ) and ( not bscu2_fault_Monitor ) ) or
+   always ( ( not bscu1_fault_Monitor ) and ( not bscu1_fault_Command ) and ( not bscu2_fault_Command ) ) or
+   always ( ( not bscu1_fault_Monitor ) and ( not bscu2_fault_Command ) and ( not bscu2_fault_Monitor ) ) or
+   always ( ( not bscu1_fault_Command ) and ( not bscu2_fault_Command ) and ( not bscu2_fault_Monitor ) ) ) ; guarantee : always ( ( change ( Pedal_Pos1 ) or change ( Pedal_Pos2 ) ) -> ( time_until ( change ( Brake_Line ) ) <=10 ) ) ;
+REFINEMENT
+SUB hydraulic : Hydraulic ;
+SUB bscu : BSCU ;
+CONNECTION bscu.Pedal_Pos1 := Pedal_Pos1 ;
+CONNECTION bscu.Pedal_Pos2 := Pedal_Pos2 ;
+CONNECTION Brake_Line := hydraulic.Brake_Line ;
+CONNECTION hydraulic.CMD_AS := bscu.CMD_AS ;
+CONNECTION hydraulic.Valid := bscu.Valid ;
+CONNECTION bscu.bscu1_fault_Monitor := bscu1_fault_Monitor ;
+CONNECTION bscu.bscu2_fault_Monitor := bscu2_fault_Monitor ;
+CONNECTION bscu.bscu1_fault_Command := bscu1_fault_Command ;
+CONNECTION bscu.bscu2_fault_Command := bscu2_fault_Command ;
+CONTRACT System_Brake_Time REFINEDBY bscu.BSCU_CMD_Time , bscu.BSCU_Safety , hydraulic.Hydraulic_Brake_Time ;
+COMPONENT Hydraulic
+INTERFACE
+INPUT CMD_AS : boolean ;
+INPUT Valid : boolean ;
+OUTPUT Brake_Line : continuous ;
+CONTRACT Hydraulic_Brake_Time assume : TRUE ; guarantee : always ( change ( CMD_AS ) -> ( time_until ( change ( Brake_Line ) ) <= 5 ) ) ;
+COMPONENT BSCU
+INTERFACE
+INPUT Pedal_Pos1 : boolean ;
+INPUT Pedal_Pos2 : boolean ;
+INPUT bscu1_fault_Monitor : boolean ;
+INPUT bscu2_fault_Monitor : boolean ;
+INPUT bscu1_fault_Command : boolean ;
+INPUT bscu2_fault_Command : boolean ;
+OUTPUT Valid : boolean ;
+OUTPUT CMD_AS : boolean ;
+CONTRACT BSCU_CMD_Time assume : always ( Pedal_Pos1 iff Pedal_Pos2 ) and ( always ( ( not bscu1_fault_Monitor ) and ( not bscu1_fault_Command ) and ( not bscu2_fault_Monitor ) ) or
+   always ( ( not bscu1_fault_Monitor ) and ( not bscu1_fault_Command ) and ( not bscu2_fault_Command ) ) or
+   always ( ( not bscu1_fault_Monitor ) and ( not bscu2_fault_Command ) and ( not bscu2_fault_Monitor ) ) or
+   always ( ( not bscu1_fault_Command ) and ( not bscu2_fault_Command ) and ( not bscu2_fault_Monitor ) ) ) ; guarantee : always ( ( Valid and ( ( change ( Pedal_Pos1 ) or change ( Pedal_Pos2 ) ) ) ) implies ( time_until ( ( change ( CMD_AS ) or fall ( Valid ) ) ) <=5 ) ) ; CONTRACT BSCU_Safety assume : ( always ( ( not bscu1_fault_Monitor ) and ( not bscu1_fault_Command ) and ( not bscu2_fault_Monitor ) ) or
+   always ( ( not bscu1_fault_Monitor ) and ( not bscu1_fault_Command ) and ( not bscu2_fault_Command ) ) or
+   always ( ( not bscu1_fault_Monitor ) and ( not bscu2_fault_Command ) and ( not bscu2_fault_Monitor ) ) or
+   always ( ( not bscu1_fault_Command ) and ( not bscu2_fault_Command ) and ( not bscu2_fault_Monitor ) ) ) ; guarantee : always Valid ;
+REFINEMENT
+SUB bscu1 : SubBSCU ;
+SUB bscu2 : SubBSCU ;
+SUB switch : Select_Switch_Impl ;
+CONNECTION bscu1.Pedal_Pos := Pedal_Pos1 ;
+CONNECTION bscu2.Pedal_Pos := Pedal_Pos2 ;
+CONNECTION CMD_AS := switch.Out ;
+CONNECTION switch.Select := bscu1.Valid ;
+CONNECTION switch.In1 := bscu1.CMD_AS ;
+CONNECTION switch.In2 := bscu2.CMD_AS ;
+CONNECTION bscu1.fault_Command := bscu1_fault_Command ;
+CONNECTION bscu1.fault_Monitor := bscu1_fault_Monitor ;
+CONNECTION bscu2.fault_Command := bscu2_fault_Command ;
+CONNECTION bscu2.fault_Monitor := bscu2_fault_Monitor ;
+CONNECTION Valid := bscu1.Valid or bscu2.Valid ;
+CONTRACT BSCU_CMD_Time REFINEDBY bscu1.SubBSCU_CMD_Time , bscu2.SubBSCU_CMD_Time , bscu1.SubBSCU_Safety , bscu2.SubBSCU_Safety , switch.Select_Switch_Sel0_Time , switch.Select_Switch_Sel1_Time ; CONTRACT BSCU_Safety REFINEDBY bscu1.SubBSCU_Safety , bscu2.SubBSCU_Safety ;
+COMPONENT SubBSCU
+INTERFACE
+INPUT Pedal_Pos : boolean ;
+INPUT fault_Monitor : boolean ;
+INPUT fault_Command : boolean ;
+OUTPUT Valid : boolean ;
+OUTPUT CMD_AS : boolean ;
+CONTRACT SubBSCU_Safety assume :  true ; guarantee : ( always ( not  fault_Command ) and always ( not fault_Monitor ) ) implies
+    always Valid ; CONTRACT SubBSCU_CMD_Time assume : TRUE ; guarantee : always ( ( Valid and ( change ( Pedal_Pos ) ) ) implies ( time_until ( change ( CMD_AS ) or fall ( Valid ) ) <=2 ) ) ;
+COMPONENT Select_Switch_Impl
+INTERFACE
+INPUT In1 : boolean ;
+INPUT In2 : boolean ;
+INPUT Select : boolean ;
+OUTPUT Out : boolean ;
+CONTRACT Select_Switch_Sel0_Time assume :   TRUE ; guarantee : ( not Select or fall ( Select ) ) releases ( change ( In1 ) -> ( time_until ( change ( Out ) ) <=1 ) ) ; CONTRACT Select_Switch_Sel1_Time assume :   TRUE ; guarantee :  always ( ( not Select or time_until ( fall ( Select ) ) <=2 ) implies
+     always ( change ( In2 ) implies ( time_until ( change ( Out ) ) <= 3 ) ) ) ;

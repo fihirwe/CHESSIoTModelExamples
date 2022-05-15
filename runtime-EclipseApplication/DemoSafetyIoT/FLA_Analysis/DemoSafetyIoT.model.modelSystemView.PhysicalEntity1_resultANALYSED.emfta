@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../cleanNovember212/org.polarsys.chess.fla.faultTreeAnalysis/models/emfta.ecore">
+  <emfta:FTAModel name="omission failure of lightPort in PhysicalEntity1">
+    <events type="Intermediate" name="omission failure of lightPort in PhysicalEntity1" probability="0.0039959999999999996">
+      <gate description="1" events="/4 /5 /0/@events.1 /0/@events.2"/>
+    </events>
+    <events name=" INTERNAL failure in iotboard_1" probability="0.002" description="5"/>
+    <events name=" INTERNAL failure in led_1" probability="0.002" description="7"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure of sensedValue in PhysicalEntity1">
+    <events type="Intermediate" name="omission failure of sensedValue in PhysicalEntity1" probability="0.9980278325588814">
+      <gate description="8" events="/6 /7 /1/@events.1 /1/@events.12"/>
+    </events>
+    <events type="Intermediate" name="omission failure of inSensed in rfmodule1_1" probability="0.9980238803195204" description="10">
+      <gate description="10" events="/8 /9 /1/@events.2 /1/@events.11"/>
+    </events>
+    <events type="Intermediate" name="omission failure of sensedValue in iotboard_1" probability="0.001980079840159936" description="11">
+      <gate type="AND" description="11" events="/10 /11 /1/@events.3 /1/@events.4"/>
+    </events>
+    <events name=" INTERNAL failure in HumiditySensor" probability="0.002" description="14"/>
+    <events type="Intermediate" name="omission failure of in_Temperature in iotboard_1" probability="0.009960079920032006" description="15">
+      <gate description="15" events="/12 /13 /14 /15 /1/@events.5 /1/@events.8 /1/@events.9 /1/@events.10"/>
+    </events>
+    <events type="Intermediate" name="omission failure of INLastDown2 in block2_1" probability="0.0039959999999999996" description="17">
+      <gate description="17" events="/16 /17 /1/@events.6 /1/@events.7"/>
+    </events>
+    <events name=" INTERNAL failure in TempSensor" probability="0.002" description="21"/>
+    <events name=" INTERNAL failure in innerSimple_1" probability="0.002" description="23"/>
+    <events name=" INTERNAL failure in block2_1" probability="0.002" description="25"/>
+    <events name=" INTERNAL failure in TempSensor" probability="0.002" description="29"/>
+    <events name=" INTERNAL failure in lastdown_1" probability="0.002" description="31"/>
+    <events name=" INTERNAL failure in iotboard_1" probability="0.002" description="33"/>
+    <events name=" INTERNAL failure in rfmodule1_1" probability="0.002" description="35"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="omission failure of outLED in led_1" description="2"/>
+  <emfta:Event type="Intermediate" name="omission failure of outLED in led_1" description="6"/>
+  <emfta:Event type="Intermediate" name="omission failure of outBroadcast in rfmodule1_1" description="9"/>
+  <emfta:Event type="Intermediate" name="omission failure of outBroadcast in rfmodule1_1" description="34"/>
+  <emfta:Event type="Intermediate" name="omission failure of sensedValue in iotboard_1" description="11"/>
+  <emfta:Event type="Intermediate" name="omission failure of sensedValue in iotboard_1" description="32"/>
+  <emfta:Event type="Intermediate" name="omission failure of in_Humidity in iotboard_1" description="12"/>
+  <emfta:Event type="Intermediate" name="omission failure of in_Temperature in iotboard_1" description="15"/>
+  <emfta:Event type="Intermediate" name="omission failure of OUTLastDow2 in block2_1" description="16"/>
+  <emfta:Event type="Intermediate" name="omission failure of OUTLastDow2 in block2_1" description="24"/>
+  <emfta:Event type="Intermediate" name="omission failure of OUTLastDown1 in lastdown_1" description="26"/>
+  <emfta:Event type="Intermediate" name="omission failure of OUTLastDown1 in lastdown_1" description="30"/>
+  <emfta:Event type="Intermediate" name="omission failure of outB in innerSimple_1" description="18"/>
+  <emfta:Event type="Intermediate" name="omission failure of outB in innerSimple_1" description="22"/>
+</xmi:XMI>

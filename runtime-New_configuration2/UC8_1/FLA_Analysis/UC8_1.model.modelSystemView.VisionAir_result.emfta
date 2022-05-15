@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="commission failure at the ui_diag of VisionAir">
+    <events type="Intermediate" name="commission failure at the ui_diag of VisionAir" description="1">
+      <gate description="1" events="/0/@events.1"/>
+    </events>
+    <events type="Intermediate" name="commission failure at the uid_out of user interface_1" description="2">
+      <gate type="AND" description="2" events="/0/@events.2"/>
+    </events>
+    <events name=" INTERNAL failure in user interface_1" description="3"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueSubtle failure at the ui_diag of VisionAir">
+    <events type="Intermediate" name="valueSubtle failure at the ui_diag of VisionAir" description="4">
+      <gate description="4"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueCoarse failure at the ui_diag of VisionAir">
+    <events type="Intermediate" name="valueCoarse failure at the ui_diag of VisionAir" description="5">
+      <gate description="5"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the ui_diag of VisionAir">
+    <events type="Intermediate" name="omission failure at the ui_diag of VisionAir" description="6">
+      <gate description="6" events="/3/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the uid_out of user interface_1" description="7">
+      <gate type="AND" description="7" events="/3/@events.2"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the uictl_in of user interface_1" description="8">
+      <gate description="8"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the ip_diag of VisionAir">
+    <events type="Intermediate" name="omission failure at the ip_diag of VisionAir" description="9">
+      <gate description="9" events="/4/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the ipd_out of infusion pump_1" description="10">
+      <gate type="AND" description="10" events="/4/@events.2"/>
+    </events>
+    <events name=" INTERNAL failure in infusion pump_1" description="11"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueCoarse failure at the ip_diag of VisionAir">
+    <events type="Intermediate" name="valueCoarse failure at the ip_diag of VisionAir" description="12">
+      <gate description="12"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueSubtle failure at the ip_diag of VisionAir">
+    <events type="Intermediate" name="valueSubtle failure at the ip_diag of VisionAir" description="13">
+      <gate description="13"/>
+    </events>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

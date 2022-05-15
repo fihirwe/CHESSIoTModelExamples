@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::System" name="System">
+    <flaxml:inputPorts>
+      <flaxml:inputPort id="model::modelSystemView::System::inSystem" name="inSystem">
+        <flaxml:inputFailure type="noFailure"/>
+        <flaxml:inputFailure type="valueSubtle"/>
+      </flaxml:inputPort>
+    </flaxml:inputPorts>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::System::outSystem" name="outSystem">
+        <outputFailure type="noFailure"/>
+        <outputFailure type="valueSubtle"/>
+        <outputFailure type="omission"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::iotboard1_1" sourceId="model::modelSystemView::IoTBoard1::outputBoard" targetComponent="model::modelSystemView::System" targetId="model::modelSystemView::System::outSystem"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System" sourceId="model::modelSystemView::System::inSystem" targetComponent="model::modelSystemView::System::relay_1" targetId="model::modelSystemView::Relay::inRelay"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::sensor_1" sourceId="model::modelSystemView::sensor::sensedValue" targetComponent="model::modelSystemView::System::iotboard1_1" targetId="model::modelSystemView::IoTBoard1::inFromSensor"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::System::relay_1" sourceId="model::modelSystemView::Relay::outRelay" targetComponent="model::modelSystemView::System::iotboard1_1" targetId="model::modelSystemView::IoTBoard1::inFromRelay"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System::sensor_1" name="sensor_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::sensor::sensedValue" name="sensedValue">
+            <outputFailure type="omission"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->sensedValue.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System::relay_1" name="relay_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Relay::inRelay" name="inRelay">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Relay::outRelay" name="outRelay">
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inRelay.valueSubtle->outRelay.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outRelay.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::System::iotboard1_1" name="iotboard1_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::IoTBoard1::inFromRelay" name="inFromRelay">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::IoTBoard1::inFromSensor" name="inFromSensor">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="omission"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::IoTBoard1::outputBoard" name="outputBoard">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+            <outputFailure type="valueSubtle"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="inFromSensor.omission->outputBoard.omission"/>
+          <flaxml:rule pattern="inFromRelay.omission,inFromSensor.noFailure->outputBoard.omission"/>
+          <flaxml:rule pattern="dumyPort.noFailure->outputBoard.omission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

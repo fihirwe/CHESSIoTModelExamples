@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="commission failure at the OUT_o of HealthCare">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: commission failure at the OUT_o of HealthCare" probability="4.000E-10" description="2">
+      <gate type="AND" description="2" events="/6 /7 /0/@events.1 /0/@events.2"/>
+    </events>
+    <events name=" INTERNAL failure in controller_1" probability="2.000E-05" description="3"/>
+    <events name=" INTERNAL failure in nmt_1" probability="2.000E-05" description="6"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the OUT_o of HealthCare">
+    <events type="Intermediate" name="SYSTEM FAILURE caused by: omission failure at the OUT_o of HealthCare" probability="4.000E-12" description="8">
+      <gate type="AND" description="8" events="/8 /9 /1/@events.1 /1/@events.2"/>
+    </events>
+    <events name=" INTERNAL failure in bp_1" probability="2.000E-07" description="11"/>
+    <events name=" INTERNAL failure in controller_1" probability="2.000E-05" description="12"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="valueSubtle failure at the OUT_o of HealthCare"/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event name=" INTERNAL failure in controller_1" description="3"/>
+  <emfta:Event type="Intermediate" name="valueSubtle failure at the CTL_nmt_i of controller_1" description="4"/>
+  <emfta:Event type="Intermediate" name="valueSubtle failure at the CTL_bp_i of controller_1" description="9"/>
+  <emfta:Event name=" INTERNAL failure in controller_1" description="12"/>
+  <emfta:Event type="Intermediate" name="SYSTEM FAILURE caused by: valueSubtle failure at the OUT_o of HealthCare"/>
+</xmi:XMI>

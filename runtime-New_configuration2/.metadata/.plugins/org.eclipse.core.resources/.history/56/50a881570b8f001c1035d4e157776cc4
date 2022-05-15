@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flaxml:system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flaxml="http://www.polarsys.org/chess/fla/flaxml">
+  <flaxml:component xsi:type="flaxml:compositeComponent" id="model::modelSystemView::HealthCare" name="HealthCare">
+    <flaxml:inputPorts/>
+    <flaxml:outputPorts>
+      <flaxml:outputPort id="model::modelSystemView::HealthCare::OUT_o" name="OUT_o">
+        <outputFailure type="omission"/>
+        <outputFailure type="noFailure"/>
+        <outputFailure type="commission"/>
+        <outputFailure type="valueSubtle"/>
+      </flaxml:outputPort>
+    </flaxml:outputPorts>
+    <flaxml:connections>
+      <flaxml:connection sourceComponent="model::modelSystemView::HealthCare::bp_1" sourceId="model::modelSystemView::BP::BP_ctl_o" targetComponent="model::modelSystemView::HealthCare::controller_1" targetId="model::modelSystemView::Controller::CTL_bp_i"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::HealthCare::nmt_1" sourceId="model::modelSystemView::NMT::NMT_ctl_o" targetComponent="model::modelSystemView::HealthCare::controller_1" targetId="model::modelSystemView::Controller::CTL_nmt_i"/>
+      <flaxml:connection sourceComponent="model::modelSystemView::HealthCare::controller_1" sourceId="model::modelSystemView::Controller::CTL_out_o" targetComponent="model::modelSystemView::HealthCare" targetId="model::modelSystemView::HealthCare::OUT_o"/>
+    </flaxml:connections>
+    <flaxml:components>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::HealthCare::nmt_1" name="nmt_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::NMT::NMT_ctl_o" name="NMT_ctl_o">
+            <outputFailure type="noFailure"/>
+            <outputFailure type="valueSubtle"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->NMT_ctl_o.valueSubtle"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::HealthCare::bp_1" name="bp_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="TestID" name="dumyPort">
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::BP::BP_ctl_o" name="BP_ctl_o">
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="noFailure"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="dumyPort.noFailure->BP_ctl_o.valueSubtle"/>
+        </flaxml:rules>
+      </flaxml:component>
+      <flaxml:component xsi:type="flaxml:simpleComponent" id="model::modelSystemView::HealthCare::controller_1" name="controller_1">
+        <flaxml:inputPorts>
+          <flaxml:inputPort id="model::modelSystemView::Controller::CTL_nmt_i" name="CTL_nmt_i">
+            <flaxml:inputFailure type="noFailure"/>
+            <flaxml:inputFailure type="valueSubtle"/>
+          </flaxml:inputPort>
+          <flaxml:inputPort id="model::modelSystemView::Controller::CTL_bp_i" name="CTL_bp_i">
+            <flaxml:inputFailure type="valueSubtle"/>
+            <flaxml:inputFailure type="noFailure"/>
+          </flaxml:inputPort>
+        </flaxml:inputPorts>
+        <flaxml:outputPorts>
+          <flaxml:outputPort id="model::modelSystemView::Controller::CTL_out_o" name="CTL_out_o">
+            <outputFailure type="commission"/>
+            <outputFailure type="valueSubtle"/>
+            <outputFailure type="noFailure"/>
+            <outputFailure type="omission"/>
+          </flaxml:outputPort>
+        </flaxml:outputPorts>
+        <flaxml:rules>
+          <flaxml:rule pattern="CTL_bp_i.valueSubtle,CTL_nmt_i.noFailure->CTL_out_o.omission"/>
+          <flaxml:rule pattern="CTL_bp_i.noFailure,CTL_nmt_i.valueSubtle->CTL_out_o.commission"/>
+        </flaxml:rules>
+      </flaxml:component>
+    </flaxml:components>
+  </flaxml:component>
+</flaxml:system>

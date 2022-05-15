@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<flamm:SimpleComponent xmlns:flamm="http://www.polarsys.org/chess/fla/flamm" id="model::modelSystemView::IoTBoard" name="IoTBoard">
+  <inputPorts id="model::modelSystemView::IoTBoard::in_Humidity" name="in_Humidity" owner="/"/>
+  <inputPorts id="model::modelSystemView::IoTBoard::in_Temperature" name="in_Temperature" owner="/"/>
+  <inputPorts id="TestID" name="dumyPort" owner="/"/>
+  <outputPorts id="model::modelSystemView::IoTBoard::sensedValue" name="sensedValue" owner="/"/>
+  <outputPorts id="model::modelSystemView::IoTBoard::outLight" name="outLight" owner="/"/>
+  <rules>
+    <inputExpression port="//@inputPorts.0">
+      <failures type="failure" id="omission"/>
+    </inputExpression>
+    <inputExpression port="//@inputPorts.1">
+      <failures type="failure" id="omission"/>
+    </inputExpression>
+    <outputExpression port="//@outputPorts.0">
+      <failures type="failure" id="omission"/>
+    </outputExpression>
+  </rules>
+  <rules>
+    <inputExpression port="//@inputPorts.2">
+      <failures id="noFailure"/>
+    </inputExpression>
+    <outputExpression port="//@outputPorts.1">
+      <failures type="failure" id="omission"/>
+    </outputExpression>
+    <outputExpression port="//@outputPorts.0">
+      <failures type="failure" id="omission"/>
+    </outputExpression>
+  </rules>
+</flamm:SimpleComponent>

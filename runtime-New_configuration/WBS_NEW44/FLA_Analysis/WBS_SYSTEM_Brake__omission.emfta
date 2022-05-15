@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<emfta:FTAModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta" name="WBS_SYSTEM_Brake__omission">
+  <root name="WBS_SYSTEM.Brake.omission" description="">
+    <gate>
+      <events name="hydraulics_1.Hydro_Out.omission" description="">
+        <gate>
+          <events name="hydraulics_1: Hydro_In.valueSubtle ->Hydro_Out.omission ">
+            <gate type="AND">
+              <events name="hydraulics_1.Hydro_In.valueSubtle" description="">
+                <gate>
+                  <events name="select_switch_1.Select_Pos.valueSubtle" description=""/>
+                </gate>
+              </events>
+            </gate>
+          </events>
+        </gate>
+      </events>
+    </gate>
+  </root>
+</emfta:FTAModel>

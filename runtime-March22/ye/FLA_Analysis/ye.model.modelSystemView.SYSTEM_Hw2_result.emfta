@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:emfta="http://cmu.edu/emfta" xsi:schemaLocation="http://cmu.edu/emfta ../../../CHESSIoTplugins_FMEAFTA/org.polarsys.chess.fla.faultTreeGenerator/models/emfta.ecore">
+  <emfta:FTAModel name="Fault Tree of flowport1+commission&#xA;--------------&#xA; TOP EVENT &lt;commission> in SYSTEM_Hw2 at flowport1 port">
+    <events type="Intermediate" name="flowport1+commission&#xA;--------------&#xA; TOP EVENT &lt;commission> in SYSTEM_Hw2 at flowport1 port" description="1_commission">
+      <gate description="1_commission" events="/0/@events.1"/>
+    </events>
+    <events type="Intermediate" name="flowport2+commission&#xA;--------------&#xA; LOCAL EFFECT &lt;commission> in system_hw1_1 at flowport2 port" description="2_commission">
+      <gate type="AND" description="2_commission" events="/0/@events.2"/>
+    </events>
+    <events name="flowport2+commission&#xA;--------------&#xA; INTERNAL FAILURE in system_hw1_1 ==> commission at flowport2 port" description="3_commission"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

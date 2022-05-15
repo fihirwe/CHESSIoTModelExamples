@@ -1,0 +1,43 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+import "../../util/_Datatypes.thingml"
+import "../../util/_Timer.thingml"
+thing fragment LEDMessages {
+	message LedON();
+	message LedOFF();
+}
+
+thing LED includes TimerMsgs,LEDMessages { 
+	property PIN11: UInt8 = 11
+	provided port inLED{
+	receives LedON,LedOFF
+	}
+
+statechart LED_SM init 	READY{
+state READY{
+	on entry 
+	  do
+		`pinMode(`&PIN11&`, OUTPUT);`
+	  end
+	internal event 	inLED?LedOFF	action 
+		  do
+		`digitalWrite(`&PIN11&`, LOW);`
+		  end
+	internal event 	inLED?LedON	action 
+		  do
+		`digitalWrite(`&PIN11&`,HIGH);`
+		  end
+	}
+}
+}

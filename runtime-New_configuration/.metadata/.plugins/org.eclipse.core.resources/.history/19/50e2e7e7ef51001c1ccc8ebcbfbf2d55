@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<emfta:FTAModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta" name="valueCoarse failure of ctrlTorque in ACSComposite">
+  <events type="Intermediate" name="valueCoarse failure of ctrlTorque in ACSComposite">
+    <gate events="//@events.1"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of ctrlTorque in torqueSelectorImpl">
+    <gate events="//@events.2 //@events.11 //@events.28 //@events.39"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estSunVec in torqueSelectorImpl">
+    <gate events="//@events.3"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estSunVec in stateEstimatorImpl">
+    <gate events="//@events.4"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of condSunVec in stateEstimatorImpl">
+    <gate events="//@events.5 //@events.8"/>
+  </events>
+  <events type="Intermediate" name="unauthorizedModificationOfService at port condSunVec in signalConditionerImpl component">
+    <gate type="AND" events="//@events.6 //@events.7"/>
+  </events>
+  <events name="missingDataIntegritySchemes vulnerability in signalConditionerImpl component"/>
+  <events name="dataSpoofingAttack at port sunVec in signalConditionerImpl component"/>
+  <events type="Intermediate" name="valueCoarse failure of condSunVec in signalConditionerImpl">
+    <gate events="//@events.9"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of sunVec in signalConditionerImpl">
+    <gate events="//@events.10"/>
+  </events>
+  <events name="valueCoarse failure of sunVec in ACSComposite"/>
+  <events type="Intermediate" name="valueCoarse failure of pdTorque in torqueSelectorImpl">
+    <gate events="//@events.12"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of pdTorque in pDControllerImpl">
+    <gate events="//@events.13 //@events.22"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estSunVec in pDControllerImpl">
+    <gate events="//@events.14"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estSunVec in stateEstimatorImpl">
+    <gate events="//@events.15"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of condSunVec in stateEstimatorImpl">
+    <gate events="//@events.16 //@events.19"/>
+  </events>
+  <events type="Intermediate" name="unauthorizedModificationOfService at port condSunVec in signalConditionerImpl component">
+    <gate type="AND" events="//@events.17 //@events.18"/>
+  </events>
+  <events name="missingDataIntegritySchemes vulnerability in signalConditionerImpl component"/>
+  <events name="dataSpoofingAttack at port sunVec in signalConditionerImpl component"/>
+  <events type="Intermediate" name="valueCoarse failure of condSunVec in signalConditionerImpl">
+    <gate events="//@events.20"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of sunVec in signalConditionerImpl">
+    <gate events="//@events.21"/>
+  </events>
+  <events name="valueCoarse failure of sunVec in ACSComposite"/>
+  <events type="Intermediate" name="valueCoarse failure of estAngVelocity in pDControllerImpl">
+    <gate events="//@events.23"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estAngVelocity in stateEstimatorImpl">
+    <gate events="//@events.24"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of condGyroscopicData in stateEstimatorImpl">
+    <gate events="//@events.25"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of condGyroscopicData in signalConditionerImpl">
+    <gate events="//@events.26"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of gyroscopicData in signalConditionerImpl">
+    <gate events="//@events.27"/>
+  </events>
+  <events name="valueCoarse failure of gyroscopicData in ACSComposite"/>
+  <events type="Intermediate" name="valueCoarse failure of specTorque in torqueSelectorImpl">
+    <gate events="//@events.29"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of specTorque in steerControllerImpl">
+    <gate events="//@events.30"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estSunVec in steerControllerImpl">
+    <gate events="//@events.31"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estSunVec in stateEstimatorImpl">
+    <gate events="//@events.32"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of condSunVec in stateEstimatorImpl">
+    <gate events="//@events.33 //@events.36"/>
+  </events>
+  <events type="Intermediate" name="unauthorizedModificationOfService at port condSunVec in signalConditionerImpl component">
+    <gate type="AND" events="//@events.34 //@events.35"/>
+  </events>
+  <events name="missingDataIntegritySchemes vulnerability in signalConditionerImpl component"/>
+  <events name="dataSpoofingAttack at port sunVec in signalConditionerImpl component"/>
+  <events type="Intermediate" name="valueCoarse failure of condSunVec in signalConditionerImpl">
+    <gate events="//@events.37"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of sunVec in signalConditionerImpl">
+    <gate events="//@events.38"/>
+  </events>
+  <events name="valueCoarse failure of sunVec in ACSComposite"/>
+  <events type="Intermediate" name="valueCoarse failure of feedforwardTorque in torqueSelectorImpl">
+    <gate events="//@events.40"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of feedforwardTorque in feedforwardControllerImpl">
+    <gate events="//@events.41"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estGyroTorque in feedforwardControllerImpl">
+    <gate events="//@events.42"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of estGyroTorque in stateEstimatorImpl">
+    <gate events="//@events.43"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of condGyroscopicData in stateEstimatorImpl">
+    <gate events="//@events.44"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of condGyroscopicData in signalConditionerImpl">
+    <gate events="//@events.45"/>
+  </events>
+  <events type="Intermediate" name="valueCoarse failure of gyroscopicData in signalConditionerImpl">
+    <gate events="//@events.46"/>
+  </events>
+  <events name="valueCoarse failure of gyroscopicData in ACSComposite"/>
+</emfta:FTAModel>

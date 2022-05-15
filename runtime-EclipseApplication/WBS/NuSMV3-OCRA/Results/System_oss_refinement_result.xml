@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:OcraOutput xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="OcraOutput.xsd" xmlns:ns="https://es.fbk.eu/tools/ocra/xml/OcraOutput">
+ <OcraResult checkType="ocra_check_refinement" timestamp="">
+  <Component type="system">
+   <Contract name="System_Brake_Time">
+    <CheckResult proofType="implementation" contractName="System_Brake_Time">
+     <Value value="BOUND_OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="bscu.BSCU_CMD_Time">
+     <Value value="OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="bscu.BSCU_Safety">
+     <Value value="OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="hydraulic.Hydraulic_Brake_Time">
+     <Value value="OK"/>
+    </CheckResult>
+   </Contract>
+  </Component>
+  <Component type="BSCU">
+   <Contract name="BSCU_CMD_Time">
+    <CheckResult proofType="implementation" contractName="BSCU_CMD_Time">
+     <Value value="BOUND_OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="bscu1.SubBSCU_CMD_Time">
+     <Value value="OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="bscu2.SubBSCU_CMD_Time">
+     <Value value="OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="bscu1.SubBSCU_Safety">
+     <Value value="OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="bscu2.SubBSCU_Safety">
+     <Value value="OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="switch.Select_Switch_Sel0_Time">
+     <Value value="OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="switch.Select_Switch_Sel1_Time">
+     <Value value="OK"/>
+    </CheckResult>
+   </Contract>
+   <Contract name="BSCU_Safety">
+    <CheckResult proofType="implementation" contractName="BSCU_Safety">
+     <Value value="BOUND_OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="bscu1.SubBSCU_Safety">
+     <Value value="OK"/>
+    </CheckResult>
+    <CheckResult proofType="environment" contractName="bscu2.SubBSCU_Safety">
+     <Value value="OK"/>
+    </CheckResult>
+   </Contract>
+  </Component>
+ </OcraResult>
+</ns:OcraOutput>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<emfta:FTAModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta" name="WBS_SYSTEM_Brake__commission">
+  <root name="WBS_SYSTEM.Brake.commission" description="">
+    <gate>
+      <events name="hydraulics_1.Hydro_Out.commission" description="">
+        <gate>
+          <events name="hydraulics_1: Hydro_In.valueCoarse ->Hydro_Out.commission ">
+            <gate type="AND">
+              <events name="hydraulics_1.Hydro_In.valueCoarse" description="">
+                <gate>
+                  <events name="select_switch_1.Select_Pos.valueCoarse" description="">
+                    <gate>
+                      <events name="select_switch_1: in2.noFailure in1.valueCoarse ->Select_Pos.valueCoarse ">
+                        <gate type="AND">
+                          <events name="select_switch_1.in1.valueCoarse" description="">
+                            <gate>
+                              <events name="subbscu_1.CMD_AS.valueCoarse" description=""/>
+                            </gate>
+                          </events>
+                        </gate>
+                      </events>
+                      <events name="select_switch_1: in2.valueCoarse ->">
+                        <gate type="AND">
+                          <events name="select_switch_1.in2.valueCoarse" description="">
+                            <gate>
+                              <events name="subbscu_2.CMD_AS.valueCoarse" description=""/>
+                            </gate>
+                          </events>
+                        </gate>
+                      </events>
+                    </gate>
+                  </events>
+                </gate>
+              </events>
+            </gate>
+          </events>
+        </gate>
+      </events>
+    </gate>
+  </root>
+</emfta:FTAModel>

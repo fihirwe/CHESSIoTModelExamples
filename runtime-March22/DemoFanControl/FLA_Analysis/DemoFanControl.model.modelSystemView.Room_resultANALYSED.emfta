@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="omission failure at the outData of Room">
+    <events type="Intermediate" name="omission failure at the outData of Room" probability="5.060E-05">
+      <gate description="1" events="/6 /7 /0/@events.1 /0/@events.5"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inGateway of gateway_1" probability="3.060E-05" description="3">
+      <gate description="3" events="/8 /9 /10 /0/@events.2 /0/@events.3 /0/@events.4"/>
+    </events>
+    <events name=" INTERNAL failure in sensor_1" probability="4.000E-09" description="7"/>
+    <events type="External" name="valueSubtle failure INJECTED at inPower in Room" probability="3.000E-05" description="10"/>
+    <events name=" INTERNAL failure in board_1" probability="6.000E-07" description="12"/>
+    <events name=" INTERNAL failure in gateway_1" probability="2.000E-05" description="14"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the SpinOut of Room">
+    <events type="Intermediate" name="omission failure at the SpinOut of Room">
+      <gate description="15" events="/11 /12 /1/@events.1 /1/@events.4"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inFan of fan_1" description="17">
+      <gate description="17" events="/13 /14 /1/@events.2 /1/@events.3"/>
+    </events>
+    <events type="External" name="valueSubtle failure INJECTED at inPower in Room" description="20"/>
+    <events name=" INTERNAL failure in board_1" description="22"/>
+    <events name=" INTERNAL failure in fan_1" description="24"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the Blinking of Room">
+    <events type="Intermediate" name="omission failure at the Blinking of Room">
+      <gate description="25" events="/15 /16 /2/@events.1 /2/@events.4"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inLED of led_1" description="27">
+      <gate description="27" events="/17 /18 /2/@events.2 /2/@events.3"/>
+    </events>
+    <events type="External" name="valueSubtle failure INJECTED at inPower in Room" description="30"/>
+    <events name=" INTERNAL failure in board_1" description="32"/>
+    <events name=" INTERNAL failure in led_1" description="34"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGateway of gateway_1" description="2"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outGateway of gateway_1" description="13"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="4"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="8"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToGateway of board_1" description="11"/>
+  <emfta:Event type="Intermediate" name="omission failure at the OutFan of fan_1" description="16"/>
+  <emfta:Event type="Intermediate" name="omission failure at the OutFan of fan_1" description="23"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToFan of board_1" description="18"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToFan of board_1" description="21"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outLED of led_1" description="26"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outLED of led_1" description="33"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToLED of board_1" description="28"/>
+  <emfta:Event type="Intermediate" name="omission failure at the outBoardToLED of board_1" description="31"/>
+</xmi:XMI>

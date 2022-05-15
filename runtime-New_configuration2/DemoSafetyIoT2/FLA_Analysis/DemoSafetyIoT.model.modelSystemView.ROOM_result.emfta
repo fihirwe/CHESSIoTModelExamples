@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfta="http://cmu.edu/emfta">
+  <emfta:FTAModel name="omission failure at the lightPort of ROOM">
+    <events type="Intermediate" name="omission failure at the lightPort of ROOM" description="1">
+      <gate description="1" events="/0/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the outLED of led_1" description="2">
+      <gate type="AND" description="2" events="/0/@events.2"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inLight of led_1" description="3">
+      <gate description="3" events="/0/@events.3"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the outLight of iotboard_1" description="4">
+      <gate type="AND" description="4" events="/0/@events.4"/>
+    </events>
+    <events name=" INTERNAL failure in iotboard_1" description="5"/>
+  </emfta:FTAModel>
+  <emfta:FTAModel name="omission failure at the sensedValue of ROOM">
+    <events type="Intermediate" name="omission failure at the sensedValue of ROOM" description="6">
+      <gate description="6" events="/1/@events.1"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the outBroadcast of rfmodule1_1" description="7">
+      <gate type="AND" description="7" events="/1/@events.2"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inSensed of rfmodule1_1" description="8">
+      <gate description="8" events="/1/@events.3 /1/@events.24"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the sensedValue of iotboard_1" description="9">
+      <gate type="AND" description="9" events="/1/@events.4 /1/@events.7"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the in_Humidity of iotboard_1" description="10">
+      <gate description="10" events="/1/@events.5"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the outSensed of HumiditySensor" description="11">
+      <gate type="AND" description="11" events="/1/@events.6"/>
+    </events>
+    <events name=" INTERNAL failure in HumiditySensor" description="12"/>
+    <events type="Intermediate" name="omission failure at the in_Temperature of iotboard_1" description="13">
+      <gate description="13" events="/1/@events.8 /1/@events.16 /1/@events.18 /1/@events.22"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the OUTLastDow2 of powerSource" description="14">
+      <gate type="AND" description="14" events="/1/@events.9"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the INLastDown2 of powerSource" description="15">
+      <gate description="15" events="/1/@events.10 /1/@events.14"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the outB of regulator" description="16">
+      <gate type="AND" description="16" events="/1/@events.11"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the inB of regulator" description="17">
+      <gate description="17" events="/1/@events.12"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the outSensed of TempSensor" description="18">
+      <gate type="AND" description="18" events="/1/@events.13"/>
+    </events>
+    <events name=" INTERNAL failure in TempSensor" description="19"/>
+    <events type="Intermediate" name="omission failure at the outB of regulator" description="20">
+      <gate type="AND" description="20" events="/1/@events.15"/>
+    </events>
+    <events name=" INTERNAL failure in regulator" description="21"/>
+    <events type="Intermediate" name="omission failure at the OUTLastDow2 of powerSource" description="22">
+      <gate type="AND" description="22" events="/1/@events.17"/>
+    </events>
+    <events name=" INTERNAL failure in powerSource" description="23"/>
+    <events type="Intermediate" name="omission failure at the OUTLastDown1 of batterySource" description="24">
+      <gate type="AND" description="24" events="/1/@events.19"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the INLastDown1 of batterySource" description="25">
+      <gate description="25" events="/1/@events.20"/>
+    </events>
+    <events type="Intermediate" name="omission failure at the outSensed of TempSensor" description="26">
+      <gate type="AND" description="26" events="/1/@events.21"/>
+    </events>
+    <events name=" INTERNAL failure in TempSensor" description="27"/>
+    <events type="Intermediate" name="omission failure at the OUTLastDown1 of batterySource" description="28">
+      <gate type="AND" description="28" events="/1/@events.23"/>
+    </events>
+    <events name=" INTERNAL failure in batterySource" description="29"/>
+    <events type="Intermediate" name="omission failure at the sensedValue of iotboard_1" description="30">
+      <gate type="AND" description="30" events="/1/@events.25"/>
+    </events>
+    <events name=" INTERNAL failure in iotboard_1" description="31"/>
+  </emfta:FTAModel>
+  <emfta:Event/>
+</xmi:XMI>

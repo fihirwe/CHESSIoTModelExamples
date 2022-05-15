@@ -1,0 +1,70 @@
+/*****************************************************************************
+ * Copyright (c) 2021 Intecs.
+ *
+ *    
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v20.html
+ *
+ * Contributors:
+ *  Felicien Ihirwe
+ *
+ *****************************************************************************/
+import "../util/_Datatypes.thingml"
+import "../util/_Timer.thingml"
+import "Room2_subs/LED.thingml"
+
+thing fragment BoardMessages {
+}
+
+thing Board includes TimerMsgs,BoardMessages,LEDMessages { 
+	required port toLED{
+	sends LedON,LedOFF
+	}
+	required port port_Timer{
+	receives timer_timeout
+	sends timer_start
+	}
+
+statechart BOARD_SM init 	OFFSTATE{
+state OFFSTATE{
+	on entry 
+	  do
+		toLED!LedOFF()
+		port_Timer!timer_start(0, 1200)
+	  end
+	
+	transition -> ONSTATE event e: port_Timer?timer_timeout
+		testGuard
+		toLED!LedON()
+		port_Timer!timer_start(0, 1200)
+	
+
+	}
+state ONSTATE{
+	on entry 
+	  do
+		toLED!LedON()
+		port_Timer!timer_start(0, 1500)
+	  end
+	
+	transition -> OFFSTATE event e: port_Timer?timer_timeout
+		testGuard
+		toLED!LedON()
+		port_Timer!timer_start(0, 1200)
+	
+
+	}
+}
+}
+
+protocol Timer;
+
+configuration BoardApp{
+	instance arduinoObj : Board
+	instance redledObj : LED
+	connector arduinoObj.toLED => redledObj.inLED
+	connector arduinoObj.port_Timer over Timer
+		set redledObj.PIN11 = 11
+	}
